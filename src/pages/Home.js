@@ -1,18 +1,25 @@
 import React from "react";
+import "../styles/Home.css";
+import { Link } from "react-router-dom";
 import Hero from "../components/Hero";
 import Banner from "../components/Banner";
-import { Link } from "react-router-dom";
+import About_me from "../components/About_me";
 
 export default function Home() {
   return (
     <>
       <Hero>
-        <Banner title="AAAAAAAAAA" subtitle="BBBBBBBBBBBBBBBBB">
-          <Link to="/rooms" className="btn-primary">
-            our rooms
+        <Banner
+          className="banner"
+          title="Front End Developer"
+          subtitle="Jacek Maciejak"
+        >
+          <Link to="/contact" className="btn-primary">
+            Contact
           </Link>
         </Banner>
       </Hero>
+      <About_me />
     </>
   );
 }
