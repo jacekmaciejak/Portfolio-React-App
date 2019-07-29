@@ -1,13 +1,17 @@
 .banner {
     display: inline-block;
-    padding: 2rem 1rem;
-    text-align: center;
-    text-transform: capitalize;
+    text-align: left;
     color: #fff;
+    margin-left: 4vw;
 }
 
 .banner h1 {
-    font-size: 2.5rem;
+    font-size: calc(25px + 3.5vw);
+}
+
+.banner h2 {
+    font-size: calc(25px + 3.5vw);
+    line-height: 2;
 }
 
 .banner div {
@@ -17,15 +21,12 @@
 }
 
 .banner p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
+    font-size: calc(10px + 1.8vw);
+    line-height: 2;
 }
 
-.banner_2 {
-    height: 100vh;
-}
 
-@media screen and (min-width: 576px) {
+/* @media screen and (min-width: 576px) {
     .banner {
         padding: 2rem 3rem;
     }
@@ -33,8 +34,9 @@
     .banner h1 {
         font-size: 3rem;
     }
-}
+} */
 
+/*
 @media screen and (min-width: 992px) {
     .banner {
         padding: 2rem 6rem;
@@ -43,4 +45,4 @@
     .banner h1 {
         font-size: 4rem;
     }
-}
+} */

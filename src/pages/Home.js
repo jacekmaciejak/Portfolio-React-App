@@ -13,13 +13,10 @@ export default function Home() {
       <Hero>
         <Banner
           className="banner"
-          title="Front End Developer"
+          title="Front-end Developer"
           subtitle="Jacek Maciejak"
-        >
-          <Link to="/contact" className="btn-primary">
-            Contact
-          </Link>
-        </Banner>
+          paragraph="Hi, I'm front-end developer living in Warsaw. I encourage you to review my projects."
+        />
         <Line_down />
       </Hero>
       <About_me />
