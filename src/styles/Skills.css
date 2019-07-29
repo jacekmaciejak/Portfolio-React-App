@@ -1,0 +1,22 @@
+.skills {
+    display: grid;
+    justify-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 6fr;
+    color: #fff;
+}
+
+.skills h1 {
+    font-size: 8vw;
+    opacity: .2;
+    margin-top: 80px;
+}
+
+.skills h2 {
+    font-size: 5vw;
+}

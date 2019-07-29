@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Hero from "../components/Hero";
 import Banner from "../components/Banner";
 import About_me from "../components/About_me";
+import Skills from "../components/Skills";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
         </Banner>
       </Hero>
       <About_me />
+      <Skills />
     </>
   );
 }
