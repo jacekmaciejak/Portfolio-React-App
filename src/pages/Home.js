@@ -22,7 +22,7 @@ export default function Home() {
       </Hero>
       <About_me />
       <Skills />
-      <Email />
+      {/* <Email /> */}
     </>
   );
 }
