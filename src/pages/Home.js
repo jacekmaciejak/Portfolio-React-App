@@ -5,6 +5,7 @@ import Hero from "../components/Hero";
 import Banner from "../components/Banner";
 import About_me from "../components/About_me";
 import Skills from "../components/Skills";
+import Line_down from "../components/Line_down";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
             Contact
           </Link>
         </Banner>
+        <Line_down />
       </Hero>
       <About_me />
       <Skills />
