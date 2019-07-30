@@ -19,4 +19,23 @@
 
 .skills h2 {
     font-size: 5vw;
+    font-size: 5vw;
+    letter-spacing: 3px;
+    background: linear-gradient(90deg, #000, #fff, #000);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+    animation: animateText 3s linear infinite;
+}
+
+@keyframes animateText {
+    0% {
+        background-position: -400%;
+    }
+
+    100% {
+        background-position: 400%;
+    }
 }

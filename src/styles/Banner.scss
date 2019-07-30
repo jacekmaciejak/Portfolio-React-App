@@ -3,26 +3,21 @@
     text-align: left;
     color: #fff;
     margin-left: 4vw;
-}
+    width: 60%;
 
-.banner h1 {
-    font-size: calc(25px + 3.5vw);
-}
+    h1,
+    h2 {
+        font-size: calc(25px + 3.5vw);
+    }
 
-.banner h2 {
-    font-size: calc(25px + 3.5vw);
-    line-height: 2;
-}
+    h2,
+    p {
+        line-height: 2;
+    }
 
-.banner div {
-    width: 10rem;
-    height: 5px;
-    margin: 1.7rem auto;
-}
-
-.banner p {
-    font-size: calc(10px + 1.8vw);
-    line-height: 2;
+    p {
+        font-size: calc(10px + 1.8vw);
+    }
 }
 
 
