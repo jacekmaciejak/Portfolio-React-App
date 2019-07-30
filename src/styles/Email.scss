@@ -1,7 +1,16 @@
 .email {
+    display: grid;
+    justify-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 6fr;
 
-    h1,
-    h2 {
+    h1 {
+        font-size: 8vw;
         color: #fff;
     }
 
@@ -28,7 +37,6 @@
     }
 
     .section-book {
-        color: #fff;
         position: relative;
         z-index: 9999;
 
@@ -122,6 +130,48 @@
                             margin-left: 3rem;
                         } */
                 }
+            }
+        }
+
+        .email_button {
+            display: block;
+            margin: 2rem auto 0;
+            cursor: pointer;
+            padding: 10px;
+            border: 1px solid #000;
+            overflow: hidden;
+            background: transparent;
+            position: relative;
+            position: relative;
+            z-index: 9999;
+            text-decoration: none;
+
+            font: {
+                size: 24px;
+                weight: 300;
+                weight: bold;
+            }
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(90deg, transparent, #000, transparent);
+                transition: .5s;
+            }
+
+            &:hover:before {
+                left: 100%;
+            }
+
+            &:hover {
+                background: linear-gradient(90deg, #000, #000, #000);
+                background-size: 100%;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: rgba(000, 000, 000, 1);
             }
         }
     }

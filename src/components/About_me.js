@@ -4,9 +4,9 @@ import "../styles/About_me.scss";
 export default function About_me() {
   return (
     <div className="about_me">
-      <h1>Who am I?</h1>
-      <h2>About me</h2>
-      <p>
+      <h1 data-aos="fade-up">Who am I?</h1>
+      <h2 data-aos="fade-up">About me</h2>
+      <p data-aos="fade-up">
         "Hey, it's nice to see you on my website. I am a beginner front-end
         developer, currently looking for a job as a junior front-end developer.
         I use HTML5, CSS3 - SASS Bootstrap4, Git, Node.js and BEM methodology.

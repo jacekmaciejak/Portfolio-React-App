@@ -1,9 +1,10 @@
 import React from "react";
 import "../styles/Panel.scss";
+import rwd from "../images/rwd.png";
 
 export default function Panel() {
   return (
-    <div className="sub_about_2">
+    <div className="sub_about_2" data-aos="fade-up">
       <div className=" sub_about_panel">
         <ul>
           <li class="p-5">
@@ -45,7 +46,7 @@ export default function Panel() {
           <li class="p-7">
             <a href="#panel">
               <i class="fab">
-                <img src="img/rwd.png" alt="Icon" />
+                <img src={rwd} alt="Icon" />
               </i>
             </a>
           </li>
