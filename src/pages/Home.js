@@ -1,5 +1,4 @@
 import React from "react";
-import "../styles/Home.css";
 import { Link } from "react-router-dom";
 import Hero from "../components/Hero";
 import Banner from "../components/Banner";
@@ -22,7 +21,7 @@ export default function Home() {
       </Hero>
       <About_me />
       <Skills />
-      {/* <Email /> */}
+      <Email />
     </>
   );
 }

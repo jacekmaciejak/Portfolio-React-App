@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/Skills.css";
+import "../styles/Skills.scss";
 import Panel from "./Panel.js";
 
 export default function Skills() {

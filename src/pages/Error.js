@@ -2,7 +2,7 @@ import React from "react";
 import Hero from "../components/Hero";
 import Banner from "../components/Banner";
 import { Link } from "react-router-dom";
-import "../styles/Error.css";
+import "../styles/Error.scss";
 
 export default function Error() {
   return (
