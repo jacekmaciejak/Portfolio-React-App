@@ -1,0 +1,444 @@
+@import '_mixins.scss';
+@import '_variables.scss';
+
+.about {
+    background: #000;
+    color: #fff;
+    padding-bottom: 2rem;
+
+	.about_1,
+	.about_2 {
+		width: 100%;
+		height: 100vh;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr .5fr 1fr 1fr 1fr .5fr 1fr 1fr 1fr 1fr;
+		grid-template-rows: .5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	}
+
+	.about_1 {
+
+		grid-template-areas: ". . . . . . . . . . . . ."". . about_1-h1 about_1-h1 about_1-h1 about_1-h1 about_1-h1 about_1-h1 about_1-h1 about_1-h1 about_1-h1 . ."". . about_1-h2 about_1-h2 about_1-h2 about_1-h2 about_1-h2 about_1-h2 about_1-h2 about_1-h2 about_1-h2 . ."". about_1-card_1 about_1-card_1 about_1-card_1 . about_1-card_2 about_1-card_2 about_1-card_2 . about_1-card_3 about_1-card_3 about_1-card_3 ."". about_1-card_1 about_1-card_1 about_1-card_1 . about_1-card_2 about_1-card_2 about_1-card_2 . about_1-card_3 about_1-card_3 about_1-card_3 ."". about_1-card_1 about_1-card_1 about_1-card_1 . about_1-card_2 about_1-card_2 about_1-card_2 . about_1-card_3 about_1-card_3 about_1-card_3 ."". about_1-card_1 about_1-card_1 about_1-card_1 . about_1-card_2 about_1-card_2 about_1-card_2 . about_1-card_3 about_1-card_3 about_1-card_3 ."". about_1-card_1 about_1-card_1 about_1-card_1 . about_1-card_2 about_1-card_2 about_1-card_2 . about_1-card_3 about_1-card_3 about_1-card_3 ."". about_1-card_1 about_1-card_1 about_1-card_1 . about_1-card_2 about_1-card_2 about_1-card_2 . about_1-card_3 about_1-card_3 about_1-card_3 ."". about_1-card_1 about_1-card_1 about_1-card_1 . about_1-card_2 about_1-card_2 about_1-card_2 . about_1-card_3 about_1-card_3 about_1-card_3 ."". about_1-card_1 about_1-card_1 about_1-card_1 . about_1-card_2 about_1-card_2 about_1-card_2 . about_1-card_3 about_1-card_3 about_1-card_3 ."". . . . . . . . . . . . .";
+
+		@include respond(tab-land) {
+			height: auto;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: .1fr .1fr 1fr 1fr;
+			grid-template-areas: "about_1-h1 about_1-h1""about_1-h2 about_1-h2""about_1-card_1 about_1-card_2""about_1-card_3 about_1-card_3";
+		}
+
+		@include respond(tab-port) {
+			height: auto;
+			grid-template-columns: 1fr;
+			grid-template-rows: .1fr .1fr 1fr 1fr 1fr;
+			grid-template-areas: "about_1-h1""about_1-h2""about_1-card_1""about_1-card_2""about_1-card_3";
+		}
+
+		@include respond(phone) {
+			/*
+			height: auto;
+			grid-template-columns: 1fr;
+			grid-template-rows: .1fr .1fr 1fr 1fr 1fr;
+			grid-template-areas: "about_1-h1""about_1-h2""about_1-card_1""about_1-card_2""about_1-card_3";
+		*/
+		}
+
+		&-h1 {
+			grid-area: about_1-h1;
+		}
+
+		&-h2 {
+			grid-area: about_1-h2;
+		}
+
+		&-card_1 {
+			grid-area: about_1-card_1;
+		}
+
+		&-card_2 {
+			grid-area: about_1-card_2;
+		}
+
+		&-card_3 {
+			grid-area: about_1-card_3;
+		}
+	}
+
+	.about_2 {
+
+		grid-template-areas: ". . . . . . . . . . . . ."". . about_2-h1 about_2-h1 about_2-h1 about_2-h1 about_2-h1 about_2-h1 about_2-h1 about_2-h1 about_2-h1 . ."". . about_2-h2 about_2-h2 about_2-h2 about_2-h2 about_2-h2 about_2-h2 about_2-h2 about_2-h2 about_2-h2 . ."". about_2-card_4 about_2-card_4 about_2-card_4 . about_2-card_5 about_2-card_5 about_2-card_5 . about_2-card_6 about_2-card_6 about_2-card_6 ."". about_2-card_4 about_2-card_4 about_2-card_4 . about_2-card_5 about_2-card_5 about_2-card_5 . about_2-card_6 about_2-card_6 about_2-card_6 ."". about_2-card_4 about_2-card_4 about_2-card_4 . about_2-card_5 about_2-card_5 about_2-card_5 . about_2-card_6 about_2-card_6 about_2-card_6 ."". about_2-card_4 about_2-card_4 about_2-card_4 . about_2-card_5 about_2-card_5 about_2-card_5 . about_2-card_6 about_2-card_6 about_2-card_6 ."". about_2-card_4 about_2-card_4 about_2-card_4 . about_2-card_5 about_2-card_5 about_2-card_5 . about_2-card_6 about_2-card_6 about_2-card_6 ."". about_2-card_4 about_2-card_4 about_2-card_4 . about_2-card_5 about_2-card_5 about_2-card_5 . about_2-card_6 about_2-card_6 about_2-card_6 ."". about_2-card_4 about_2-card_4 about_2-card_4 . about_2-card_5 about_2-card_5 about_2-card_5 . about_2-card_6 about_2-card_6 about_2-card_6 ."". about_2-card_4 about_2-card_4 about_2-card_4 . about_2-card_5 about_2-card_5 about_2-card_5 . about_2-card_6 about_2-card_6 about_2-card_6 ."". . . . . . . . . . . . .";
+
+		@include respond(tab-land) {
+			height: auto;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: .1fr .1fr 1fr 1fr;
+			grid-template-areas: "about_2-h1 about_2-h1""about_2-h2 about_2-h2""about_2-card_4 about_2-card_5""about_2-card_6 about_2-card_6";
+		}
+
+		@include respond(tab-port) {
+			height: auto;
+			grid-template-columns: 1fr;
+			grid-template-rows: .1fr .1fr 1fr 1fr 1fr;
+			grid-template-areas: "about_2-h1""about_2-h2""about_2-card_4""about_2-card_5""about_2-card_6";
+		}
+
+		@include respond(phone) {
+			/*
+			height: auto;
+			grid-template-columns: 1fr;
+			grid-template-rows: .1fr .1fr 1fr 1fr 1fr;
+			grid-template-areas: "about_2-h1""about_2-h2""about_2-card_4""about_2-card_5""about_2-card_6";
+		*/
+		}
+
+
+		&-h1 {
+			grid-area: about_2-h1;
+		}
+
+		&-h2 {
+			grid-area: about_2-h2;
+		}
+
+		&-card_4 {
+			grid-area: about_2-card_4;
+		}
+
+		&-card_5 {
+			grid-area: about_2-card_5;
+		}
+
+		&-card_6 {
+			grid-area: about_2-card_6;
+		}
+
+	}
+
+
+
+
+    @include respond(tab-port) {
+        padding-bottom: 0;
+    }
+
+    &_1,
+    &_2 {
+        @include gridCenter;
+    }
+
+    &_1-card,
+    &_2-card {
+        width: 100%;
+        height: 100%;
+        transition: .5s;
+        position: relative;
+
+        @include respond(tab-land) {
+            height: 500px;
+            width: 90%;
+            margin: 30px 0;
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            box-sizing: border-box;
+            transition: .5s;
+            opacity: 0;
+            z-index: 1;
+        }
+
+        &::before {
+            border-top: 1px solid #000;
+            border-bottom: 1px solid #000;
+            transform: scaleX(0);
+
+            @include respond(tab-port) {
+                display: none;
+            }
+        }
+
+        &:hover:before {
+            transform: scaleX(1);
+            opacity: 1;
+        }
+
+        &::after {
+            border-left: 1px solid #000;
+            border-right: 1px solid #000;
+            transform: scaleY(0);
+
+            @include respond(tab-port) {
+                display: none;
+            }
+        }
+
+        &:hover:after {
+            transform: scaleY(1);
+            opacity: 1;
+        }
+
+        &-img {
+            width: 100%;
+            height: 100%;
+            position: relative;
+
+            img {
+                width: 100%;
+                height: 100%;
+                position: relative;
+                object-fit: cover;
+                background-size: cover;
+                background-position: center;
+                transition: .5s;
+                filter: grayscale(1);
+                -webkit-filter: grayscale(1);
+
+                @include respond(tab-port) {
+                    filter: grayscale(0) saturate(2);
+                    -webkit-filter: grayscale(0) saturate(2);
+                }
+            }
+        }
+
+        &:hover &-img img {
+            filter: grayscale(0) saturate(2);
+            -webkit-filter: grayscale(0) saturate(2);
+            transition: .5s;
+
+            @include respond(tab-port) {}
+        }
+
+        .content {
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 2;
+            padding: 20px;
+            box-sizing: border-box;
+            color: $second_text-color;
+            text-shadow: 4px 2px 5px rgba(255, 255, 255, 0.73);
+
+            h3,
+            p,
+            button,
+            ul {
+                transition: .5s;
+                padding: 0;
+                text-align: center;
+                opacity: 0;
+                visibility: hidden;
+                font-weight: bold;
+
+                @include respond(tab-port) {
+                    opacity: 1;
+                    visibility: visible;
+                    transform: translateY(0);
+                }
+            }
+
+            h3 {
+                margin-bottom: 20px;
+                transform: translateY(-70px);
+                font-size: 30px;
+
+                @include respond(tab-port) {
+                    transform: none;
+                }
+            }
+
+            p {
+                transform: translateY(-70px);
+                font-size: 23px;
+
+                @include respond(tab-port) {
+                    transform: none;
+                }
+            }
+
+            ul {
+                transform: translateY(70px);
+                margin-top: 20px;
+                list-style: none;
+                line-height: 1.4;
+                font-size: 23px;
+
+                @include respond(tab-port) {
+                    transform: none;
+                }
+            }
+
+            button {
+                transform: translateY(40px);
+
+                @include respond(tab-port) {
+                    transform: none;
+                }
+            }
+        }
+
+        &:hover .content h3,
+        &:hover .content p,
+        &:hover .content button,
+        &:hover .content ul {
+            opacity: 1;
+            visibility: visible;
+            transition-delay: .2s;
+            transform: translateY(0px);
+
+            @include respond(tab-port) {
+                transform: none;
+                transition-delay: none;
+            }
+        }
+    }
+
+    &_1 {
+
+        &-h1 {
+            position: relative;
+            z-index: 9999;
+
+            h1 {
+                font-size: 8vw;
+                opacity: .2;
+
+                @include respond(tab-port) {
+                    font-size: calc(50px + 3.5vw);
+                }
+            }
+
+            @include respond(tab-port) {
+                margin-top: 2rem;
+            }
+        }
+
+        &-h2 {
+            position: relative;
+            z-index: 9999;
+
+            h2 {
+                font-size: 5vw;
+
+                @include respond(tab-port) {
+                    font-size: calc(30px + 3.5vw);
+                }
+            }
+
+            @include animTextAbout;
+
+            @include respond(tab-land) {
+                margin-bottom: 2rem;
+            }
+        }
+
+        &-card_1 {
+            margin-top: -100px;
+
+            @include respond(tab-land) {
+                margin-top: 0;
+            }
+        }
+
+        &-card_2 {
+            margin-top: 50px;
+
+            @include respond(tab-land) {
+                margin-top: 0;
+            }
+        }
+
+        &-card_3 {
+            margin-top: -100px;
+
+
+            @include respond(tab-land) {
+                margin-top: 0;
+                width: 95%;
+            }
+
+            @include respond(tab-port) {
+                width: 90%;
+            }
+        }
+    }
+
+    &_2 {
+
+        &-h1 {
+            position: relative;
+            z-index: 9999;
+
+            h1 {
+                font-size: 8vw;
+                opacity: .2;
+
+                @include respond(tab-port) {
+                    font-size: calc(50px + 3.5vw);
+                }
+            }
+
+            @include respond(tab-port) {
+                margin-top: 2rem;
+            }
+        }
+
+        &-h2 {
+            position: relative;
+            z-index: 9999;
+
+            h2 {
+                font-size: 5vw;
+
+                @include respond(tab-port) {
+                    font-size: calc(30px + 3.5vw);
+                }
+            }
+
+            @include animTextAbout;
+
+            @include respond(tab-land) {
+                margin-bottom: 2rem;
+            }
+        }
+
+        @include respond(tab-land) {
+            margin-top: 0;
+        }
+
+        &-card_4 {
+            margin-top: -100px;
+
+            @include respond(tab-land) {
+                margin-top: 0;
+            }
+        }
+
+        &-card_5 {
+            margin-top: 50px;
+
+            @include respond(tab-land) {
+                margin-top: 0;
+            }
+        }
+
+        &-card_6 {
+            margin-top: -100px;
+
+            @include respond(tab-land) {
+                margin-top: 0;
+                width: 95%;
+            }
+
+            @include respond(tab-port) {
+                width: 90%;
+            }
+        }
+    }
+}
+
