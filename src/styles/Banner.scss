@@ -1,43 +1,25 @@
+@import "_variables.scss";
+@import '_mixins.scss';
+
+
 .banner {
     display: inline-block;
     text-align: left;
-    color: #fff;
+    color: $main_text-color;
     margin-left: 4vw;
     width: 60%;
 
-    h1,
-    h2 {
-        font-size: calc(25px + 3.5vw);
+    &__title,
+    &__subtitle {
+        font-size: calc(20px + 3.5vw);
     }
 
-    h2,
-    p {
+    &__subtitle,
+    &__paragraph {
         line-height: 2;
     }
 
-    p {
+    &__paragraph {
         font-size: calc(10px + 1.8vw);
     }
 }
-
-
-/* @media screen and (min-width: 576px) {
-    .banner {
-        padding: 2rem 3rem;
-    }
-
-    .banner h1 {
-        font-size: 3rem;
-    }
-} */
-
-/*
-@media screen and (min-width: 992px) {
-    .banner {
-        padding: 2rem 6rem;
-    }
-
-    .banner h1 {
-        font-size: 4rem;
-    }
-} */

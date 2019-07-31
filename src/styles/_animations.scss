@@ -1,0 +1,83 @@
+@keyframes animateText {
+	0% {
+		background-position: -400%;
+	}
+
+	100% {
+		background-position: 400%;
+	}
+}
+
+/*------------END----------------*/
+@keyframes animateScrollDown {
+
+	0% {
+		transform-origin: top;
+		transform: scaleY(0);
+	}
+
+	50% {
+		transform-origin: top;
+		transform: scaleY(1);
+	}
+
+	51% {
+		transform-origin: bottom;
+		transform: scaleY(1);
+	}
+
+	100% {
+		transform-origin: bottom;
+		transform: scaleY(0);
+	}
+
+}
+
+
+@keyframes animateScrollUp {
+
+	0% {
+		transform-origin: bottom;
+		transform: scaleY(0);
+	}
+
+	50% {
+		transform-origin: bottom;
+		transform: scaleY(1);
+	}
+
+	51% {
+		transform-origin: top;
+		transform: scaleY(1);
+	}
+
+	100% {
+		transform-origin: top;
+		transform: scaleY(0);
+	}
+
+}
+
+@keyframes animateScrollHorizontally {
+
+	0% {
+		transform-origin: right;
+		transform: scaleX(0);
+	}
+
+	50% {
+		transform-origin: right;
+		transform: scaleX(1);
+	}
+
+	51% {
+		transform-origin: left;
+		transform: scaleX(1);
+	}
+
+	100% {
+		transform-origin: left;
+		transform: scaleX(0);
+	}
+
+}

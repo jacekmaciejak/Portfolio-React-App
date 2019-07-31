@@ -13,16 +13,16 @@
     z-index: 999;
     display: grid;
     align-items: center;
-}
 
-.defaultHero:hover {
-    transition: .5s;
-    filter: grayscale(0);
-    -webkit-filter: grayscale(0);
-}
+    &:hover {
+        transition: .5s;
+        filter: grayscale(0);
+        -webkit-filter: grayscale(0);
+    }
 
-@media only screen and (max-width: 900px) {
-    .defaultHero {
-        background-position: calc(100% + 200px);
+    @media only screen and (max-width: 900px) {
+        .defaultHero {
+            background-position: calc(100% + 200px);
+        }
     }
 }

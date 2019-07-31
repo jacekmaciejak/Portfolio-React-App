@@ -4,8 +4,12 @@ import React from "react";
 export default function Email() {
   return (
     <div className="email">
-      <h1 data-aos="fade-up">Keep in touch</h1>
-      <h2 data-aos="fade-up">Contact</h2>
+      <h1 className="email__title" data-aos="fade-up">
+        Keep in touch
+      </h1>
+      <h2 className="email__subtitle" data-aos="fade-up">
+        Contact
+      </h2>
       <section class="section-book" id="contact" data-aos="fade-up">
         <div class="book__form">
           <form

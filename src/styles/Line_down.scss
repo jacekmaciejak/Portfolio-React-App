@@ -1,58 +1,40 @@
-.line_down {
-    position: absolute;
-    top: 90%;
-    left: 50%;
-    transform: translate(-90%, -50%);
-    width: 2px;
-    height: 150px;
-    background: transparent;
-    color: #fff;
-}
+        @import "_variables.scss";
+        @import '_mixins.scss';
+        @import '_animations.scss';
 
-.line_down:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(transparent, #fff, transparent);
-    animation: animateScrollDown 2s linear infinite;
-}
+        .line_down {
+            position: absolute;
+            top: 90%;
+            left: 50%;
+            transform: translate(-90%, -50%);
+            width: 2px;
+            height: 150px;
+            background: transparent;
+            color: $main_text-color;
+        }
 
-@media only screen and (max-width: 1200px) {
+        .line_down:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(transparent, #fff, transparent);
+            animation: animateScrollDown 2s linear infinite;
+        }
 
-    .line_down {
-        top: 85%;
-        left: 10%;
-        transform: translate(-85%, -10%);
-    }
-}
+        @media only screen and (max-width: 1200px) {
 
-@media only screen and (max-width: 900px) {
-    .line_down {
-        display: none;
-    }
-}
+            .line_down {
+                top: 85%;
+                left: 10%;
+                transform: translate(-85%, -10%);
+            }
+        }
 
-@keyframes animateScrollDown {
-    0% {
-        transform-origin: top;
-        transform: scaleY(0);
-    }
-
-    50% {
-        transform-origin: top;
-        transform: scaleY(1);
-    }
-
-    51% {
-        transform-origin: bottom;
-        transform: scaleY(1);
-    }
-
-    100% {
-        transform-origin: bottom;
-        transform: scaleY(0);
-    }
-}
+        @media only screen and (max-width: 900px) {
+            .line_down {
+                display: none;
+            }
+        }
