@@ -7,10 +7,7 @@ import "../styles/Error.scss";
 export default function Error() {
   return (
     <Hero>
-      {/* <h1>Error 404</h1>
-      <h1>page not found</h1> */}
-
-      <Banner title="Error 404" subtitle="page not found" />
+      <Banner className="error" title="Error 404" subtitle="page not found" />
       <Link to="/" className="btn-primary">
         return home
       </Link>

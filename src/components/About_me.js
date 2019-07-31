@@ -11,7 +11,7 @@ export default function About_me() {
         About me
       </h2>
       <p className="about-me__paragraph" data-aos="fade-up">
-        Hey, it's nice to see you on my website. I am a beginner front-end
+        Hi, it's nice to see/meet you on my website. I am a beginner front-end
         developer, currently looking for a job as a junior front-end developer.
         I use HTML5, CSS3 - SASS Bootstrap4, Git, Node.js and BEM methodology.
         In projects I apply the principles of Responsive Web Design. I use Grid

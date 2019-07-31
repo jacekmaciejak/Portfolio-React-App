@@ -1,12 +1,16 @@
 .defaultHero {
     min-height: 100vh;
-    background: url("../images/img1.jpg");
     position: relative;
     object-fit: cover;
-    background-position: top;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+    background: url("../images/img1.jpg");
+
+    background: {
+        position: top;
+        repeat: no-repeat;
+        attachment: fixed;
+        size: cover
+    }
+
     transition: .5s;
     filter: grayscale(1);
     -webkit-filter: grayscale(1);
