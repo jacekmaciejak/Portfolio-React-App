@@ -1,7 +1,8 @@
 import React from "react";
-import "../styles/About_me.scss";
+import "../styles/AboutMe.scss";
+import LineDown from "./LineDown";
 
-export default function About_me() {
+export default function AboutMe() {
   return (
     <div className="about-me">
       <h1 className="about-me__title" data-aos="fade-up">
@@ -19,6 +20,7 @@ export default function About_me() {
         JavaScript and React library. Every day I improve my skills in coding
         websites and programming in JavaScript especially ES6.
       </p>
+      <LineDown className="about-me__line-down" />
     </div>
   );
 }

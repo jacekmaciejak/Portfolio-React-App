@@ -5,7 +5,7 @@ import Error from "./pages/Error";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Email from "./components/Email";
-import About_me from "./components/About_me";
+import AboutMe from "./components/AboutMe";
 import About from "./components/About";
 import Skills from "./components/Skills";
 
@@ -16,7 +16,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/home" component={Home} />
-        <Route path="/about_me" component={About_me} />
+        <Route path="/about_me" component={AboutMe} />
         <Route path="/about" component={About} />
         <Route path="/skills" component={Skills} />
         <Route path="/contact" component={Email} />

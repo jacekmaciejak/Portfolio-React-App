@@ -3,12 +3,11 @@
     top: 0;
     left: 0;
     width: 100%;
-    padding: 2rem;
+    padding-top: 1rem;
     background: #000;
     z-index: 999999;
     height: auto;
 }
-
 
 .nav-header {
     display: flex;
@@ -62,15 +61,15 @@
     }
 
     .nav-center {
-        max-width: 1170px;
+        width: 100%;
         margin: 0 auto;
         display: flex;
+        justify-content: center;
     }
 
     .nav-links {
         height: auto;
         display: flex;
-        margin-left: 4rem;
     }
 
     .nav-links a {

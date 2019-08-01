@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Hero from "../components/Hero";
 import Banner from "../components/Banner";
-import About_me from "../components/About_me";
+import AboutMe from "../components/AboutMe";
 import Skills from "../components/Skills";
-import Line_down from "../components/Line_down";
+import LineDown from "../components/LineDown";
 import Email from "../components/Email";
 import About from "../components/About";
 
@@ -18,9 +18,9 @@ export default function Home() {
           subtitle="Jacek Maciejak"
           paragraph="Hi, I'm front-end developer living in Warsaw. I encourage you to review my projects."
         />
-        <Line_down />
+        <LineDown />
       </Hero>
-      <About_me />
+      <AboutMe />
       <Skills />
       <About />
       <Email />
