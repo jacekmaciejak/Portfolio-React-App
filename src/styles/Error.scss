@@ -4,4 +4,9 @@
 
         .error {
             @include gridCenter;
+
+            h1 {
+                color: #fff;
+
+            }
         }

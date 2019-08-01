@@ -301,7 +301,7 @@
             z-index: 9999;
 
             h1 {
-                font-size: $h1_size;
+                font-size: $main_font_size;
                 opacity: .2;
 
                 @include respond(tab-port) {
