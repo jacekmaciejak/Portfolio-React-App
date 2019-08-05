@@ -6,76 +6,41 @@ import card_3 from "../images/card_3.jpg";
 import card_4 from "../images/card_4.jpg";
 import card_5 from "../images/card_5.jpg";
 import card_6 from "../images/card_6.jpg";
+import ButtonCard from "../components/ButtonCard";
+import Card from "../components/Card";
 
 export default function About() {
   return (
     <div class="about">
-      <div class="about_1">
-        <div class="about_1-h1" data-aos="fade-up">
+      <div class="about__1">
+        <div class="about__1-h1" data-aos="fade-up">
           <h1>Moje prace</h1>
         </div>
-        <div class="about_1-h2" data-aos="fade-up">
+        <div class="about__1-h2" data-aos="fade-up">
           <h2>Projekty</h2>
         </div>
-        <div
-          class="about_1-card about_1-card_1"
+        <Card
+          className="about__1-card about__1-card_1"
           data-aos="fade-up"
           data-aos-offset="200"
-        >
-          <div class="about_1-card-img">
-            <img src={card_1} alt="image" />
-          </div>
-          <div class="content">
-            <h3>Tourism</h3>
-            <p>The site has been built using the following technologies:</p>
-            <ul>
-              <li>HTML5</li>
-              <li>SCSS</li>
-              <li>Grid Layout</li>
-              <li>Responsive web design</li>
-            </ul>
-            <button
-              class="card_button"
-              type="button"
-              onclick="window.open('https://jacekmaciejak.github.io/Tourism','_blank')"
-            >
-              View project
-            </button>
-          </div>
-        </div>
-        <div
-          class="about_1-card about_1-card_2"
+          title="Tourism"
+          paragraph="Strona została zbudowana przy użyciu następujących technologi:"
+          img={card_1}
+        />
+        <Card
+          class="about__1-card about__1-card_2"
           data-aos="fade-up"
           data-aos-offset="300"
-        >
-          <div class="about_1-card-img">
-            <img src={card_2} alt="image" />
-          </div>
-          <div class="content">
-            <h3>Restaurant</h3>
-            <p>The site has been built using the following technologies:</p>
-            <ul>
-              <li>HTML5</li>
-              <li>CSS3</li>
-              <li>Grid Layout</li>
-              <li>Responsive web design</li>
-              <li>JavaScript</li>
-            </ul>
-            <button
-              class="card_button"
-              type="button"
-              onclick="window.open('https://jacekmaciejak.github.io/Restaurant/','_blank')"
-            >
-              View project
-            </button>
-          </div>
-        </div>
+          title="Restaurant"
+          paragraph="Strona została zbudowana przy użyciu następujących technologi:"
+          img={card_2}
+        />
         <div
-          class="about_1-card about_1-card_3"
+          class="about__1-card about__1-card_3"
           data-aos="fade-up"
           data-aos-offset="200"
         >
-          <div class="about_1-card-img">
+          <div class="about__1-card-img">
             <img src={card_3} alt="image" />
           </div>
           <div class="content">
@@ -100,19 +65,19 @@ export default function About() {
           </div>
         </div>
       </div>
-      <div class="about_2">
-        <div class="about_2-h1" data-aos="fade-up">
+      <div class="about__2">
+        <div class="about__2-h1" data-aos="fade-up">
           <h1>Moje prace</h1>
         </div>
-        <div class="about_2-h2" data-aos="fade-up">
+        <div class="about__2-h2" data-aos="fade-up">
           <h2>Projekty</h2>
         </div>
         <div
-          class="about_2-card about_2-card_4"
+          class="about__2-card about__2-card_4"
           data-aos="fade-up"
           data-aos-offset="150"
         >
-          <div class="about_2-card-img">
+          <div class="about__2-card-img">
             <img src={card_4} alt="image" />
           </div>
           <div class="content">
@@ -137,11 +102,11 @@ export default function About() {
           </div>
         </div>
         <div
-          class="about_2-card about_2-card_5"
+          class="about__2-card about__2-card_5"
           data-aos="fade-up"
           data-aos-offset="300"
         >
-          <div class="about_2-card-img">
+          <div class="about__2-card-img">
             <img src={card_5} alt="image" />
           </div>
           <div class="content">
@@ -162,11 +127,11 @@ export default function About() {
           </div>
         </div>
         <div
-          class="about_2-card about_2-card_6"
+          class="about__2-card about__2-card_6"
           data-aos="fade-up"
           data-aos-offset="150"
         >
-          <div class="about_2-card-img">
+          <div class="about__2-card-img">
             <img src={card_6} alt="image" />
           </div>
           <div class="content">

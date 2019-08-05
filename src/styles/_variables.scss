@@ -1,9 +1,10 @@
 $main_background-color: #fff;
 $second_background-color: #f2f2f2;
+$third_background-color:#000;
 $main_text-color: #000;
 $second_text-color:#fff;
 $main_font_size: calc(15px + 3vw);
 $second_font_size: calc(15px + 2.5vw);
 $h1_size: 7vw;
 
-$main_text-shadow:0 15px 25px rgba(0, 0, 0, .9);
+$main_text-shadow: inset 0px 0px 22px 7px rgba(0, 0, 0, 0.55);
