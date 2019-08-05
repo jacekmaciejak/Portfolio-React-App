@@ -5,10 +5,10 @@ export default function Email() {
   return (
     <div className="email">
       <h1 className="email__title" data-aos="fade-up">
-        Keep in touch
+        Bądźmy w kontakcie
       </h1>
       <h2 className="email__subtitle" data-aos="fade-up">
-        Contact
+        Kontakt
       </h2>
       <section class="section-book" id="contact" data-aos="fade-up">
         <div class="book__form">
@@ -22,26 +22,26 @@ export default function Email() {
               <input
                 type="text"
                 class="form__input"
-                placeholder="Name and surname"
+                placeholder="Imię i nazwisko"
                 id="name"
                 name="name"
                 required
               />
               <label for="name" class="form__label">
-                Name and surname
+                Imię i nazwisko
               </label>
             </div>
             <div class="form__group">
               <input
                 type="email"
                 class="form__input"
-                placeholder="Email address"
+                placeholder="Adres email"
                 id="email"
                 name="email"
                 required
               />
               <label for="email" class="form__label">
-                Email address
+                Adres email
               </label>
             </div>
             <div class="form__group">
@@ -51,13 +51,13 @@ export default function Email() {
                 cols="40"
                 rows="4"
                 class="form__input"
-                placeholder="Message"
+                placeholder="Wiadomość"
                 required
               />
             </div>
             <div class="form__group">
               <button class="email_button" name="submit" type="submit">
-                Send email &rarr;
+                Wyślij &rarr;
               </button>
             </div>
           </form>

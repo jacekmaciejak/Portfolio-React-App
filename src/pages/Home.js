@@ -16,7 +16,7 @@ export default function Home() {
           className="banner"
           title="Front-end Developer"
           subtitle="Jacek Maciejak"
-          paragraph="Hi, I'm front-end developer living in Warsaw. I encourage you to review my projects."
+          paragraph="Witam na mojej stronie. Zapraszam Cię do przejrzenia moich projektów."
         />
         <LineDown />
       </Hero>

@@ -15,20 +15,10 @@
 
 @mixin animTextHeader {
 	letter-spacing: 3px;
-	background: linear-gradient(90deg, #000, #fff, #000);
+	background: linear-gradient(90deg, #fff, #000, #fff);
 	background-repeat: no-repeat;
 	background-size: 80%;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: rgba(255, 255, 255, 0);
-	animation: animateText 8s linear 3.5s infinite;
-	-webkit-animation-play-state: running;
-}
-
-@mixin animTextAbout {
-	letter-spacing: 3px;
-	background: linear-gradient(90deg, #000, #fff, #000);
-	background-repeat: no-repeat;
-	background-size: 80%;
+	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: rgba(255, 255, 255, 0);
 	animation: animateText 3s linear infinite;

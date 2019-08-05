@@ -10,21 +10,14 @@
             grid-template-rows: 1fr 1fr 6fr;
 
             &__title {
-                font-size: 8vw;
+                font-size: $h1_size;
                 color: $main_text-color;
-                opacity: .2 !important;
+                opacity: .1 !important;
             }
 
             &__subtitle {
                 font-size: 5vw;
-                letter-spacing: 3px;
-                background: linear-gradient(90deg, #000, #fff, #000);
-                background-repeat: no-repeat;
-                background-size: 80%;
-                background-clip: text;
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: rgba(255, 255, 255, 0);
-                animation: animateText 3s linear infinite;
+                @include animTextHeader;
             }
 
             .section-book {

@@ -6,10 +6,10 @@ export default function Skills() {
   return (
     <div className="skills">
       <h1 className="skills__title" data-aos="fade-up">
-        What am I good at?
+        W czym jestem dobry?
       </h1>
       <h2 className="skills__subtitle" data-aos="fade-up">
-        Technology
+        Technologie
       </h2>
       <Panel />
     </div>

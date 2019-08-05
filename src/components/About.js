@@ -7,16 +7,15 @@ import card_4 from "../images/card_4.jpg";
 import card_5 from "../images/card_5.jpg";
 import card_6 from "../images/card_6.jpg";
 
-
 export default function About() {
   return (
     <div class="about">
       <div class="about_1">
         <div class="about_1-h1" data-aos="fade-up">
-          <h1>My passion</h1>
+          <h1>Moje prace</h1>
         </div>
         <div class="about_1-h2" data-aos="fade-up">
-          <h2>Works</h2>
+          <h2>Projekty</h2>
         </div>
         <div
           class="about_1-card about_1-card_1"
@@ -103,10 +102,10 @@ export default function About() {
       </div>
       <div class="about_2">
         <div class="about_2-h1" data-aos="fade-up">
-          <h1>My passion</h1>
+          <h1>Moje prace</h1>
         </div>
         <div class="about_2-h2" data-aos="fade-up">
-          <h2>Works</h2>
+          <h2>Projekty</h2>
         </div>
         <div
           class="about_2-card about_2-card_4"

@@ -29,20 +29,20 @@ export default class Navbar extends Component {
             className={this.state.isOpen ? "nav-links show-nav" : "nav-links"}
           >
             <li>
-              <NavLink to="/about_me">About me</NavLink>
+              <NavLink to="/about_me">O mnie</NavLink>
             </li>
             <li>
-              <NavLink to="/skills">Technology</NavLink>
+              <NavLink to="/skills">Technologie</NavLink>
             </li>
             <li>
-              <NavLink to="/about">Works</NavLink>
+              <NavLink to="/about">Projekty</NavLink>
             </li>
             <li>
-              <NavLink to="/contact">Contact</NavLink>
+              <NavLink to="/contact">Kontakt</NavLink>
             </li>
             <li>
               <NavLink to="/" exact>
-                Home
+                Strona główna
               </NavLink>
             </li>
           </ul>

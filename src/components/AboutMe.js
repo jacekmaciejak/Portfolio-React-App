@@ -6,10 +6,10 @@ export default function AboutMe() {
   return (
     <div className="about-me">
       <h1 className="about-me__title" data-aos="fade-up">
-        Who am I?
+        Kim jestem?
       </h1>
       <h2 className="about-me__subtitle" data-aos="fade-up">
-        About me
+        O mnie
       </h2>
       <p className="about-me__paragraph" data-aos="fade-up">
         Hi, it's nice to see/meet you on my website. I am a beginner front-end

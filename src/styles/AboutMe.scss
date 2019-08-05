@@ -1,6 +1,7 @@
         @import "_variables.scss";
         @import '_mixins.scss';
         @import '_animations.scss';
+        @import '_mixins.scss';
 
         .about-me {
             color: $main_text-color;
@@ -16,21 +17,14 @@
 
 
             &__title {
-                font-size: 8vw;
-                opacity: .2 !important;
+                font-size: $h1_size;
+                opacity: .1 !important;
                 margin-top: 80px;
             }
 
             &__subtitle {
                 font-size: 5vw;
-                letter-spacing: 3px;
-                background: linear-gradient(90deg, #000, #fff, #000);
-                background-repeat: no-repeat;
-                background-size: 80%;
-                background-clip: text;
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: rgba(255, 255, 255, 0);
-                animation: animateText 3s linear infinite;
+                @include animTextHeader;
             }
 
             &__paragraph {
