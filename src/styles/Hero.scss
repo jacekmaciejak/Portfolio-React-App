@@ -1,32 +1,38 @@
-.defaultHero {
-    min-height: 100vh;
-    position: relative;
-    object-fit: cover;
-    // background: url("../images/img1.jpg");
+        @import "_variables.scss";
+        @import '_mixins.scss';
+        @import '_animations.scss';
 
-    background: {
-        position: top;
-        repeat: no-repeat;
-        attachment: fixed;
-        size: cover
-    }
-
-    transition: .5s;
-    filter: grayscale(1);
-    -webkit-filter: grayscale(1);
-    z-index: 999;
-    display: grid;
-    align-items: center;
-
-    &:hover {
-        transition: .5s;
-        filter: grayscale(0);
-        -webkit-filter: grayscale(0);
-    }
-
-    @media only screen and (max-width: 900px) {
         .defaultHero {
-            background-position: calc(100% + 200px);
+            min-height: 100vh;
+            position: relative;
+            object-fit: cover;
+            // background: url("../images/img1.jpg");
+
+            background: {
+                position: top;
+                repeat: no-repeat;
+                attachment: fixed;
+                size: cover;
+                color: $second_background-color;
+
+            }
+
+            transition: .5s;
+            filter: grayscale(1);
+            -webkit-filter: grayscale(1);
+            z-index: 999;
+            display: grid;
+            align-items: center;
+
+            &:hover {
+                transition: .5s;
+                filter: grayscale(0);
+                -webkit-filter: grayscale(0);
+            }
+
+            @media only screen and (max-width: 900px) {
+                .defaultHero {
+                    background-position: calc(100% + 200px);
+                }
+            }
         }
-    }
-}

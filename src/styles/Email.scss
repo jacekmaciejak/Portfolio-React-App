@@ -13,6 +13,9 @@
                 font-size: $h1_size;
                 color: $main_text-color;
                 opacity: .1 !important;
+                box-shadow: $main_text-shadow;
+                padding: 10px;
+
             }
 
             &__subtitle {

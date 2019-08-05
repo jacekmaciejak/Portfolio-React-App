@@ -10,11 +10,16 @@
             grid-template-columns: 1fr;
             grid-template-rows: 1fr 1fr 6fr;
             color: $main_text-color;
+            background-color: $second_background-color;
+
 
             &__title {
                 font-size: $h1_size;
                 opacity: .1 !important;
                 margin-top: 80px;
+                box-shadow: $main_text-shadow;
+                padding: 10px;
+
             }
 
             &__subtitle {

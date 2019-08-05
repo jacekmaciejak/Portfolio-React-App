@@ -127,6 +127,8 @@
         height: 100%;
         transition: .5s;
         position: relative;
+        box-shadow: 0 15px 25px rgba(0, 0, 0, .5);
+
 
         @include respond(tab-land) {
             height: 500px;
@@ -303,6 +305,10 @@
             h1 {
                 font-size: $h1_size;
                 opacity: .1;
+                box-shadow: $main_text-shadow;
+                padding: 10px;
+
+
 
                 @include respond(tab-port) {
                     font-size: calc(50px + 3.5vw);
@@ -317,6 +323,7 @@
         &-h2 {
             position: relative;
             z-index: 9999;
+
 
             h2 {
                 font-size: 5vw;
@@ -365,14 +372,21 @@
     }
 
     &_2 {
+        background-color: $second_background-color;
+
 
         &-h1 {
             position: relative;
             z-index: 9999;
 
+
             h1 {
                 font-size: $h1_size;
                 opacity: .1;
+                box-shadow: $main_text-shadow;
+                padding: 10px;
+
+
 
                 @include respond(tab-port) {
                     font-size: calc(50px + 3.5vw);
