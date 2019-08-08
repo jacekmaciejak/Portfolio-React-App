@@ -2,24 +2,35 @@ import React from "react";
 import ButtonCard from "../components/ButtonCard";
 import "../styles/Card.scss";
 
-export default function Card({ img, children, title, subtitle, paragraph }) {
+export default function Card({
+  img,
+  children,
+  title,
+  subtitle,
+  paragraph,
+  item_1,
+  item_2,
+  item_3,
+  item_4,
+  item_5
+}) {
   return (
     <div
-      class="about__1-card about__1-card_1 about__1-card_2"
+      className="about__1-card about__1-card_1"
       data-aos="fade-up"
       data-aos-offset="200"
     >
-      <div class="about__1-card-img">
+      <div className="about__1-card-img">
         <img src={img} alt="Zdjęcie projektu" />
       </div>
-      <div class="content">
+      <div className="content">
         <h3>{title}</h3>
         <p>{paragraph}</p>
         <ul>
-          <li>HTML5</li>
-          <li>SCSS</li>
-          <li>Grid Layout</li>
-          <li>Responsive web design</li>
+          <li>{item_1}</li>
+          <li>{item_2}</li>
+          <li>{item_3}</li>
+          <li>{item_4}</li>
         </ul>
         <ButtonCard
           type="button"

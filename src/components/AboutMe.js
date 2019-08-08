@@ -1,26 +1,70 @@
 import React from "react";
-import "../styles/AboutMe.scss";
 import LineDown from "./LineDown";
+import styled, { createGlobalStyle } from "styled-components";
+import { mixins } from ".//mixins";
+import styles from "../styles/AboutMe.scss";
+
+const GlobalStyle = createGlobalStyle`
+
+`;
+
+const Container = styled.div`
+  color: #000;
+  display: grid;
+  justify-items: center;
+  -webkit-box- align: center;
+  -ms-flex- align: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  height: 100vh;
+  width: 100%;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 6fr;
+  letter-spacing: 3px;
+  position: relative;
+`;
+const Title_1 = styled.h1`
+  font-size: 7vw;
+  opacity: 0.1 !important;
+  margin-top: 80px;
+  box-shadow: $main_text-shadow;
+  padding: 10px;
+`;
+const Title_2 = styled.h2`
+  font-size: 5vw;
+  @include animTextHeader;
+`;
+
+const Text = styled.p`
+  line-height: 2;
+  text-align: justify;
+  font-size: calc(13px + 1vw);
+  letter-spacing: 1px;
+  width: 70%;
+`;
+const StyleLine = styled(LineDown)`
+  top: 50%;
+  left: 92%;
+  transform: translate(-92%, -50%);
+  height: 50%;
+`;
 
 export default function AboutMe() {
   return (
-    <div className="about-me">
-      <h1 className="about-me__title" data-aos="fade-up">
-        Kim jestem?
-      </h1>
-      <h2 className="about-me__subtitle" data-aos="fade-up">
-        O mnie
-      </h2>
-      <p className="about-me__paragraph" data-aos="fade-up">
-        Hi, it's nice to see/meet you on my website. I am a beginner front-end
-        developer, currently looking for a job as a junior front-end developer.
-        I use HTML5, CSS3 - SASS Bootstrap4, Git, Node.js and BEM methodology.
-        In projects I apply the principles of Responsive Web Design. I use Grid
-        and Flexbox in everyday coding of projects. I know the basics of
-        JavaScript and React library. Every day I improve my skills in coding
-        websites and programming in JavaScript especially ES6.
-      </p>
-      <LineDown className="about-me__line-down" />
-    </div>
+    <Container>
+      <Title_1 data-aos="fade-up">Kim jestem?</Title_1>
+      <Title_2 data-aos="fade-up">O mnie</Title_2>
+      <Text data-aos="fade-up">
+        Witaj, na stronie z moimi projektami. Jestem front-end developerem
+        kodującym w HTML5, CSS3 - SCSS. Korzystam również z Bootstrap4 oraz Git,
+        znam podstawy Node.js. W projektach stosuję zasady Responsive Web
+        Design, wykorzystuję Grid i Flexbox, jak również metodologię BEM. Znam
+        podstawy JavaScript i bibliotekę React. Każdego dnia doskonalę swoje
+        umiejętności kodowania strony internetowe i programowanie w JavaScript,
+        szczególnie ES6.
+      </Text>
+      <StyleLine />
+    </Container>
   );
 }

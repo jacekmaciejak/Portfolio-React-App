@@ -5,7 +5,7 @@ export default function Email() {
   return (
     <div className="email">
       <h1 className="email__title" data-aos="fade-up">
-        Bądźmy w kontakcie
+        Zachęcam do kontaktu
       </h1>
       <h2 className="email__subtitle" data-aos="fade-up">
         Kontakt
