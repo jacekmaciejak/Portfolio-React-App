@@ -1,19 +1,12 @@
 import React from "react";
-import LineDown from "./LineDown";
-import styled, { createGlobalStyle } from "styled-components";
-import { mixins } from ".//mixins";
-import styles from "../styles/AboutMe.scss";
-
-const GlobalStyle = createGlobalStyle`
-
-`;
+import styled from "styled-components";
 
 const Container = styled.div`
   color: #000;
   display: grid;
   justify-items: center;
-  -webkit-box- align: center;
-  -ms-flex- align: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   text-align: center;
   height: 100vh;
@@ -27,13 +20,30 @@ const Container = styled.div`
 const Title_1 = styled.h1`
   font-size: 7vw;
   opacity: 0.1 !important;
-  margin-top: 80px;
+  margin-top: 70px;
   box-shadow: $main_text-shadow;
   padding: 10px;
+
+  @media (max-width: 900px) {
+    margin-top: 100px;
+    font-size: calc(15px + 7vw);
+  }
 `;
 const Title_2 = styled.h2`
   font-size: 5vw;
-  @include animTextHeader;
+  letter-spacing: 3px;
+  background: linear-gradient(90deg, #fff, #000, #fff);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  animation: animateText 3s linear infinite;
+  margin-top: -40px;
+
+  @media (max-width: 900px) {
+    font-size: calc(15px + 5vw);
+  }
 `;
 
 const Text = styled.p`
@@ -42,12 +52,41 @@ const Text = styled.p`
   font-size: calc(13px + 1vw);
   letter-spacing: 1px;
   width: 70%;
+
+  ::first-letter {
+    font-size: calc(30px + 1vw);
+    line-height: 0;
+  }
 `;
-const StyleLine = styled(LineDown)`
+const LineDown = styled.div`
   top: 50%;
   left: 92%;
   transform: translate(-92%, -50%);
   height: 50%;
+  position: absolute;
+  width: 2px;
+  background: transparent;
+  color: #000;
+
+  ::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(transparent, #000, transparent);
+    animation: animateScrollDown 2s linear infinite;
+  }
+
+  @media (max-width: 1200px) {
+    top: 85 %;
+    left: 10 %;
+    transform: translate(-85 %, -10 %);
+  }
+  @media (max-width: 900px) {
+    display: none;
+  }
 `;
 
 export default function AboutMe() {
@@ -64,7 +103,7 @@ export default function AboutMe() {
         umiejętności kodowania strony internetowe i programowanie w JavaScript,
         szczególnie ES6.
       </Text>
-      <StyleLine />
+      <LineDown />
     </Container>
   );
 }
