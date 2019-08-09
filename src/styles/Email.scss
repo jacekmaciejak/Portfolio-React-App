@@ -3,40 +3,40 @@
         @import '_animations.scss';
 
         .email {
-            @include gridCenter;
-            height: 100vh;
-            width: 100%;
-            grid-template-columns: 1fr;
-            grid-template-rows: 1fr 1fr 6fr;
+            // @include gridCenter;
+            // height: 100vh;
+            // width: 100%;
+            // grid-template-columns: 1fr;
+            // grid-template-rows: 1fr 1fr 6fr;
 
-            &__title {
-                font-size: $h1_size;
-                color: $main_text-color;
-                opacity: .1 !important;
-                box-shadow: $main_text-shadow;
-                padding: 10px;
+            // &__title {
+            //     font-size: $h1_size;
+            //     color: $main_text-color;
+            //     opacity: .1 !important;
+            //     box-shadow: $main_text-shadow;
+            //     padding: 10px;
 
-            }
+            // }
 
-            &__subtitle {
-                font-size: 5vw;
-                @include animTextHeader;
-            }
+            // &__subtitle {
+            //     font-size: 5vw;
+            //     @include animTextHeader;
+            // }
 
             .section-book {
-                position: relative;
-                z-index: 9999;
+                // position: relative;
+                // z-index: 9999;
 
                 .book__form {
-                    width: 55vw;
-                    height: 100%;
-                    padding: 3rem;
-                    border-radius: 3px;
-                    -webkit-box-shadow: 0 15px 25px rgba(0, 0, 0, .5);
-                    box-shadow: 0 15px 25px rgba(0, 0, 0, .5);
-                    background-image: linear-gradient(105deg, rgba(255, 255, 255, .5) 0%, rgba(255, 255, 255, .5) 60%, transparent 50%), url('../images/img2.jpg');
-                    background-position: center;
-                    background-size: cover;
+                    // width: 55vw;
+                    // height: 100%;
+                    // padding: 3rem;
+                    // border-radius: 3px;
+                    // -webkit-box-shadow: 0 15px 25px rgba(0, 0, 0, .5);
+                    // box-shadow: 0 15px 25px rgba(0, 0, 0, .5);
+                    // background-image: linear-gradient(105deg, rgba(255, 255, 255, .5) 0%, rgba(255, 255, 255, .5) 60%, transparent 50%), url('../images/img2.jpg');
+                    // background-position: center;
+                    // background-size: cover;
 
                     @include respond(tab-land) {
                         width: 95%;
@@ -160,6 +160,7 @@
                         background: linear-gradient(90deg, #000, #000, #000);
                         background-size: 100%;
                         -webkit-background-clip: text;
+                        background-clip: text;
                         -webkit-text-fill-color: rgba(000, 000, 000, 1);
                     }
                 }
