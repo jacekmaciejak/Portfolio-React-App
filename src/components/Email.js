@@ -1,6 +1,8 @@
 import "../styles/Email.scss";
 import React from "react";
 import styled from "styled-components";
+import img from "../images/img2.jpg";
+import ButtonEmail from "./ButtonEmail";
 
 const StyledWrapper = styled.div`
   display: grid;
@@ -48,7 +50,8 @@ const Book__form = styled.div`
         rgba(255, 255, 255, 0.5) 60 %,
         transparent 50 %
       ),
-    url("../images/img2.jpg");
+    url(${props => props.img});
+  background-image: url(${props => props.img});
   background-position: center;
   background-size: cover;
 
@@ -61,7 +64,7 @@ const Book__form = styled.div`
         rgba(255, 255, 255, 0.8) 65%,
         transparent 50%
       ),
-      url("../images/img2.jpg");
+      url(${props => props.img});
   }
   @media (max-width: 600px) {
     background-image: linear-gradient(
@@ -70,14 +73,63 @@ const Book__form = styled.div`
         rgba(255, 255, 255, 0.5) 75%,
         transparent 50%
       ),
-      url("../images/img2.jpg");
+      url(${props => props.img});
   }
 `;
+
 const Form = styled.form`
   width: 60%;
   @media (max-width: 1200px) {
     width: 70%;
   }
+`;
+const Form_input = styled.input`
+  font-size: calc(8px + 1vw);
+  font-family: inherit;
+  color: inherit;
+  padding: 1rem;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  border-bottom: 3px solid transparent;
+  width: 70%;
+  display: block;
+  margin: auto;
+
+  @media (max-width: 600px) {
+    width: 100%;
+  }
+
+  :focus {
+    outline: none;
+    -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
+    border-bottom: 6px solid #4dec3e;
+
+    :invalid {
+      border-bottom: 6px solid #ff7730;
+    }
+  }
+
+  :-webkit-input-placeholder {
+    color: #000;
+  }
+  :placeholder-shown + .form__label {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: translateY(-4rem);
+    transform: translateY(-4rem);
+  }
+`;
+const Form_label = styled.label`
+  font-size: calc(8px + 1vw);
+  font-weight: 600;
+  margin-left: 4rem;
+  margin-top: 0.7rem;
+  display: block;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  opacity: 0.5;
 `;
 
 export default function Email() {
@@ -86,49 +138,43 @@ export default function Email() {
       <Title_1 data-aos="fade-up">Zachęcam do kontaktu</Title_1>
       <Title_2 data-aos="fade-up">Kontakt</Title_2>
       <Book id="contact" data-aos="fade-up">
-        <Book__form>
+        <Book__form img={img}>
           <Form autocomplete="off" method="post" action="kontakt.php">
             <div class="form__group">
-              <input
+              <Form_input
                 type="text"
-                class="form__input"
                 placeholder="Imię i nazwisko"
                 id="name"
                 name="name"
                 required
               />
-              <label for="name" class="form__label">
-                Imię i nazwisko
-              </label>
+              <Form_label for="name">Imię i nazwisko</Form_label>
             </div>
             <div class="form__group">
-              <input
+              <Form_input
                 type="email"
-                class="form__input"
                 placeholder="Adres email"
                 id="email"
                 name="email"
                 required
               />
-              <label for="email" class="form__label">
-                Adres email
-              </label>
+              <Form_label for="email">Adres email</Form_label>
             </div>
             <div class="form__group">
-              <textarea
+              <Form_input
                 name="message"
                 id="message"
                 cols="40"
-                rows="4"
-                class="form__input"
+                rows="1"
                 placeholder="Wiadomość"
                 required
               />
             </div>
             <div class="form__group">
-              <button class="email_button" name="submit" type="submit">
+              {/* <button class="email_button" name="submit" type="submit">
                 Wyślij &rarr;
-              </button>
+              </button> */}
+              <ButtonEmail />
             </div>
           </Form>
         </Book__form>
