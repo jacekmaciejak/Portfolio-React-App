@@ -3,10 +3,10 @@ import styled from "styled-components";
 
 const Button = styled.button`
   display: block;
-  margin: 2rem auto 0;
+  margin: 3rem auto 0;
   cursor: pointer;
   padding: 15px;
-  border: 1px solid #000;
+  border: 1px solid transparent;
   overflow: hidden;
   background: transparent;
   position: relative;
@@ -15,6 +15,10 @@ const Button = styled.button`
   text-decoration: none;
   font-weight: bold;
   font-size: 24px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: 0.9s;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
 
   :before {
     content: "";
