@@ -6,15 +6,19 @@
             min-height: 100vh;
             position: relative;
             object-fit: cover;
-            // background: url("../images/img1.jpg");
+            background: url("../images/img4.png");
+            background-image: linear - gradient(105deg,
+                    rgba(255, 255, 255, .9) 0%,
+                    rgba(255, 255, 255, 0.5) 60%,
+                    transparent 50%),
+                url("../images/img4.png");
 
             background: {
                 position: top;
                 repeat: no-repeat;
                 attachment: fixed;
                 size: cover;
-                color: $second_background-color;
-
+                color: #fff;
             }
 
             transition: .5s;

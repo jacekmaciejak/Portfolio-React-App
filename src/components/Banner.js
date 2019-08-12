@@ -10,14 +10,23 @@ const StyledWrapper = styled.div`
 `;
 const Title_1 = styled.h1`
   font-size: calc(15px + 3.5vw);
+  :first-letter {
+    font-size: calc(35px + 3.5vw);
+  }
 `;
 const Title_2 = styled.h2`
   font-size: calc(15px + 3.5vw);
   line-height: 2;
+  :first-letter {
+    font-size: calc(35px + 3.5vw);
+  }
 `;
 const Paragraph = styled.p`
   line-height: 2;
   font-size: calc(10px + 1.8vw);
+  :first-letter {
+    font-size: calc(25px + 1.8vw);
+  }
 `;
 
 export default function Banner({ children, title, subtitle, paragraph }) {
