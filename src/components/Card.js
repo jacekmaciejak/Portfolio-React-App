@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import ButtonCard from "../components/ButtonCard";
 import "../styles/Card.scss";
 import { card } from "./Data/Data";
@@ -31,4 +32,17 @@ export default function Card({
       </div>
     </div>
   );
+  Card.propTypes = {
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
+    item_1: PropTypes.string.isRequired,
+    item_2: PropTypes.string.isRequired,
+    item_3: PropTypes.string.isRequired,
+    item_4: PropTypes.string,
+    link: PropTypes.string.isRequired
+  };
+  Card.defaultProps = {
+    item_4: " "
+  };
 }
