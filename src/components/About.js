@@ -19,15 +19,18 @@ export default function About() {
         </div>
         {card.map(item => (
           <Card
+            key={item.title}
+            {...item}
             data-aos="fade-up"
             data-aos-offset="200"
-            title={item.title}
-            description={item.description}
-            image={item.image}
-            item_1={item.item_1}
-            item_2={item.item_2}
-            item_3={item.item_3}
-            item_4={item.item_4}
+
+            // title={title}
+            // description={description}
+            // image={image}
+            // item_1={item_1}
+            // item_2={item_2}
+            // item_3={item_3}
+            // item_4={item_4}
           />
         ))}
 
