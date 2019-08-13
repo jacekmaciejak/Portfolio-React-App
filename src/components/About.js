@@ -1,13 +1,11 @@
 import React from "react";
 import "../styles/About.scss";
-import card_1 from "../images/card_1.jpg";
-import card_2 from "../images/card_2.jpg";
-import card_3 from "../images/card_3.jpg";
 import card_4 from "../images/card_4.jpg";
 import card_5 from "../images/card_5.jpg";
 import card_6 from "../images/card_6.jpg";
 import ButtonCard from "../components/ButtonCard";
 import Card from "../components/Card";
+import { card } from "./Data/Data";
 
 export default function About() {
   return (
@@ -18,20 +16,22 @@ export default function About() {
         </div>
         <div className="about__1-h2" data-aos="fade-up">
           <h2>Projekty</h2>
-          {/* <Card
-            className="about__1-card_1"
+        </div>
+        {card.map(item => (
+          <Card
             data-aos="fade-up"
             data-aos-offset="200"
-            title="Tourism"
-            paragraph="Strona została zbudowana przy użyciu następujących technologi:"
-            img={card_1}
-            item_1="HTML5"
-            item_2="SCSS"
-            item_3="Grid Layout"
-            item_4="Responsive web design"
-          />*/}
-        </div>
-        <div
+            title={item.title}
+            description={item.description}
+            image={item.image}
+            item_1={item.item_1}
+            item_2={item.item_2}
+            item_3={item.item_3}
+            item_4={item.item_4}
+          />
+        ))}
+
+        {/* <div
           class="about__1-card about__1-card_1"
           data-aos="fade-up"
           data-aos-offset="200"
@@ -56,8 +56,8 @@ export default function About() {
               View project
             </button>
           </div>
-        </div>
-        <div
+        </div> */}
+        {/* <div
           class="about__1-card about__1-card_2"
           data-aos="fade-up"
           data-aos-offset="300"
@@ -83,7 +83,7 @@ export default function About() {
               View project
             </button>
           </div>
-        </div>
+        </div> */}
         {/* <Card
           className="about__1-card_1"
           data-aos="fade-up"
@@ -97,7 +97,7 @@ export default function About() {
           item_4="Responsive web design"
         />
 */}
-        <div
+        {/* <div
           className="about__1-card about__1-card_3"
           data-aos="fade-up"
           data-aos-offset="200"
@@ -125,7 +125,7 @@ export default function About() {
               View project
             </button>
           </div>
-        </div>
+        </div> */}
       </div>
       <div className="about__2">
         <div className="about__2-h1" data-aos="fade-up">

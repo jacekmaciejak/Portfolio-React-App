@@ -94,7 +94,7 @@ const Form = styled.form`
   }
 `;
 const Form_input = styled.input`
-  font-size: calc(12px + 1vw);
+  font-size: calc(10px + 1vw);
   font-family: inherit;
   color: inherit;
   padding: 0.7rem;
@@ -154,7 +154,7 @@ const Form_label = styled.label`
   }
 `;
 const Form_textarea = styled.textarea`
-  font-size: calc(12px + 1vw);
+  font-size: calc(10px + 1vw);
   font-family: inherit;
   color: inherit;
   padding: 1rem;

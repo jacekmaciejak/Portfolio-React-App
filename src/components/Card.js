@@ -1,41 +1,24 @@
 import React from "react";
 import ButtonCard from "../components/ButtonCard";
 import "../styles/Card.scss";
+import { card } from "./Data/Data";
 
-export default function Card({
-  img,
-  children,
-  title,
-  subtitle,
-  paragraph,
-  item_1,
-  item_2,
-  item_3,
-  item_4,
-  item_5
-}) {
+export default function Card(props) {
   return (
-    <div
-      className="about__1-card about__1-card_1"
-      data-aos="fade-up"
-      data-aos-offset="200"
-    >
+    <div className="about__1-card" data-aos="fade-up" data-aos-offset="200">
       <div className="about__1-card-img">
-        <img src={img} alt="Zdjęcie projektu" />
+        <img src={props.image} alt={props.title} />
       </div>
       <div className="content">
-        <h3>{title}</h3>
-        <p>{paragraph}</p>
+        <h3>{props.title}</h3>
+        <p>{props.description}</p>
         <ul>
-          <li>{item_1}</li>
-          <li>{item_2}</li>
-          <li>{item_3}</li>
-          <li>{item_4}</li>
+          <li>{props.item_1}</li>
+          <li>{props.item_2}</li>
+          <li>{props.item_3}</li>
+          <li>{props.item_4}</li>
         </ul>
-        <ButtonCard
-          type="button"
-          onclick="window.open('https://jacekmaciejak.github.io/Tourism','_blank')"
-        />
+        <ButtonCard type="button" onclick={props.link} />
       </div>
     </div>
   );
