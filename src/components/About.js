@@ -13,46 +13,59 @@ const StyledWrapper = styled.div`
   padding-bottom: 2rem;
 `;
 const About__1 = styled.div`
-  width: 100%;
   height: 100vh;
-  display: grid;
-  grid-template-columns:
-    1fr 1fr 1fr 1fr 0.5fr 1fr 1fr 1fr 0.5fr 1fr 1fr 1fr
-    1fr;
-  grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-areas: ". . . . . . . . . . . . ." ". . about__1-h1 about__1-h1 about__1-h1 about__1-h1 about__1-h1 about__1-h1 about__1-h1 about__1-h1 about__1-h1 . ." ". . about__1-h2 about__1-h2 about__1-h2 about__1-h2 about__1-h2 about__1-h2 about__1-h2 about__1-h2 about__1-h2 . ." ". about__1-card_1 about__1-card_1 about__1-card_1 . about__1-card_2 about__1-card_2 about__1-card_2 . about__1-card_3 about__1-card_3 about__1-card_3 ." ". about__1-card_1 about__1-card_1 about__1-card_1 . about__1-card_2 about__1-card_2 about__1-card_2 . about__1-card_3 about__1-card_3 about__1-card_3 ." ". about__1-card_1 about__1-card_1 about__1-card_1 . about__1-card_2 about__1-card_2 about__1-card_2 . about__1-card_3 about__1-card_3 about__1-card_3 ." ". about__1-card_1 about__1-card_1 about__1-card_1 . about__1-card_2 about__1-card_2 about__1-card_2 . about__1-card_3 about__1-card_3 about__1-card_3 ." ". about__1-card_1 about__1-card_1 about__1-card_1 . about__1-card_2 about__1-card_2 about__1-card_2 . about__1-card_3 about__1-card_3 about__1-card_3 ." ". about__1-card_1 about__1-card_1 about__1-card_1 . about__1-card_2 about__1-card_2 about__1-card_2 . about__1-card_3 about__1-card_3 about__1-card_3 ." ". about__1-card_1 about__1-card_1 about__1-card_1 . about__1-card_2 about__1-card_2 about__1-card_2 . about__1-card_3 about__1-card_3 about__1-card_3 ." ". about__1-card_1 about__1-card_1 about__1-card_1 . about__1-card_2 about__1-card_2 about__1-card_2 . about__1-card_3 about__1-card_3 about__1-card_3 ." ". . . . . . . . . . . . .";
+  display: flex;
+  flex-basis: 100%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  // grid-template-columns: 1fr 1fr 1fr 1fr 0.5fr 1fr 1fr 1fr 0.5fr 1fr 1fr 1fr 1fr;
+  // grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  // grid-template-areas: ". . . . . . . . . . . . ." ". . about__1-h1 about__1-h1 about__1-h1 about__1-h1 about__1-h1 about__1-h1 about__1-h1 about__1-h1 about__1-h1 . ." ". . about__1-h2 about__1-h2 about__1-h2 about__1-h2 about__1-h2 about__1-h2 about__1-h2 about__1-h2 about__1-h2 . ." ". about__1-card_1 about__1-card_1 about__1-card_1 . about__1-card_2 about__1-card_2 about__1-card_2 . about__1-card_3 about__1-card_3 about__1-card_3 ." ". about__1-card_1 about__1-card_1 about__1-card_1 . about__1-card_2 about__1-card_2 about__1-card_2 . about__1-card_3 about__1-card_3 about__1-card_3 ." ". about__1-card_1 about__1-card_1 about__1-card_1 . about__1-card_2 about__1-card_2 about__1-card_2 . about__1-card_3 about__1-card_3 about__1-card_3 ." ". about__1-card_1 about__1-card_1 about__1-card_1 . about__1-card_2 about__1-card_2 about__1-card_2 . about__1-card_3 about__1-card_3 about__1-card_3 ." ". about__1-card_1 about__1-card_1 about__1-card_1 . about__1-card_2 about__1-card_2 about__1-card_2 . about__1-card_3 about__1-card_3 about__1-card_3 ." ". about__1-card_1 about__1-card_1 about__1-card_1 . about__1-card_2 about__1-card_2 about__1-card_2 . about__1-card_3 about__1-card_3 about__1-card_3 ." ". about__1-card_1 about__1-card_1 about__1-card_1 . about__1-card_2 about__1-card_2 about__1-card_2 . about__1-card_3 about__1-card_3 about__1-card_3 ." ". about__1-card_1 about__1-card_1 about__1-card_1 . about__1-card_2 about__1-card_2 about__1-card_2 . about__1-card_3 about__1-card_3 about__1-card_3 ." ". . . . . . . . . . . . .";
 
   @media (max-width: 1200px) {
     height: auto;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.1fr 0.1fr 1fr 1fr;
-    grid-template-areas: "about__1-h1 about__1-h1" "about__1-h2 about__1-h2" "about__1-card_1 about__1-card_2" "about__1-card_3 about__1-card_3";
+    // grid-template-columns: 1fr 1fr;
+    // grid-template-rows: 0.1fr 0.1fr 1fr 1fr;
+    // grid-template-areas: "about__1-h1 about__1-h1" "about__1-h2 about__1-h2" "about__1-card_1 about__1-card_2" "about__1-card_3 about__1-card_3";
   }
 
   @media (max-width: 900px) {
     height: auto;
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.1fr 0.1fr 1fr 1fr 1fr;
-    grid-template-areas: "about__1-h1" "about__1-h2" "about__1-card_1" "about__1-card_2" "about__1-card_3";
+    // grid-template-columns: 1fr;
+    // grid-template-rows: 0.1fr 0.1fr 1fr 1fr 1fr;
+    // grid-template-areas: "about__1-h1" "about__1-h2" "about__1-card_1" "about__1-card_2" "about__1-card_3";
+  }
+
+  @media (max-width: 600px) {
+    height: auto;
   }
 `;
 const About__2 = styled.div`
   width: 100%;
   height: 100vh;
-  display: grid;
-  grid-template-columns:
-    1fr 1fr 1fr 1fr 0.5fr 1fr 1fr 1fr 0.5fr 1fr 1fr 1fr
-    1fr;
-  grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  display: flex;
+  flex-basis: 100%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  // display: grid;
+  // grid-template-columns:
+  //   1fr 1fr 1fr 1fr 0.5fr 1fr 1fr 1fr 0.5fr 1fr 1fr 1fr
+  //   1fr;
+  // grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 `;
 
 const H1__1 = styled.h1`
-  display: grid;
-  justify-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  grid-area: about__1-h1;
+  display: flex;
+  flex-basis: 100%;
+  justify-content: center;
+
+  // display: grid;
+  // justify-items: center;
+  // -webkit-box-align: center;
+  // -ms-flex-align: center;
+  // align-items: center;
+  // grid-area: about__1-h1;
   position: relative;
   z-index: 9999;
   font-size: 7vw;
@@ -64,21 +77,27 @@ const H1__1 = styled.h1`
   }
 `;
 const H2__1 = styled.h2`
-  display: grid;
-  justify-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  grid-area: about__1-h2;
+  flex-basis: 100%;
+  display: flex;
+  flex-basis: 100%;
+  justify-content: center;
+
+  // display: grid;
+  // justify-items: center;
+  // -webkit-box-align: center;
+  // -ms-flex-align: center;
+  // align-items: center;
+  // grid-area: about__1-h2;
   position: relative;
   z-index: 9999;
   font-size: 5vw;
+
   @media (max-width: 1200px) {
     margin-bottom: 2rem;
   }
   @media (max-width: 900px) {
     font-size: calc(30px + 3.5vw);
-    margin-top: 2rem;
+    margin-top: 0;
   }
 
   letter-spacing: 3px;
@@ -210,7 +229,7 @@ export default function About() {
           </div>
         </div> */}
       </About__1>
-      <About__2>
+      {/* <About__2>
         <div className="about__2-h1" data-aos="fade-up">
           <h1>Moje prace</h1>
         </div>
@@ -296,7 +315,7 @@ export default function About() {
             </button>
           </div>
         </div>
-      </About__2>
+      </About__2> */}
     </StyledWrapper>
   );
 }

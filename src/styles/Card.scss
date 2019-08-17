@@ -89,20 +89,18 @@
                 filter: grayscale(0) saturate(2);
                 -webkit-filter: grayscale(0) saturate(2);
                 transition: .5s;
-
-                @include respond(tab-port) {}
             }
 
             .content {
-                position: absolute;
-                width: 100%;
-                top: 50%;
-                transform: translateY(-50%);
-                z-index: 2;
-                padding: 20px;
-                box-sizing: border-box;
-                color: $main_text-color;
-                text-shadow: 4px 2px 5px rgba(255, 255, 255, 0.73);
+                // position: absolute;
+                // width: 100%;
+                // top: 50%;
+                // transform: translateY(-50%);
+                // z-index: 2;
+                // padding: 20px;
+                // box-sizing: border-box;
+                // color: $main_text-color;
+                // text-shadow: 4px 2px 5px rgba(255, 255, 255, 0.73);
 
                 h3,
                 p,
