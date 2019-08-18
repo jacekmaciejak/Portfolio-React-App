@@ -189,23 +189,23 @@ const UL = styled.ul`
     transform: translateY(0);
   }
 `;
-// const StyledButton = styled(ButtonCard)`
-//   &.aaa {
-//     ${StyledWrapper}:hover & {
-//       opacity: 1;
-//       visibility: visible;
-//       transition-delay: 0.2s;
-//       transform: translateY(0px);
-
-//       @media (max-width: 900px) {
-//         transform: none;
-//         transition-delay: none;
-//       }
-//     }
-//   }
-// `;
 
 const StyledButtonCard = styled(ButtonCard)`
+  transition: 0.5s;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  font-weight: bold;
+  transform: translateY(40px);
+  text-shadow: none;
+
+  @media (max-width: 900px) {
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
   ${StyledWrapper}:hover & {
     opacity: 1;
     visibility: visible;

@@ -2,11 +2,10 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledWrapper = styled.div`
-  width: auto;
   height: auto;
+  width: 60%;
   text-align: center;
   cursor: pointer;
-  padding: 30px;
   background: transparent;
   border: 1px solid #fff;
   position: absolute;
@@ -18,9 +17,10 @@ const StyledWrapper = styled.div`
   font-size: 24px;
   font-weight: bold;
   background: #000;
-  padding: 15px !important;
+  padding: 20px;
   margin: 30px auto 0;
   position: relative;
+  border-radius: 10px;
 
   @media (max-width: 900px) {
     font-size: calc(10px + 2vw);
