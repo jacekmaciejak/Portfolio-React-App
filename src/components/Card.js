@@ -6,10 +6,12 @@ import styled from "styled-components";
 
 const StyledWrapper = styled.div`
   flex-basis: 30%;
-  height: 60%;
+  height: 55%;
   transition: 0.5s;
   position: relative;
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+  margin-top: 50px;
+
   @media (max-width: 1200px) {
     height: 500px;
     width: 90%;

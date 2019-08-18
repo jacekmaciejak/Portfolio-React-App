@@ -1,11 +1,13 @@
 import React from "react";
 import "../styles/Panel.scss";
 import rwd from "../images/rwd.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCoffee } from "@fortawesome/free-solid-svg-icons";
 
 export default function Panel() {
   return (
     <div className="sub_about_2" data-aos="fade-up">
-      <div className=" sub_about_panel">
+      <div className="sub_about_panel">
         <ul>
           <li class="p-5">
             <a

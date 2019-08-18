@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import "../styles/About.scss";
 import card_4 from "../images/card_4.jpg";
 import card_5 from "../images/card_5.jpg";
 import card_6 from "../images/card_6.jpg";
@@ -48,6 +47,7 @@ const About__2 = styled.div`
   flex-basis: 100%;
   flex-wrap: wrap;
   justify-content: space-around;
+
   // display: grid;
   // grid-template-columns:
   //   1fr 1fr 1fr 1fr 0.5fr 1fr 1fr 1fr 0.5fr 1fr 1fr 1fr
