@@ -189,18 +189,32 @@ const UL = styled.ul`
     transform: translateY(0);
   }
 `;
-const StyledButton = styled(ButtonCard)`
-  &.aaa {
-    ${StyledWrapper}:hover & {
-      opacity: 1;
-      visibility: visible;
-      transition-delay: 0.2s;
-      transform: translateY(0px);
+// const StyledButton = styled(ButtonCard)`
+//   &.aaa {
+//     ${StyledWrapper}:hover & {
+//       opacity: 1;
+//       visibility: visible;
+//       transition-delay: 0.2s;
+//       transform: translateY(0px);
 
-      @media (max-width: 900px) {
-        transform: none;
-        transition-delay: none;
-      }
+//       @media (max-width: 900px) {
+//         transform: none;
+//         transition-delay: none;
+//       }
+//     }
+//   }
+// `;
+
+const StyledButtonCard = styled(ButtonCard)`
+  ${StyledWrapper}:hover & {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.2s;
+    transform: translateY(0px);
+
+    @media (max-width: 900px) {
+      transform: none;
+      transition-delay: none;
     }
   }
 `;
@@ -227,7 +241,7 @@ export default function Card({
           <li>{item_3}</li>
           <li>{item_4}</li>
         </UL>
-        <ButtonCard type="button" onclick={link} />
+        <StyledButtonCard type="button" onclick={link} />
       </Content>
     </StyledWrapper>
   );
