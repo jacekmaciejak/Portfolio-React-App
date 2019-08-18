@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import ButtonCard from "../components/ButtonCard";
-import "../styles/Card.scss";
 import { card } from "./Data/Data";
 import styled from "styled-components";
 
@@ -12,9 +11,9 @@ const StyledWrapper = styled.div`
   position: relative;
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
   @media (max-width: 1200px) {
-    // height: 500px;
-    // width: 90%;
-    // margin: 30px 0;
+    height: 500px;
+    width: 90%;
+    margin: 30px 0;
   }
   @media (max-width: 900px) {
     flex-basis: 95%;
@@ -77,13 +76,21 @@ const Image = styled.img`
   transition: 0.5s;
   filter: grayscale(1);
   -webkit-filter: grayscale(1);
+  opacity: 0.9;
   @media (max-width: 900px) {
     filter: grayscale(0) saturate(2);
     -webkit-filter: grayscale(0) saturate(2);
   }
-  :hover {
-    opacity: ${props => (props.isVisble ? "1" : "1")};
-    visibility: ${props => (props.isVisble ? "visible" : "visible")};
+
+  ${StyledWrapper}:hover & {
+    filter: grayscale(0) saturate(2);
+    -webkit-filter: grayscale(0) saturate(2);
+    transition: 0.5s;
+
+    @media (max-width: 900px) {
+      transform: none;
+      transition-delay: none;
+    }
   }
 `;
 const Content = styled.div`
@@ -96,17 +103,17 @@ const Content = styled.div`
   box-sizing: border-box;
   color: #000;
   text-shadow: 4px 2px 5px rgba(255, 255, 255, 0.73);
+`;
+const H3 = styled.h3`
+  margin-bottom: 20px;
+  transform: translateY(-70px);
+  font-size: 30px;
   transition: 0.5s;
   padding: 0;
   text-align: center;
   opacity: 0;
   visibility: hidden;
   font-weight: bold;
-  @media (max-width: 900px) {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
   ${StyledWrapper}:hover & {
     opacity: 1;
     visibility: visible;
@@ -118,30 +125,83 @@ const Content = styled.div`
       transition-delay: none;
     }
   }
-`;
-const H3 = styled(Content)`
-  margin-bottom: 20px;
-  transform: translateY(-70px);
-  font-size: 30px;
   @media (max-width: 900px) {
     transform: none;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
   }
 `;
-const P = styled(Content)`
+const P = styled.p`
   transform: translateY(-70px);
   font-size: 23px;
+  transition: 0.5s;
+  padding: 0;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  font-weight: bold;
+  ${StyledWrapper}:hover & {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.2s;
+    transform: translateY(0px);
+
+    @media (max-width: 900px) {
+      transform: none;
+      transition-delay: none;
+    }
+  }
   @media (max-width: 900px) {
     transform: none;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
   }
 `;
-const UL = styled(Content)`
+const UL = styled.ul`
   transform: translateY(70px);
   margin-top: 20px;
   list-style: none;
   line-height: 1.4;
   font-size: 23px;
+  transition: 0.5s;
+  padding: 0;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  font-weight: bold;
+  ${StyledWrapper}:hover & {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.2s;
+    transform: translateY(0px);
+
+    @media (max-width: 900px) {
+      transform: none;
+      transition-delay: none;
+    }
+  }
   @media (max-width: 900px) {
     transform: none;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+`;
+const StyledButton = styled(ButtonCard)`
+  &.aaa {
+    ${StyledWrapper}:hover & {
+      opacity: 1;
+      visibility: visible;
+      transition-delay: 0.2s;
+      transform: translateY(0px);
+
+      @media (max-width: 900px) {
+        transform: none;
+        transition-delay: none;
+      }
+    }
   }
 `;
 
