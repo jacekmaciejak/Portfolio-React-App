@@ -66,13 +66,6 @@ const StyledWrapper = styled.div`
     transform: scaleY(1);
     opacity: 1;
   }
-
-  :hover {
-    opacity: ${({ isVisble }) => (isVisble ? "1" : "1")};
-    visibility: ${({ isVisble }) => (isVisble ? "visible" : "visible")};
-    transition-delay: 0.2s;
-    transform: translateY(0px);
-  }
 `;
 const Image = styled.img`
   width: 100%;
@@ -113,6 +106,17 @@ const Content = styled.div`
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
+  }
+  ${StyledWrapper}:hover & {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.2s;
+    transform: translateY(0px);
+
+    @media (max-width: 900px) {
+      transform: none;
+      transition-delay: none;
+    }
   }
 `;
 const H3 = styled(Content)`
@@ -155,8 +159,8 @@ export default function Card({
     <StyledWrapper data-aos="fade-up" data-aos-offset="200">
       <Image src={image} alt={title} />
       <Content>
-        <H3 isVisble>{title}</H3>
-        <P isVisble>{description}</P>
+        <H3>{title}</H3>
+        <P>{description}</P>
         <UL isVisble>
           <li>{item_1}</li>
           <li>{item_2}</li>
