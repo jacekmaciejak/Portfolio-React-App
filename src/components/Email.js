@@ -65,7 +65,7 @@ const Book__form = styled.div`
   padding: 3rem;
   border-radius: 3px;
   -webkit-box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 20px 40px -10px #818181;
   // background-image: linear -
   //   gradient(
   //     105deg,

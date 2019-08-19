@@ -11,7 +11,7 @@ const StyledWrapper = styled.div`
   margin: 20px;
   transition: 0.5s;
   position: relative;
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 20px 40px -10px #818181;
 
   @media (max-width: 1200px) {
     flex-basis: 45%;
