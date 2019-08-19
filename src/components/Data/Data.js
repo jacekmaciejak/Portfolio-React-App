@@ -27,7 +27,7 @@ export const card = [
     item_2: "SCSS",
     item_3: "Grid Layout",
     item_4: "Responsive web design",
-    link: "https://jacekmaciejak.github.io/Tourism"
+    link: "https://jacekmaciejak.github.io/Restaurant"
   },
   {
     image: card_3,
@@ -38,7 +38,7 @@ export const card = [
     item_2: "SCSS",
     item_3: "Grid Layout",
     item_4: "Responsive web design",
-    link: "https://jacekmaciejak.github.io/Tourism"
+    link: "https://jacekmaciejak.github.io/Veterinary-clinic"
   },
   {
     image: card_4,
@@ -52,7 +52,7 @@ export const card = [
     item_5: "JavaScript",
     item_6: "JQuery",
     item_7: "Bootstrap4",
-    link: "https://jacekmaciejak.github.io/Tourism"
+    link: "https://jacekmaciejak.github.io/Parkogrody-v2"
   },
   ,
   {
@@ -63,7 +63,7 @@ export const card = [
     item_1: "HTML5",
     item_2: "SCSS",
     item_3: "Java Script",
-    link: "https://jacekmaciejak.github.io/Tourism"
+    link: "https://jacekmaciejak.github.io/Dice-game"
   },
   {
     image: card_6,
@@ -73,6 +73,6 @@ export const card = [
     item_1: "HTML5",
     item_2: "SCSS",
     item_3: "Java Script",
-    link: "https://jacekmaciejak.github.io/Tourism"
+    link: "https://jacekmaciejak.github.io/Rock-paper-and-scissors---game"
   }
 ];

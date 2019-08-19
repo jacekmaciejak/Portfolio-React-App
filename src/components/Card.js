@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import ButtonCard from "../components/ButtonCard";
 import { card } from "./Data/Data";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const StyledWrapper = styled.div`
   flex-basis: 30%;
@@ -247,7 +248,9 @@ export default function Card({
           <li>{item_6}</li>
           <li>{item_7}</li>
         </UL>
-        <StyledButtonCard type="button" onclick={link} />
+        <Link to={link}>
+          <StyledButtonCard />
+        </Link>
       </Content>
     </StyledWrapper>
   );

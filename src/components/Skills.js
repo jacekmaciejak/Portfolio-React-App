@@ -1,6 +1,7 @@
-import React from "react";
+import React, { Component } from "react";
 import styled from "styled-components";
 import Panel from "./Panel.js";
+import Modal from "./Modal.js";
 
 const StyledWrapper = styled.div`
   display: grid;
@@ -33,12 +34,31 @@ const Title_2 = styled.h2`
   animation: animateText 3s linear infinite;
 `;
 
-export default function Skills() {
-  return (
-    <StyledWrapper>
-      <Title_1 data-aos="fade-up">W czym jestem dobry?</Title_1>
-      <Title_2 data-aos="fade-up">Technologie</Title_2>
-      <Panel />
-    </StyledWrapper>
-  );
+export default class Skills extends Component {
+  state = {
+    isModalOpen: false
+  };
+
+  openModal = () => {
+    this.setState({
+      isModalOpen: true
+    });
+  };
+  closeModal = () => {
+    this.setState({
+      isModalOpen: false
+    });
+  };
+  render() {
+    const { isModalOpen } = this.state;
+
+    return (
+      <StyledWrapper>
+        <Title_1 data-aos="fade-up">W czym jestem dobry?</Title_1>
+        <Title_2 data-aos="fade-up">Technologie</Title_2>
+        <Panel openModalFn={this.openModal} />
+        {isModalOpen && <Modal closeModalFn={this.closeModal} />}
+      </StyledWrapper>
+    );
+  }
 }

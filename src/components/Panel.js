@@ -4,7 +4,7 @@ import rwd from "../images/rwd.png";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faFileCode } from "@fortawesome/free-solid-svg-icons";
 
-export default function Panel() {
+export default function Panel({ openModalFn }) {
   return (
     <div className="sub_about_2" data-aos="fade-up">
       <div className="sub_about_panel">
@@ -19,7 +19,7 @@ export default function Panel() {
             </a>
           </li>
           <li className="p-2">
-            <a href="#panel">
+            <a href="#panel" onClick={openModalFn}>
               <i className="fab fa-html5" />
             </a>
           </li>
