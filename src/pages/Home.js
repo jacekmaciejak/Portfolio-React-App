@@ -7,6 +7,7 @@ import Skills from "../components/Skills";
 import LineDown from "../components/LineDown";
 import Email from "../components/Email";
 import About from "../components/About";
+import Footer from "../components/Footer";
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
       <Skills />
       <About />
       <Email />
+      <Footer />
     </>
   );
 }
