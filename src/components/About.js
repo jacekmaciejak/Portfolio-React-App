@@ -1,8 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import card_4 from "../images/card_4.jpg";
-import card_5 from "../images/card_5.jpg";
-import card_6 from "../images/card_6.jpg";
 import ButtonCard from "../components/ButtonCard";
 import Card from "../components/Card";
 import { card } from "./Data/Data";
@@ -12,7 +9,7 @@ const StyledWrapper = styled.div`
   padding-bottom: 2rem;
 `;
 const About__1 = styled.div`
-  height: 100vh;
+  height: 150vh;
   display: flex;
   flex-basis: 100%;
   flex-wrap: wrap;

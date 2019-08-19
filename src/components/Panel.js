@@ -1,82 +1,83 @@
 import React from "react";
 import "../styles/Panel.scss";
 import rwd from "../images/rwd.png";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCoffee } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faFileCode } from "@fortawesome/free-solid-svg-icons";
 
 export default function Panel() {
   return (
     <div className="sub_about_2" data-aos="fade-up">
       <div className="sub_about_panel">
         <ul>
-          <li class="p-5">
+          <li className="p-5">
             <a
               href="https://www.facebook.com/profile.php?id=100007445748069"
               target="_blank"
             >
-              <i class="fab fa-facebook-f" />
+              <i className="fab fa-facebook-f" />
+              {/* <FontAwesomeIcon icon={faFileCode} size="5x" /> */}
             </a>
           </li>
-          <li class="p-2">
+          <li className="p-2">
             <a href="#panel">
-              <i class="fab fa-html5" />
+              <i className="fab fa-html5" />
             </a>
           </li>
-          <li class="p-11">
+          <li className="p-11">
             <a href="#panel">
-              <i class="fab fa-js" />
+              <i className="fab fa-js" />
             </a>
           </li>
-          <li class="p-4">
+          <li className="p-4">
             <a
               href="www.linkedin.com/in/jacek-maciejak-frontend-developer"
               target="_blank"
             >
-              <i class="fab fa-linkedin-in" />
+              <i className="fab fa-linkedin-in" />
             </a>
           </li>
-          <li class="p-1">
+          <li className="p-1">
             <a href="#panel">
-              <i class="fab fa-css3-alt" />
+              <i className="fab fa-css3-alt" />
             </a>
           </li>
-          <li class="p-6">
+          <li className="p-6">
             <a href="#panel">
-              <i class="fab">B4</i>
+              <i className="fab">B4</i>
             </a>
           </li>
-          <li class="p-7">
+          <li className="p-7">
             <a href="#panel">
-              <i class="fab">
+              <i className="fab">
                 <img src={rwd} alt="Icon" />
               </i>
             </a>
           </li>
-          <li class="p-8">
+          <li className="p-8">
             <a href="#panel">
-              <i class="fab">
+              <i className="fab">
                 Flex <br /> Box
               </i>
             </a>
           </li>
-          <li class="p-9">
+          <li className="p-9">
             <a href="#panel">
-              <i class="fab">Grid</i>
+              <i className="fab">Grid</i>
             </a>
           </li>
-          <li class="p-10">
+          <li className="p-10">
             <a href="#panel">
-              <i class="fab fa-sass" />
+              <i className="fab fa-sass" />
             </a>
           </li>
-          <li class="p-3">
+          <li className="p-3">
             <a href="https://github.com/jacekmaciejak" target="_blank">
-              <i class="fab fa-github" />
+              <i className="fab fa-github" />
             </a>
           </li>
-          <li class="p-12">
+          <li className="p-12">
             <a href="#panel">
-              <i class="fab fa-react" />
+              <i className="fab fa-react" />
             </a>
           </li>
         </ul>

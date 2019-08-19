@@ -42,36 +42,37 @@ export const card = [
   },
   {
     image: card_4,
-    title: "Veterinary clinic",
+    title: "Parkogrody",
     description:
       "Strona została zbudowana przy użyciu następujących technologi:",
     item_1: "HTML5",
     item_2: "SCSS",
     item_3: "Grid Layout",
     item_4: "Responsive web design",
+    item_5: "JavaScript",
+    item_6: "JQuery",
+    item_7: "Bootstrap4",
     link: "https://jacekmaciejak.github.io/Tourism"
   },
   ,
   {
     image: card_5,
-    title: "Veterinary clinic",
+    title: "Dice game",
     description:
-      "Strona została zbudowana przy użyciu następujących technologi:",
+      "Aplikacja została zbudowana przy użyciu następujących technologi:",
     item_1: "HTML5",
     item_2: "SCSS",
-    item_3: "Grid Layout",
-    item_4: "Responsive web design",
+    item_3: "Java Script",
     link: "https://jacekmaciejak.github.io/Tourism"
   },
   {
     image: card_6,
-    title: "Veterinary clinic",
+    title: "Rock, paper and scissors",
     description:
-      "Strona została zbudowana przy użyciu następujących technologi:",
+      "Aplikacja została zbudowana przy użyciu następujących technologi:",
     item_1: "HTML5",
     item_2: "SCSS",
-    item_3: "Grid Layout",
-    item_4: "Responsive web design",
+    item_3: "Java Script",
     link: "https://jacekmaciejak.github.io/Tourism"
   }
 ];

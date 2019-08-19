@@ -6,7 +6,7 @@ import styled from "styled-components";
 
 const StyledWrapper = styled.div`
   flex-basis: 30%;
-  height: 55%;
+  height: 50%;
   transition: 0.5s;
   position: relative;
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
@@ -229,6 +229,9 @@ export default function Card({
   item_2,
   item_3,
   item_4,
+  item_5,
+  item_6,
+  item_7,
   link
 }) {
   return (
@@ -242,6 +245,9 @@ export default function Card({
           <li>{item_2}</li>
           <li>{item_3}</li>
           <li>{item_4}</li>
+          <li>{item_5}</li>
+          <li>{item_6}</li>
+          <li>{item_7}</li>
         </UL>
         <StyledButtonCard type="button" onclick={link} />
       </Content>
@@ -254,10 +260,15 @@ export default function Card({
     item_1: PropTypes.string.isRequired,
     item_2: PropTypes.string.isRequired,
     item_3: PropTypes.string.isRequired,
-    item_4: PropTypes.string,
+    item_4: PropTypes.string.isRequired,
+    item_5: PropTypes.string,
+    item_6: PropTypes.string,
+    item_7: PropTypes.string,
     link: PropTypes.string.isRequired
   };
   Card.defaultProps = {
-    item_4: " "
+    item_5: " ",
+    item_6: " ",
+    item_7: " "
   };
 }
