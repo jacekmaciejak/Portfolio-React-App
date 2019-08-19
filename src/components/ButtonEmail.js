@@ -45,7 +45,7 @@ const Button = styled.button`
 
 export default function ButtonEmail() {
   return (
-    <Button class="email_button" name="submit" type="submit">
+    <Button name="submit" type="submit">
       Wyślij wiadomość &rarr;
     </Button>
   );

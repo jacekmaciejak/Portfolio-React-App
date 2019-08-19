@@ -17,10 +17,10 @@ const StyledWrapper = styled.div`
   font-size: 24px;
   font-weight: bold;
   background: #000;
-  padding: 20px;
+  padding: 10px;
   margin: 30px auto 0;
   position: relative;
-  border-radius: 10px;
+  border-radius: 5px;
 
   @media (max-width: 900px) {
     font-size: calc(10px + 2vw);
