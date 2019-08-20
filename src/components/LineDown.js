@@ -1,5 +1,6 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
+import { theme } from "./utils/theme.js";
 
 const Line = styled.div`
   position: absolute;
@@ -22,17 +23,20 @@ const Line = styled.div`
     animation: animateScrollDown 2s linear infinite;
   }
 
-  @media only screen and (max-width: 1200px) {
-    top: 85%;
-    left: 10%;
-    transform: translate(-85%, -10%);
-  }
-
-  @media only screen and (max-width: 900px) {
+  // ${({ theme }) => theme.media.tabLand} {
+  //   top: 85%;
+  //   left: 10%;
+  //   transform: translate(-85%, -10%);
+  // }
+  ${({ theme }) => theme.media.tabPort} {
     display: none;
   }
 `;
 
 export default function LineDown() {
-  return <Line />;
+  return (
+    <ThemeProvider theme={theme}>
+      <Line />
+    </ThemeProvider>
+  );
 }

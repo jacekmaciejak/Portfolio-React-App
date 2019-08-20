@@ -1,5 +1,6 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
+import { theme } from "./utils/theme.js";
 import img from "../images/img2.jpg";
 import ButtonEmail from "./ButtonEmail";
 
@@ -23,7 +24,7 @@ const Title_1 = styled.h1`
   text-align: center;
   margin-top: 100px;
 
-  @media (max-width: 900px) {
+  ${({ theme }) => theme.media.tabPort} {
     font-size: calc(40px + 3.5vw);
     line-height: 1;
   }
@@ -40,8 +41,7 @@ const Title_2 = styled.h2`
   -webkit-background-clip: text;
   -webkit-text-fill-color: rgba(255, 255, 255, 0);
   animation: animateText 3s linear infinite;
-
-  @media (max-width: 900px) {
+  ${({ theme }) => theme.media.tabPort} {
     font-size: calc(30px + 3.5vw);
   }
 `;
@@ -54,9 +54,8 @@ const Book = styled.section`
   -ms-flex-align: center;
   align-items: center;
   width: 100%;
-
-  @media (max-width: 1200px) {
-    height: 80%;
+  ${({ theme }) => theme.media.tabLand} {
+    height: 85%;
   }
 `;
 const Book__form = styled.div`
@@ -76,17 +75,16 @@ const Book__form = styled.div`
   background-image: url(${props => props.img});
   background-position: center;
   background-size: cover;
-
-  @media (max-width: 1200px) {
+${({ theme }) => theme.media.tabLand}{
     width: 95%;
     padding: 2rem;
-  }
+}
 `;
 
 const Form = styled.form`
   width: 100%;
 
-  @media (max-width: 1200px) {
+  ${({ theme }) => theme.media.tabLand} {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -108,7 +106,7 @@ const Form_input = styled.input`
   border-radius: 5px;
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
 
-  @media (max-width: 600px) {
+  ${({ theme }) => theme.media.phone} {
     width: 100%;
   }
 
@@ -143,13 +141,14 @@ const Form_label = styled.label`
   transition: all 0.3s;
   color: #fff;
   text-align: start;
-  @media (max-width: 1200px) {
+
+  ${({ theme }) => theme.media.tabLand} {
     margin-left: 7rem;
   }
-  @media (max-width: 900px) {
+  ${({ theme }) => theme.media.tabPort} {
     margin-left: 5rem;
   }
-  @media (max-width: 600px) {
+  ${({ theme }) => theme.media.phone} {
     margin-left: 3rem;
   }
 `;
@@ -168,7 +167,7 @@ const Form_textarea = styled.textarea`
   border-radius: 5px;
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
 
-  @media (max-width: 600px) {
+  ${({ theme }) => theme.media.phone} {
     width: 100%;
   }
 
@@ -195,39 +194,43 @@ const Form_textarea = styled.textarea`
 
 export default function Email() {
   return (
-    <StyledWrapper>
-      <Title_1 data-aos="fade-up">Zachęcam do kontaktu</Title_1>
-      <Title_2 data-aos="fade-up">Kontakt</Title_2>
-      <Book id="contact" data-aos="fade-up">
-        <Book__form img={img}>
-          <Form autocomplete="off" method="post" action="kontakt.php">
-            <Form_input
-              type="text"
-              placeholder="Imię i nazwisko"
-              id="name"
-              name="name"
-              required
-            />
-            <Form_label for="name">Imię i nazwisko</Form_label>
-            <Form_input
-              type="email"
-              placeholder="Adres email"
-              id="email"
-              name="email"
-              required
-            />
-            <Form_label for="email">Adres email</Form_label>
-            <Form_textarea
-              name="message"
-              id="message"
-              rows="4"
-              placeholder="Wiadomość"
-              required
-            />
-            <ButtonEmail />
-          </Form>
-        </Book__form>
-      </Book>
-    </StyledWrapper>
+    <ThemeProvider theme={theme}>
+      <>
+        <StyledWrapper>
+          <Title_1 data-aos="fade-up">Zachęcam do kontaktu</Title_1>
+          <Title_2 data-aos="fade-up">Kontakt</Title_2>
+          <Book id="contact" data-aos="fade-up">
+            <Book__form img={img}>
+              <Form autocomplete="off" method="post" action="kontakt.php">
+                <Form_input
+                  type="text"
+                  placeholder="Imię i nazwisko"
+                  id="name"
+                  name="name"
+                  required
+                />
+                <Form_label for="name">Imię i nazwisko</Form_label>
+                <Form_input
+                  type="email"
+                  placeholder="Adres email"
+                  id="email"
+                  name="email"
+                  required
+                />
+                <Form_label for="email">Adres email</Form_label>
+                <Form_textarea
+                  name="message"
+                  id="message"
+                  rows="4"
+                  placeholder="Wiadomość"
+                  required
+                />
+                <ButtonEmail />
+              </Form>
+            </Book__form>
+          </Book>
+        </StyledWrapper>
+      </>
+    </ThemeProvider>
   );
 }

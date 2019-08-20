@@ -1,5 +1,6 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
+import { theme } from "./utils/theme.js";
 
 const StyledWrapper = styled.div`
   display: inline-block;
@@ -7,6 +8,10 @@ const StyledWrapper = styled.div`
   color: #000;
   margin-left: 4vw;
   width: 60%;
+
+  ${({ theme }) => theme.media.tabPort} {
+    width: 90%;
+  }
 `;
 const Title_1 = styled.h1`
   font-size: calc(15px + 3.5vw);
@@ -31,11 +36,15 @@ const Paragraph = styled.p`
 
 export default function Banner({ children, title, subtitle, paragraph }) {
   return (
-    <StyledWrapper>
-      <Title_1>{title}</Title_1>
-      <Title_2>{subtitle}</Title_2>
-      <Paragraph>{paragraph}</Paragraph>
-      {children}
-    </StyledWrapper>
+    <ThemeProvider theme={theme}>
+      <>
+        <StyledWrapper>
+          <Title_1>{title}</Title_1>
+          <Title_2>{subtitle}</Title_2>
+          <Paragraph>{paragraph}</Paragraph>
+          {children}
+        </StyledWrapper>
+      </>
+    </ThemeProvider>
   );
 }

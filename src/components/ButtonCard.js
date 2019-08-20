@@ -1,5 +1,6 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
+import { theme } from "./utils/theme.js";
 
 const StyledWrapper = styled.div`
   height: auto;
@@ -22,10 +23,12 @@ const StyledWrapper = styled.div`
   position: relative;
   border-radius: 5px;
 
-  @media (max-width: 900px) {
+  ${({ theme }) => theme.media.tabPort} {
     font-size: calc(10px + 2vw);
     padding: 20px;
     opacity: 1;
+    width: 50%;
+    padding: 10px;
   }
   &:before {
     content: "";
@@ -50,8 +53,12 @@ const StyledWrapper = styled.div`
 
 export default function ButtonCard({ className, children }) {
   return (
-    <StyledWrapper className={className}>
-      {children}Zobacz projekt
-    </StyledWrapper>
+    <ThemeProvider theme={theme}>
+      <>
+        <StyledWrapper className={className}>
+          {children}Zobacz projekt
+        </StyledWrapper>
+      </>
+    </ThemeProvider>
   );
 }
