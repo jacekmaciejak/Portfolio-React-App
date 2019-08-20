@@ -22,6 +22,7 @@ const StyledWrapper = styled.div`
   margin: 30px auto 0;
   position: relative;
   border-radius: 5px;
+  box-shadow: 0 20px 40px -10px #818181;
 
   ${({ theme }) => theme.media.tabPort} {
     font-size: calc(10px + 2vw);

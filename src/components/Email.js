@@ -5,20 +5,15 @@ import img from "../images/img2.jpg";
 import ButtonEmail from "./ButtonEmail";
 
 const StyledWrapper = styled.div`
-  display: grid;
-  justify-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  ${({ theme }) => theme.grid}
   height: 100vh;
   width: 100%;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 6fr;
 `;
 const Title_1 = styled.h1`
-  font-size: 7vw;
+  font-size: ${({ theme }) => theme.main.fontSize};
   line-height: 1;
-  color: #000;
   opacity: 0.1 !important;
   padding: 10px;
   text-align: center;
@@ -32,7 +27,7 @@ const Title_1 = styled.h1`
 const Title_2 = styled.h2`
   position: relative;
   top: -30px;
-  font-size: 5vw;
+  font-size: ${({ theme }) => theme.second.fontSize};
   letter-spacing: 3px;
   background: linear-gradient(90deg, #fff, #000, #fff);
   background-repeat: no-repeat;
@@ -48,11 +43,7 @@ const Title_2 = styled.h2`
 const Book = styled.section`
   position: relative;
   z-index: 9999;
-  display: grid;
-  justify-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  ${({ theme }) => theme.grid}
   width: 100%;
   ${({ theme }) => theme.media.tabLand} {
     height: 85%;
@@ -85,10 +76,7 @@ const Form = styled.form`
   width: 100%;
 
   ${({ theme }) => theme.media.tabLand} {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    ${({ theme }) => theme.center}
   }
 `;
 const Form_input = styled.input`

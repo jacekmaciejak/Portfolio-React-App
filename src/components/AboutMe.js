@@ -3,14 +3,8 @@ import styled, { ThemeProvider } from "styled-components";
 import { theme } from "./utils/theme.js";
 
 const StyledWrapper = styled.div`
-  color: #000;
-  display: grid;
-  justify-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  text-align: center;
-  height: 100vh;
+  // ${props => props.theme.grid};
+  ${({ theme }) => theme.grid};
   height: 100vh;
   width: 100%;
   grid-template-columns: 1fr;
@@ -19,10 +13,9 @@ const StyledWrapper = styled.div`
   position: relative;
 `;
 const Title_1 = styled.h1`
-  font-size: 7vw;
+  font-size: ${({ theme }) => theme.main.fontSize};
   opacity: 0.1 !important;
   margin-top: 70px;
-  box-shadow: $main_text-shadow;
   padding: 10px;
 
   ${({ theme }) => theme.media.tabPort} {
@@ -31,7 +24,7 @@ const Title_1 = styled.h1`
   }
 `;
 const Title_2 = styled.h2`
-  font-size: 5vw;
+  font-size: ${({ theme }) => theme.second.fontSize};
   letter-spacing: 3px;
   background: linear-gradient(90deg, #fff, #000, #fff);
   background-repeat: no-repeat;
@@ -67,7 +60,6 @@ const LineDown = styled.div`
   position: absolute;
   width: 2px;
   background: transparent;
-  color: #000;
 
   ::before {
     content: "";

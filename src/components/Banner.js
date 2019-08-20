@@ -5,7 +5,6 @@ import { theme } from "./utils/theme.js";
 const StyledWrapper = styled.div`
   display: inline-block;
   text-align: left;
-  color: #000;
   margin-left: 4vw;
   width: 60%;
 

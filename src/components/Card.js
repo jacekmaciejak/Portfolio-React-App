@@ -93,8 +93,7 @@ const Image = styled.img`
     transition: 0.5s;
 
     ${({ theme }) => theme.media.tabPort} {
-      transform: none;
-      transition-delay: none;
+      ${({ theme }) => theme.cardTransformOf}
     }
   }
 `;
@@ -106,62 +105,38 @@ const Content = styled.div`
   z-index: 2;
   padding: 20px;
   box-sizing: border-box;
-  color: #000;
   text-shadow: 4px 2px 5px rgba(255, 255, 255, 0.73);
 `;
 const H3 = styled.h3`
   margin-bottom: 20px;
   transform: translateY(-70px);
   font-size: 30px;
-  transition: 0.5s;
-  padding: 0;
-  text-align: center;
-  opacity: 0;
-  visibility: hidden;
-  font-weight: bold;
+  ${({ theme }) => theme.cardContent}
   ${StyledWrapper}:hover & {
-    opacity: 1;
-    visibility: visible;
-    transition-delay: 0.2s;
-    transform: translateY(0px);
+    ${({ theme }) => theme.cardHover}
 
     ${({ theme }) => theme.media.tabPort} {
-      transform: none;
-      transition-delay: none;
+      ${({ theme }) => theme.cardTransformOf}
     }
   }
   ${({ theme }) => theme.media.tabPort} {
-    transform: none;
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
+    ${({ theme }) => theme.cardHoverOf}
   }
 `;
 const P = styled.p`
   transform: translateY(-70px);
   font-size: 23px;
-  transition: 0.5s;
-  padding: 0;
-  text-align: center;
-  opacity: 0;
-  visibility: hidden;
-  font-weight: bold;
+  ${({ theme }) => theme.cardContent}
+
   ${StyledWrapper}:hover & {
-    opacity: 1;
-    visibility: visible;
-    transition-delay: 0.2s;
-    transform: translateY(0px);
+    ${({ theme }) => theme.cardHover}
 
     ${({ theme }) => theme.media.tabPort} {
-      transform: none;
-      transition-delay: none;
+      ${({ theme }) => theme.cardTransformOf}
     }
   }
   ${({ theme }) => theme.media.tabPort} {
-    transform: none;
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
+    ${({ theme }) => theme.cardHoverOf}
   }
 `;
 const UL = styled.ul`
@@ -170,28 +145,17 @@ const UL = styled.ul`
   list-style: none;
   line-height: 1.4;
   font-size: 23px;
-  transition: 0.5s;
-  padding: 0;
-  text-align: center;
-  opacity: 0;
-  visibility: hidden;
-  font-weight: bold;
+  ${({ theme }) => theme.cardContent}
+
   ${StyledWrapper}:hover & {
-    opacity: 1;
-    visibility: visible;
-    transition-delay: 0.2s;
-    transform: translateY(0px);
+    ${({ theme }) => theme.cardHover}
 
     ${({ theme }) => theme.media.tabPort} {
-      transform: none;
-      transition-delay: none;
+      ${({ theme }) => theme.cardTransformOf}
     }
   }
   ${({ theme }) => theme.media.tabPort} {
-    transform: none;
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
+    ${({ theme }) => theme.cardHoverOf}
   }
 `;
 
@@ -205,21 +169,14 @@ const StyledButtonCard = styled(ButtonCard)`
   text-shadow: none;
 
   ${({ theme }) => theme.media.tabPort} {
-    transform: none;
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
+    ${({ theme }) => theme.cardHoverOf}
   }
 
   ${StyledWrapper}:hover & {
-    opacity: 1;
-    visibility: visible;
-    transition-delay: 0.2s;
-    transform: translateY(0px);
+    ${({ theme }) => theme.cardHover}
 
     ${({ theme }) => theme.media.tabPort} {
-      transform: none;
-      transition-delay: none;
+      ${({ theme }) => theme.cardTransformOf}
     }
   }
 `;

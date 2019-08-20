@@ -1,11 +1,13 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
+import { theme } from "./utils/theme.js";
 
 const StyledWrapper = styled.div`
   height: 20vh;
   width: 100%;
-  background-color: #f2f2f2;
+  background-color: ${({ theme }) => theme.second.color};
   text-align: center;
+  margin-top: 50px;
 `;
 const H1 = styled.h1`
   top: 50%;
@@ -15,8 +17,12 @@ const H1 = styled.h1`
 
 export default function Footer() {
   return (
-    <StyledWrapper>
-      <H1>Witaj na mojej stronie</H1>
-    </StyledWrapper>
+    <ThemeProvider theme={theme}>
+      <>
+        <StyledWrapper>
+          <H1>Witaj na mojej stronie</H1>
+        </StyledWrapper>
+      </>
+    </ThemeProvider>
   );
 }

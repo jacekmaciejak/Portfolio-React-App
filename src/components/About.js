@@ -6,7 +6,6 @@ import { card } from "./Data/Data";
 import { theme } from "./utils/theme.js";
 
 const StyledWrapper = styled.div`
-  color: #000;
   padding-bottom: 2rem;
   height: auto;
   display: flex;
@@ -47,7 +46,7 @@ const H2 = styled.h2`
   justify-content: center;
   position: relative;
   z-index: 9999;
-  font-size: 5vw;
+  font-size: ${({ theme }) => theme.second.fontSize};
   letter-spacing: 3px;
   background: linear-gradient(90deg, #fff, #000, #fff);
   background-repeat: no-repeat;
