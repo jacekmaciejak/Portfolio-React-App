@@ -2,8 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import ButtonCard from "../components/ButtonCard";
 import { card } from "./Data/Data";
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 import { Link } from "react-router-dom";
+import { theme } from "./utils/theme.js";
 
 const StyledWrapper = styled.div`
   flex-basis: 30%;
@@ -13,10 +14,10 @@ const StyledWrapper = styled.div`
   position: relative;
   box-shadow: 0 20px 40px -10px #818181;
 
-  @media (max-width: 1200px) {
+  ${({ theme }) => theme.media.tabLand} {
     flex-basis: 45%;
   }
-  @media (max-width: 900px) {
+  ${({ theme }) => theme.media.tabPort} {
     flex-basis: 95%;
   }
 
@@ -34,7 +35,8 @@ const StyledWrapper = styled.div`
     border-top: 1px solid #000;
     border-bottom: 1px solid #000;
     transform: scaleX(0);
-    @media (max-width: 900px) {
+
+    ${({ theme }) => theme.media.tabPort} {
       display: none;
     }
   }
@@ -58,7 +60,8 @@ const StyledWrapper = styled.div`
     border-left: 1px solid #000;
     border-right: 1px solid #000;
     transform: scaleY(0);
-    @media (max-width: 900px) {
+
+    ${({ theme }) => theme.media.tabPort} {
       display: none;
     }
   }
@@ -78,7 +81,8 @@ const Image = styled.img`
   filter: grayscale(1);
   -webkit-filter: grayscale(1);
   opacity: 0.9;
-  @media (max-width: 900px) {
+
+  ${({ theme }) => theme.media.tabPort} {
     filter: grayscale(0) saturate(2);
     -webkit-filter: grayscale(0) saturate(2);
   }
@@ -88,7 +92,7 @@ const Image = styled.img`
     -webkit-filter: grayscale(0) saturate(2);
     transition: 0.5s;
 
-    @media (max-width: 900px) {
+    ${({ theme }) => theme.media.tabPort} {
       transform: none;
       transition-delay: none;
     }
@@ -121,12 +125,12 @@ const H3 = styled.h3`
     transition-delay: 0.2s;
     transform: translateY(0px);
 
-    @media (max-width: 900px) {
+    ${({ theme }) => theme.media.tabPort} {
       transform: none;
       transition-delay: none;
     }
   }
-  @media (max-width: 900px) {
+  ${({ theme }) => theme.media.tabPort} {
     transform: none;
     opacity: 1;
     visibility: visible;
@@ -148,12 +152,12 @@ const P = styled.p`
     transition-delay: 0.2s;
     transform: translateY(0px);
 
-    @media (max-width: 900px) {
+    ${({ theme }) => theme.media.tabPort} {
       transform: none;
       transition-delay: none;
     }
   }
-  @media (max-width: 900px) {
+  ${({ theme }) => theme.media.tabPort} {
     transform: none;
     opacity: 1;
     visibility: visible;
@@ -178,12 +182,12 @@ const UL = styled.ul`
     transition-delay: 0.2s;
     transform: translateY(0px);
 
-    @media (max-width: 900px) {
+    ${({ theme }) => theme.media.tabPort} {
       transform: none;
       transition-delay: none;
     }
   }
-  @media (max-width: 900px) {
+  ${({ theme }) => theme.media.tabPort} {
     transform: none;
     opacity: 1;
     visibility: visible;
@@ -200,7 +204,7 @@ const StyledButtonCard = styled(ButtonCard)`
   transform: translateY(40px);
   text-shadow: none;
 
-  @media (max-width: 900px) {
+  ${({ theme }) => theme.media.tabPort} {
     transform: none;
     opacity: 1;
     visibility: visible;
@@ -213,7 +217,7 @@ const StyledButtonCard = styled(ButtonCard)`
     transition-delay: 0.2s;
     transform: translateY(0px);
 
-    @media (max-width: 900px) {
+    ${({ theme }) => theme.media.tabPort} {
       transform: none;
       transition-delay: none;
     }
@@ -234,25 +238,29 @@ export default function Card({
   link
 }) {
   return (
-    <StyledWrapper data-aos="fade-up" data-aos-offset="200">
-      <Image src={image} alt={title} />
-      <Content>
-        <H3>{title}</H3>
-        <P>{description}</P>
-        <UL isVisble>
-          <li>{item_1}</li>
-          <li>{item_2}</li>
-          <li>{item_3}</li>
-          <li>{item_4}</li>
-          <li>{item_5}</li>
-          <li>{item_6}</li>
-          <li>{item_7}</li>
-        </UL>
-        <Link to={link}>
-          <StyledButtonCard />
-        </Link>
-      </Content>
-    </StyledWrapper>
+    <ThemeProvider theme={theme}>
+      <>
+        <StyledWrapper data-aos="fade-up" data-aos-offset="200">
+          <Image src={image} alt={title} />
+          <Content>
+            <H3>{title}</H3>
+            <P>{description}</P>
+            <UL isVisble>
+              <li>{item_1}</li>
+              <li>{item_2}</li>
+              <li>{item_3}</li>
+              <li>{item_4}</li>
+              <li>{item_5}</li>
+              <li>{item_6}</li>
+              <li>{item_7}</li>
+            </UL>
+            <Link to={link}>
+              <StyledButtonCard />
+            </Link>
+          </Content>
+        </StyledWrapper>
+      </>
+    </ThemeProvider>
   );
   Card.propTypes = {
     title: PropTypes.string.isRequired,

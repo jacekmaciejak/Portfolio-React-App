@@ -1,8 +1,9 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 import ButtonCard from "../components/ButtonCard";
 import Card from "../components/Card";
 import { card } from "./Data/Data";
+import { theme } from "./utils/theme.js";
 
 const StyledWrapper = styled.div`
   color: #000;
@@ -56,24 +57,29 @@ const H2 = styled.h2`
   -webkit-background-clip: text;
   -webkit-text-fill-color: rgba(255, 255, 255, 0);
   animation: animateText 3s linear infinite;
-  @media (max-width: 1200px) {
+
+  ${({ theme }) => theme.media.tabLand} {
     font-size: calc(30px + 3.5vw);
   }
 `;
 
 export default function About() {
   return (
-    <StyledWrapper>
-      {/* <H1 data-aos="fade-up">Moje prace</H1> */}
-      <H2 data-aos="fade-up">Projekty</H2>
-      {card.map(item => (
-        <Card
-          key={item.title}
-          {...item}
-          data-aos="fade-up"
-          data-aos-offset="200"
-        />
-      ))}
-    </StyledWrapper>
+    <ThemeProvider theme={theme}>
+      <>
+        <StyledWrapper>
+          {/* <H1 data-aos="fade-up">Moje prace</H1> */}
+          <H2 data-aos="fade-up">Projekty</H2>
+          {card.map(item => (
+            <Card
+              key={item.title}
+              {...item}
+              data-aos="fade-up"
+              data-aos-offset="200"
+            />
+          ))}
+        </StyledWrapper>
+      </>
+    </ThemeProvider>
   );
 }
