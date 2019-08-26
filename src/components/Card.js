@@ -167,7 +167,11 @@ const StyledButtonCard = styled(ButtonCard)`
   font-weight: bold;
   transform: translateY(40px);
   text-shadow: none;
-
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  height: 100px;
+  background-color: black;
   ${({ theme }) => theme.media.tabPort} {
     ${({ theme }) => theme.cardHoverOf}
   }
@@ -211,9 +215,7 @@ export default function Card({
               <li>{item_6}</li>
               <li>{item_7}</li>
             </UL>
-            <Link to={link}>
-              <StyledButtonCard />
-            </Link>
+            <StyledButtonCard as="a" href={link} target="_blank" />
           </Content>
         </StyledWrapper>
       </>
