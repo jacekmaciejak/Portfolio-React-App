@@ -50,14 +50,12 @@ export default class Skills extends Component {
 
     return (
       <ThemeProvider theme={theme}>
-        <>
-          <StyledWrapper>
-            <Title_1 data-aos="fade-up">W czym jestem dobry?</Title_1>
-            <Title_2 data-aos="fade-up">Technologie</Title_2>
-            <Panel openModalFn={this.openModal} />
-            {isModalOpen && <Modal closeModalFn={this.closeModal} />}
-          </StyledWrapper>
-        </>
+        <StyledWrapper>
+          <Title_1 data-aos="fade-up">W czym jestem dobry?</Title_1>
+          <Title_2 data-aos="fade-up">Technologie</Title_2>
+          <Panel openModalFn={this.openModal} />
+          {isModalOpen && <Modal closeModalFn={this.closeModal} />}
+        </StyledWrapper>
       </ThemeProvider>
     );
   }

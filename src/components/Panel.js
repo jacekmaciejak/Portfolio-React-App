@@ -1,8 +1,17 @@
 import React from "react";
 import "../styles/Panel.scss";
 import rwd from "../images/rwd.png";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faFileCode } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faHtml5,
+  faCss3Alt,
+  faSass,
+  faGithub,
+  faJsSquare,
+  faReact,
+  faLinkedinIn,
+  faFacebookF
+} from "@fortawesome/free-brands-svg-icons";
 
 export default function Panel({ openModalFn }) {
   return (
@@ -14,18 +23,23 @@ export default function Panel({ openModalFn }) {
               href="https://www.facebook.com/profile.php?id=100007445748069"
               target="_blank"
             >
-              <i className="fab fa-facebook-f" />
-              {/* <FontAwesomeIcon icon={faFileCode} size="5x" /> */}
+              <i className="fab">
+                <FontAwesomeIcon icon={faFacebookF} size="lg" />
+              </i>
             </a>
           </li>
           <li className="p-2">
             <a href="#panel" onClick={openModalFn}>
-              <i className="fab fa-html5" />
+              <i className="fab">
+                <FontAwesomeIcon icon={faHtml5} size="lg" />
+              </i>
             </a>
           </li>
           <li className="p-11">
             <a href="#panel">
-              <i className="fab fa-js" />
+              <i className="fab">
+                <FontAwesomeIcon icon={faJsSquare} size="lg" />
+              </i>
             </a>
           </li>
           <li className="p-4">
@@ -33,12 +47,16 @@ export default function Panel({ openModalFn }) {
               href="www.linkedin.com/in/jacek-maciejak-frontend-developer"
               target="_blank"
             >
-              <i className="fab fa-linkedin-in" />
+              <i className="fab">
+                <FontAwesomeIcon icon={faLinkedinIn} size="lg" />
+              </i>
             </a>
           </li>
           <li className="p-1">
             <a href="#panel">
-              <i className="fab fa-css3-alt" />
+              <i className="fab">
+                <FontAwesomeIcon icon={faCss3Alt} size="lg" />
+              </i>
             </a>
           </li>
           <li className="p-6">
@@ -67,17 +85,23 @@ export default function Panel({ openModalFn }) {
           </li>
           <li className="p-10">
             <a href="#panel">
-              <i className="fab fa-sass" />
+              <i className="fab">
+                <FontAwesomeIcon icon={faSass} size="lg" />
+              </i>
             </a>
           </li>
           <li className="p-3">
             <a href="https://github.com/jacekmaciejak" target="_blank">
-              <i className="fab fa-github" />
+              <i className="fab">
+                <FontAwesomeIcon icon={faGithub} size="lg" />
+              </i>
             </a>
           </li>
           <li className="p-12">
             <a href="#panel">
-              <i className="fab fa-react" />
+              <i className="fab">
+                <FontAwesomeIcon icon={faReact} size="lg" />
+              </i>
             </a>
           </li>
         </ul>
