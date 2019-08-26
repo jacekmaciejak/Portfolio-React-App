@@ -2,7 +2,7 @@ import React from "react";
 import styled, { ThemeProvider } from "styled-components";
 import { theme } from "./utils/theme.js";
 
-const Line = styled.div`
+const StyledWrapper = styled.div`
   position: absolute;
   top: 90%;
   left: 50%;
@@ -33,10 +33,10 @@ const Line = styled.div`
   }
 `;
 
-export default function LineDown() {
+export default function LineDown({ children, className }) {
   return (
     <ThemeProvider theme={theme}>
-      <Line />
+      <StyledWrapper className={className}>{children}</StyledWrapper>
     </ThemeProvider>
   );
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import styled, { ThemeProvider } from "styled-components";
 import { theme } from "./utils/theme.js";
+import LineDown from "./LineDown.js";
 
 const StyledWrapper = styled.div`
   // ${props => props.theme.grid};
@@ -52,31 +53,12 @@ const Text = styled.p`
     line-height: 0;
   }
 `;
-const LineDown = styled.div`
+const StyledLineDown = styled(LineDown)`
+  position: absolute;
   top: 50%;
   left: 92%;
   transform: translate(-92%, -50%);
   height: 50%;
-  position: absolute;
-  width: 2px;
-  background: transparent;
-
-  ::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(transparent, #000, transparent);
-    animation: animateScrollDown 2s linear infinite;
-  }
-
-  ${({ theme }) => theme.media.tabLand} {
-    top: 85 %;
-    left: 10 %;
-    transform: translate(-85 %, -10 %);
-  }
 
   ${({ theme }) => theme.media.tabPort} {
     display: none;
@@ -86,22 +68,20 @@ const LineDown = styled.div`
 export default function AboutMe() {
   return (
     <ThemeProvider theme={theme}>
-      <>
-        <StyledWrapper>
-          <Title_1 data-aos="fade-up">Kim jestem?</Title_1>
-          <Title_2 data-aos="fade-up">O mnie</Title_2>
-          <Text data-aos="fade-up">
-            Witaj, na stronie z moimi projektami. Jestem front-end developerem
-            kodującym w HTML5, CSS3 - SCSS. Korzystam również z Bootstrap4 oraz
-            Git, znam podstawy Node.js. W projektach stosuję zasady Responsive
-            Web Design, wykorzystuję Grid i Flexbox, jak również metodologię
-            BEM. Znam podstawy JavaScript i bibliotekę React. Każdego dnia
-            doskonalę swoje umiejętności kodowania strony internetowe i
-            programowanie w JavaScript, szczególnie ES6.
-          </Text>
-          <LineDown />
-        </StyledWrapper>
-      </>
+      <StyledWrapper>
+        <Title_1 data-aos="fade-up">Kim jestem?</Title_1>
+        <Title_2 data-aos="fade-up">O mnie</Title_2>
+        <Text data-aos="fade-up">
+          Witaj, na stronie z moimi projektami. Jestem front-end developerem
+          kodującym w HTML5, CSS3 - SCSS. Korzystam również z Bootstrap4 oraz
+          Git, znam podstawy Node.js. W projektach stosuję zasady Responsive Web
+          Design, wykorzystuję Grid i Flexbox, jak również metodologię BEM. Znam
+          podstawy JavaScript i bibliotekę React. Każdego dnia doskonalę swoje
+          umiejętności kodowania strony internetowe i programowanie w
+          JavaScript, szczególnie ES6.
+        </Text>
+        <StyledLineDown />
+      </StyledWrapper>
     </ThemeProvider>
   );
 }

@@ -14,7 +14,6 @@ export default function Home() {
     <>
       <Hero>
         <Banner
-          className="banner"
           title="Front-end Developer"
           subtitle="Jacek Maciejak"
           paragraph="Witam na mojej stronie. Zapraszam Cię do przejrzenia moich projektów."
