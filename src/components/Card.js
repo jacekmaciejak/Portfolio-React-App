@@ -170,8 +170,52 @@ const StyledButton = styled(Button)`
   display: flex;
   justify-content: end;
   align-items: end;
-  height: 100px;
-  background-color: black;
+  height: auto;
+  width: 60%;
+  text-align: center;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #fff;
+  position: absolute;
+  overflow: hidden;
+  letter-spacing: 2px;
+  opacity: 0.5;
+  color: #fff;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+  background: #000;
+  padding: 10px;
+  margin: 30px auto 0;
+  position: relative;
+  border-radius: 5px;
+  box-shadow: 0 20px 40px -10px #818181;
+  ${({ theme }) => theme.media.tabPort} {
+    font-size: calc(10px + 2vw);
+    padding: 20px;
+    opacity: 1;
+    width: 50%;
+    padding: 10px;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, #fff, transparent);
+    transition: 0.5s;
+
+    &:hover {
+      background: linear-gradient(90deg, #fff, #fff, #fff);
+    }
+  }
+  &:hover:before,
+  &:active:before,
+  &:focus:before {
+    left: 100%;
+  }
 
   ${({ theme }) => theme.media.tabPort} {
     ${({ theme }) => theme.cardHoverOf}
@@ -201,25 +245,25 @@ export default function Card({
 }) {
   return (
     <ThemeProvider theme={theme}>
-      <>
-        <StyledWrapper data-aos="fade-up" data-aos-offset="200">
-          <Image src={image} alt={title} />
-          <Content>
-            <H3>{title}</H3>
-            <P>{description}</P>
-            <UL isVisble>
-              <li>{item_1}</li>
-              <li>{item_2}</li>
-              <li>{item_3}</li>
-              <li>{item_4}</li>
-              <li>{item_5}</li>
-              <li>{item_6}</li>
-              <li>{item_7}</li>
-            </UL>
-            <StyledButton as="a" href={link} target="_blank" />
-          </Content>
-        </StyledWrapper>
-      </>
+      <StyledWrapper data-aos="fade-up" data-aos-offset="200">
+        <Image src={image} alt={title} />
+        <Content>
+          <H3>{title}</H3>
+          <P>{description}</P>
+          <UL isVisble>
+            <li>{item_1}</li>
+            <li>{item_2}</li>
+            <li>{item_3}</li>
+            <li>{item_4}</li>
+            <li>{item_5}</li>
+            <li>{item_6}</li>
+            <li>{item_7}</li>
+          </UL>
+          <StyledButton as="a" href={link} target="_blank">
+            Zobacz projekt
+          </StyledButton>
+        </Content>
+      </StyledWrapper>
     </ThemeProvider>
   );
   Card.propTypes = {
