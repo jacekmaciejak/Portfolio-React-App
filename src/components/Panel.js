@@ -48,6 +48,209 @@ const Li = styled.li`
   :hover:nth-child(1) a:after {
     background: #4a69ad;
   }
+  :hover:nth-child(2) a {
+    background: #e44d26;
+  }
+
+  :hover:nth-child(2) a:before {
+    background: #cc3d19;
+  }
+  :hover:nth-child(2) a:after {
+    background: #e96949;
+  }
+  :hover:nth-child(3) a {
+    background: #f7e018;
+  }
+
+  :hover:nth-child(3) a:before {
+    background: #ddc808;
+  }
+
+  :hover:nth-child(3) a:after {
+    background: #f8e53a;
+  }
+
+  :hover:nth-child(4) a {
+    background: #0077b5;
+  }
+
+  :hover:nth-child(4) a:before {
+    background: #036aa0;
+  }
+
+  :hover:nth-child(4) a:after {
+    background: #0d82bf;
+  }
+
+  :hover:nth-child(5) a {
+    background: #1f62ae;
+  }
+
+  :hover:nth-child(5) a:before {
+    background: #174982;
+  }
+
+  :hover:nth-child(5) a:after {
+    background: #267ad9;
+  }
+
+  :hover:nth-child(6) a {
+    background: #8a61c1;
+  }
+
+  :hover:nth-child(6) a:before {
+    background: #7847b8;
+  }
+
+  :hover:nth-child(6) a:after {
+    background: #956cc6;
+  }
+
+  :hover:nth-child(7) a {
+    background: #33ff33;
+  }
+
+  :hover:nth-child(7) a:before {
+    background: #00e600;
+  }
+
+  :hover:nth-child(7) a:after {
+    background: #66ff66;
+  }
+
+  :hover:nth-child(8) a {
+    background: #ff5500;
+  }
+
+  :hover:nth-child(8) a:before {
+    background: #cc4400;
+  }
+
+  :hover:nth-child(8) a:after {
+    background: #ff7733;
+  }
+
+  :hover:nth-child(9) a {
+    background: #ff0066;
+  }
+
+  :hover:nth-child(9) a:before {
+    background: #cc0052;
+  }
+
+  :hover:nth-child(9) a:after {
+    background: #ff3385;
+  }
+
+  :hover:nth-child(10) a {
+    background: #cf649a;
+  }
+
+  :hover:nth-child(10) a:before {
+    background: #c33c80;
+  }
+
+  :hover:nth-child(10) a:after {
+    background: #db8ab3;
+  }
+
+  :hover:nth-child(11) a {
+    background: #e4405f;
+  }
+
+  :hover:nth-child(11) a:before {
+    background: #d02d4c;
+  }
+
+  :hover:nth-child(11) a:after {
+    background: #f1395c;
+  }
+
+  :hover:nth-child(12) a {
+    background: #61dbfb;
+  }
+
+  :hover:nth-child(12) a:before {
+    background: #38d3fa;
+  }
+
+  :hover:nth-child(12) a:after {
+    background: #83e4fc;
+  }
+
+  &.p-1 {
+    position: absolute;
+    top: 260px;
+    left: 170px;
+    ${({ theme }) => theme.media.tabPort} {
+      top: 220px;
+      left: 220px;
+    }
+  }
+  &.p-2 {
+    position: absolute;
+    top: 340px;
+    left: 40px;
+    ${({ theme }) => theme.media.tabPort} {
+      top: 280px;
+      left: 300px;
+    }
+  }
+  &.p-3 {
+    position: absolute;
+    top: 430px;
+    left: 170px;
+        ${({ theme }) => theme.media.tabPort} {
+        top: 390px;
+        left: 300px;
+    }
+    }
+    &.p-4{
+      position: absolute;
+      top: 520px;
+      left: 300px;
+        ${({ theme }) => theme.media.tabPort} {
+        top: 450px;
+        left: 385px;
+    }
+    }
+      &.p-5 {
+    position: absolute;
+    top: 445px;
+    left: 430px;
+      ${({ theme }) => theme.media.tabPort} {
+        top: 400px;
+        left: 470px;
+    }
+  }
+        &.p-6 {
+    position: absolute;
+    top: 375px;
+    left: 550px;
+        font-weight: bold;
+
+    ${({ theme }) => theme.media.tabPort} {
+        top: 290px;
+        left: 470px;
+    }
+  }
+          &.p-7 {
+    font-size: 35px;
+    font-weight: bold;
+        position: absolute;
+    top: 305px;
+    left: 670px;
+    &.img{
+        width: 90%;
+    height: 100%;
+    }
+
+    ${({ theme }) => theme.media.tabPort} {
+        font-size: 22px;
+
+    }
+  }
+  }
 `;
 const A = styled.a`
   position: relative;
@@ -58,7 +261,8 @@ const A = styled.a`
   text-align: center;
   transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(0, 0);
   transition: 0.5s;
-  cursor: default;
+  cursor: pointer;
+
   ${({ theme }) => theme.media.tabPort} {
     width: 50px;
     height: 50px;
@@ -169,7 +373,7 @@ export default function Panel({ openModalFn }) {
           <Li className="p-7">
             <A href="#panel">
               <I className="fab">
-                <img src={rwd} alt="Icon" />
+                <img className="img" src={rwd} alt="Icon" />
               </I>
             </A>
           </Li>
