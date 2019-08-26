@@ -95,7 +95,7 @@ const Form_input = styled.input`
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
 
   ${({ theme }) => theme.media.phone} {
-    width: 100%;
+    width: 90%;
   }
 
   :focus {
@@ -122,22 +122,13 @@ const Form_label = styled.label`
   width: 70%;
   font-size: calc(8px + 1vw);
   font-weight: 600;
-  margin-top: 0.7rem;
-  margin-bottom: 0.7rem;
   display: block;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  color: #fff;
-  text-align: start;
-
-  ${({ theme }) => theme.media.tabLand} {
-    margin-left: 7rem;
-  }
-  ${({ theme }) => theme.media.tabPort} {
-    margin-left: 5rem;
-  }
+  margin: 0.7rem auto;
+  color: ${({ theme }) => theme.main.color};
   ${({ theme }) => theme.media.phone} {
-    margin-left: 3rem;
+    width: 90%;
   }
 `;
 const Form_textarea = styled.textarea`
@@ -156,7 +147,7 @@ const Form_textarea = styled.textarea`
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
 
   ${({ theme }) => theme.media.phone} {
-    width: 100%;
+    width: 90%;
   }
 
   :focus {
@@ -189,7 +180,7 @@ export default function Email() {
           <Title_2 data-aos="fade-up">Kontakt</Title_2>
           <Book id="contact" data-aos="fade-up">
             <Book__form img={img}>
-              <Form autocomplete="off" method="post" action="kontakt.php">
+              <Form autocomplete="off" method="post" action="Contact.php">
                 <Form_input
                   type="text"
                   placeholder="Imię i nazwisko"
