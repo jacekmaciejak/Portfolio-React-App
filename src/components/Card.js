@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import ButtonCard from "../components/ButtonCard";
+import Button from "./Button.js";
 import { card } from "./Data/Data";
 import styled, { ThemeProvider } from "styled-components";
 import { Link } from "react-router-dom";
@@ -159,7 +159,7 @@ const UL = styled.ul`
   }
 `;
 
-const StyledButtonCard = styled(ButtonCard)`
+const StyledButton = styled(Button)`
   transition: 0.5s;
   text-align: center;
   opacity: 0;
@@ -172,6 +172,7 @@ const StyledButtonCard = styled(ButtonCard)`
   align-items: end;
   height: 100px;
   background-color: black;
+
   ${({ theme }) => theme.media.tabPort} {
     ${({ theme }) => theme.cardHoverOf}
   }
@@ -215,7 +216,7 @@ export default function Card({
               <li>{item_6}</li>
               <li>{item_7}</li>
             </UL>
-            <StyledButtonCard as="a" href={link} target="_blank" />
+            <StyledButton as="a" href={link} target="_blank" />
           </Content>
         </StyledWrapper>
       </>
