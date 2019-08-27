@@ -10,16 +10,18 @@ const StyledWrapper = styled.div`
   width: 100vw;
   height: auto;
   color: ${({ theme }) => theme.third.color};
-  line-height: 1.5;
+  line-height: 1.8;
   text-transform: uppercase;
-  font-size: ${({ theme }) => theme.second.fontSize};
+  font-size: 3.5vw;
   text-align: center;
+  margin-top: 100px;
 `;
 const StyledButton = styled(Button)`
   opacity: 1;
   margin: 0 auto;
-  width: 50%;
+  width: 40%;
   padding: 20px 0;
+  margin-top: -100px;
 `;
 const StyledLink = styled(Link)`
   text-decoration: none;

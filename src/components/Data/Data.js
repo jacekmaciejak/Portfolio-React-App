@@ -5,6 +5,16 @@ import card_3 from "../../images/card_3.jpg";
 import card_4 from "../../images/card_4.jpg";
 import card_5 from "../../images/card_5.jpg";
 import card_6 from "../../images/card_6.jpg";
+import {
+  faHtml5,
+  faCss3Alt,
+  faSass,
+  faGithub,
+  faJsSquare,
+  faReact,
+  faLinkedinIn,
+  faFacebookF
+} from "@fortawesome/free-brands-svg-icons";
 
 export const card = [
   {
@@ -74,5 +84,23 @@ export const card = [
     item_2: "SCSS",
     item_3: "Java Script",
     link: "https://jacekmaciejak.github.io/Rock-paper-and-scissors---game"
+  }
+];
+
+export const icon = [
+  {
+    icon: faCss3Alt,
+    title: "",
+    link: ""
+  },
+  {
+    icon: faHtml5,
+    title: "",
+    link: ""
+  },
+  {
+    icon: faGithub,
+    title: "",
+    link: "https://github.com/jacekmaciejak"
   }
 ];

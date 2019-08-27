@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import Button from "./Button.js";
 import { card } from "./Data/Data";
 import styled, { ThemeProvider } from "styled-components";
-import { Link } from "react-router-dom";
 import { theme } from "./utils/theme.js";
 
 const StyledWrapper = styled.div`

@@ -1,6 +1,6 @@
-@import './styles/variables';
-
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,5 +9,5 @@
 }
 
 body {
-    background-color: $main_background-color;
+    // background-color: $main_background-color;
 }

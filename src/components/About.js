@@ -1,6 +1,5 @@
 import React from "react";
 import styled, { ThemeProvider } from "styled-components";
-import ButtonCard from "./Button";
 import Card from "../components/Card";
 import { card } from "./Data/Data";
 import { theme } from "./utils/theme.js";
