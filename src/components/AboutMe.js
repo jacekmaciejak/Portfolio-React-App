@@ -68,7 +68,7 @@ const StyledLineDown = styled(LineDown)`
 export default function AboutMe() {
   return (
     <ThemeProvider theme={theme}>
-      <StyledWrapper>
+      <StyledWrapper id="aboutme">
         <Title_1 data-aos="fade-up">Kim jestem?</Title_1>
         <Title_2 data-aos="fade-up">O mnie</Title_2>
         <Text data-aos="fade-up">

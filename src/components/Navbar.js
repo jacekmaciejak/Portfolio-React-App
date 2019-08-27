@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import "../styles/Navbar.scss";
 import { FaAlignRight } from "react-icons/fa";
-import { NavLink } from "react-router-dom";
+// import { NavHashLink as Link } from "react-router-hash-link";
+// import { Link } from "react-router-dom";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 export default class Navbar extends Component {
   state = {
@@ -29,21 +31,65 @@ export default class Navbar extends Component {
             className={this.state.isOpen ? "nav-links show-nav" : "nav-links"}
           >
             <li>
-              <NavLink to="/about_me">O mnie</NavLink>
+              <Link
+                to="aboutme"
+                activeClass="active"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={1000}
+              >
+                O mnie
+              </Link>
             </li>
             <li>
-              <NavLink to="/skills">Technologie</NavLink>
+              <Link
+                to="skills"
+                activeClass="active"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={1000}
+              >
+                Technologie
+              </Link>
             </li>
             <li>
-              <NavLink to="/about">Projekty</NavLink>
+              <Link
+                to="about"
+                activeClass="active"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={1000}
+              >
+                Projekty
+              </Link>
             </li>
             <li>
-              <NavLink to="/contact">Kontakt</NavLink>
+              <Link
+                to="email"
+                activeClass="active"
+                spy={true}
+                smooth={true}
+                offset={150}
+                duration={1000}
+              >
+                Kontakt
+              </Link>
             </li>
             <li>
-              <NavLink to="/" exact>
-                Strona główna
-              </NavLink>
+              <Link
+                to="banner"
+                exact
+                activeClass="active"
+                spy={true}
+                smooth={true}
+                offset={-250}
+                duration={1000}
+              >
+                Strona g?�wna
+              </Link>
             </li>
           </ul>
         </div>

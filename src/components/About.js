@@ -65,7 +65,7 @@ export default function About() {
   return (
     <ThemeProvider theme={theme}>
       <>
-        <StyledWrapper>
+        <StyledWrapper id="about">
           {/* <H1 data-aos="fade-up">Moje prace</H1> */}
           <H2 data-aos="fade-up">Projekty</H2>
           {card.map(item => (

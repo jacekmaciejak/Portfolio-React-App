@@ -19,7 +19,7 @@ const StyledWrapper = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(transparent, #000, transparent);
+    background: linear-gradient(transparent, #80bfff, transparent);
     animation: animateScrollDown 2s linear infinite;
   }
 

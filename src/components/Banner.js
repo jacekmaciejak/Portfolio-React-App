@@ -37,7 +37,7 @@ export default function Banner({ children, title, subtitle, paragraph }) {
   return (
     <ThemeProvider theme={theme}>
       <>
-        <StyledWrapper>
+        <StyledWrapper id="banner">
           <Title_1>{title}</Title_1>
           <Title_2>{subtitle}</Title_2>
           <Paragraph>{paragraph}</Paragraph>

@@ -175,7 +175,7 @@ export default function Email() {
   return (
     <ThemeProvider theme={theme}>
       <>
-        <StyledWrapper>
+        <StyledWrapper id="email">
           <Title_1 data-aos="fade-up">Zachęcam do kontaktu</Title_1>
           <Title_2 data-aos="fade-up">Kontakt</Title_2>
           <Book id="contact" data-aos="fade-up">

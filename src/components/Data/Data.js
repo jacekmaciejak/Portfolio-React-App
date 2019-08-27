@@ -29,17 +29,6 @@ export const card = [
     link: "https://jacekmaciejak.github.io/Tourism"
   },
   {
-    image: card_2,
-    title: "Restaurant",
-    description:
-      "Strona została zbudowana przy użyciu następujących technologi:",
-    item_1: "HTML5",
-    item_2: "SCSS",
-    item_3: "Grid Layout",
-    item_4: "Responsive web design",
-    link: "https://jacekmaciejak.github.io/Restaurant"
-  },
-  {
     image: card_3,
     title: "Veterinary clinic",
     description:
@@ -49,6 +38,17 @@ export const card = [
     item_3: "Grid Layout",
     item_4: "Responsive web design",
     link: "https://jacekmaciejak.github.io/Veterinary-clinic"
+  },
+  {
+    image: card_2,
+    title: "Restaurant",
+    description:
+      "Strona została zbudowana przy użyciu następujących technologi:",
+    item_1: "HTML5",
+    item_2: "SCSS",
+    item_3: "Grid Layout",
+    item_4: "Responsive web design",
+    link: "https://jacekmaciejak.github.io/Restaurant"
   },
   {
     image: card_4,
