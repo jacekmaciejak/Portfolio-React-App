@@ -1,5 +1,4 @@
 import React from "react";
-import "../styles/Panel.scss";
 import rwd from "../images/rwd.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled, { ThemeProvider } from "styled-components";
@@ -200,57 +199,107 @@ const Li = styled.li`
     position: absolute;
     top: 430px;
     left: 170px;
-        ${({ theme }) => theme.media.tabPort} {
-        top: 390px;
-        left: 300px;
-    }
-    }
-    &.p-4{
-      position: absolute;
-      top: 520px;
+    ${({ theme }) => theme.media.tabPort} {
+      top: 390px;
       left: 300px;
-        ${({ theme }) => theme.media.tabPort} {
-        top: 450px;
-        left: 385px;
     }
+  }
+  &.p-4 {
+    position: absolute;
+    top: 520px;
+    left: 300px;
+    ${({ theme }) => theme.media.tabPort} {
+      top: 450px;
+      left: 385px;
     }
-      &.p-5 {
+  }
+  &.p-5 {
     position: absolute;
     top: 445px;
     left: 430px;
-      ${({ theme }) => theme.media.tabPort} {
-        top: 400px;
-        left: 470px;
+    ${({ theme }) => theme.media.tabPort} {
+      top: 400px;
+      left: 470px;
     }
   }
-        &.p-6 {
+  &.p-6 {
     position: absolute;
     top: 375px;
     left: 550px;
-        font-weight: bold;
+    font-weight: bold;
 
     ${({ theme }) => theme.media.tabPort} {
-        top: 290px;
-        left: 470px;
+      top: 290px;
+      left: 470px;
     }
   }
-          &.p-7 {
+  &.p-7 {
     font-size: 35px;
     font-weight: bold;
-        position: absolute;
+    position: absolute;
     top: 305px;
     left: 670px;
-    &.img{
-        width: 90%;
-    height: 100%;
-    }
-
     ${({ theme }) => theme.media.tabPort} {
-        font-size: 22px;
-
+      font-size: 22px;
+      top: 240px;
+      left: 550px;
     }
   }
+  &.p-8 {
+    font-size: 35px;
+    font-weight: bold;
+    position: absolute;
+    top: 210px;
+    left: 540px;
+    ${({ theme }) => theme.media.tabPort} {
+      font-size: 22px;
+      top: 180px;
+      left: 470px;
+    }
   }
+  &.p-9 {
+    font-size: 35px;
+    font-weight: bold;
+    position: absolute;
+    top: 120px;
+    left: 410px;
+    ${({ theme }) => theme.media.tabPort} {
+      font-size: 22px;
+      top: 120px;
+      left: 385px;
+    }
+  }
+  &.p-10 {
+    position: absolute;
+    top: 190px;
+    left: 290px;
+    ${({ theme }) => theme.media.tabPort} {
+      top: 170px;
+      left: 300px;
+    }
+  }
+  &.p-11 {
+    position: absolute;
+    top: 350px;
+    left: 300px;
+    ${({ theme }) => theme.media.tabPort} {
+      top: 340px;
+      left: 385px;
+    }
+  }
+  &.p-12 {
+    position: absolute;
+    top: 280px;
+    left: 420px;
+    ${({ theme }) => theme.media.tabPort} {
+      top: 230px;
+      left: 385px;
+    }
+  }
+`;
+const Img = styled.img`
+  width: 90%;
+  height: 100%;
 `;
 const A = styled.a`
   position: relative;
@@ -317,6 +366,21 @@ const I = styled.i`
   ${Li}:hover & {
     color: #fff;
   }
+  &.ip-8 {
+    line-height: 1;
+    font-size: 35px;
+    font-weight: bold;
+    ${({ theme }) => theme.media.tabPort} {
+      font-size: 22px;
+    }
+  }
+  &.ip-9 {
+    font-size: 35px;
+    font-weight: bold;
+    ${({ theme }) => theme.media.tabPort} {
+      font-size: 22px;
+    }
+  }
 `;
 
 export default function Panel({ openModalFn }) {
@@ -373,20 +437,20 @@ export default function Panel({ openModalFn }) {
           <Li className="p-7">
             <A href="#panel">
               <I className="fab">
-                <img className="img" src={rwd} alt="Icon" />
+                <Img className="img" src={rwd} alt="Icon" />
               </I>
             </A>
           </Li>
           <Li className="p-8">
             <A href="#panel">
-              <I className="fab">
+              <I className="ip-8 fab">
                 Flex <br /> Box
               </I>
             </A>
           </Li>
           <Li className="p-9">
             <A href="#panel">
-              <I className="fab">Grid</I>
+              <I className="ip-9 fab">Grid</I>
             </A>
           </Li>
           <Li className="p-10">
