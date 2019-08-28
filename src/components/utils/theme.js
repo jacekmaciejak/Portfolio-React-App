@@ -5,7 +5,8 @@ export const theme = {
     phone: "@media (max-width: 600px)",
     tabPort: "@media (max-width: 900px)",
     tabLand: "@media (max-width: 1200px)",
-    bigDesktop: "@media (min-width: 1800px)"
+    bigDesktop: "@media (min-width: 1800px)",
+    tabPortMin: "@media (min-width: 900px)"
   },
   main: {
     color: "#fff",

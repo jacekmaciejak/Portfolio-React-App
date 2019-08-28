@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import "../styles/Navbar.scss";
 import { FaAlignRight } from "react-icons/fa";
-// import { NavHashLink as Link } from "react-router-hash-link";
-// import { Link } from "react-router-dom";
 import { Link, animateScroll as scroll } from "react-scroll";
 
 export default class Navbar extends Component {
@@ -72,7 +70,7 @@ export default class Navbar extends Component {
                 activeClass="active"
                 spy={true}
                 smooth={true}
-                offset={150}
+                offset={-70}
                 duration={1000}
               >
                 Kontakt
@@ -88,7 +86,7 @@ export default class Navbar extends Component {
                 offset={-250}
                 duration={1000}
               >
-                Strona g?ówna
+                Glowna
               </Link>
             </li>
           </ul>
