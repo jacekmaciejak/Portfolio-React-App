@@ -15,7 +15,7 @@ const StyledWrapper = styled.div`
 const Title_1 = styled.h1`
   font-size: ${({ theme }) => theme.main.fontSize};
   opacity: 0.1 !important;
-  margin-top: 80px;
+  margin-top: 30px;
   padding: 10px;
 `;
 const Title_2 = styled.h2`
@@ -28,6 +28,7 @@ const Title_2 = styled.h2`
   -webkit-background-clip: text;
   -webkit-text-fill-color: rgba(255, 255, 255, 0);
   animation: animateText 3s linear infinite;
+  margin-top: -40px;
 `;
 
 export default class Skills extends Component {

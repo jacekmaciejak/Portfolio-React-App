@@ -6,7 +6,7 @@ import ButtonEmail from "./ButtonEmail";
 
 const StyledWrapper = styled.div`
   ${({ theme }) => theme.grid}
-  height: 100vh;
+  height: 90vh;
   width: 100%;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 6fr;
@@ -17,7 +17,7 @@ const Title_1 = styled.h1`
   opacity: 0.1 !important;
   padding: 10px;
   text-align: center;
-  margin-top: 100px;
+  margin-top: 30px;
 
   ${({ theme }) => theme.media.tabPort} {
     font-size: calc(40px + 3.5vw);
@@ -26,7 +26,6 @@ const Title_1 = styled.h1`
 `;
 const Title_2 = styled.h2`
   position: relative;
-  top: -30px;
   font-size: ${({ theme }) => theme.second.fontSize};
   letter-spacing: 3px;
   background: linear-gradient(90deg, #fff, #000, #fff);
@@ -46,7 +45,7 @@ const Book = styled.section`
   ${({ theme }) => theme.grid}
   width: 100%;
   ${({ theme }) => theme.media.tabLand} {
-    height: 85%;
+    height: 75%;
   }
 `;
 const Book__form = styled.div`

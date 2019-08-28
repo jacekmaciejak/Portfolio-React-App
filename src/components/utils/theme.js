@@ -10,11 +10,11 @@ export const theme = {
   },
   main: {
     color: "#fff",
-    fontSize: "7vw"
+    fontSize: "6vw"
   },
   second: {
     color: "#f2f2f2",
-    fontSize: "5vw"
+    fontSize: "4.5vw"
   },
   third: {
     color: "#000"

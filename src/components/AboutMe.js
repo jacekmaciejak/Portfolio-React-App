@@ -16,13 +16,16 @@ const StyledWrapper = styled.div`
 const Title_1 = styled.h1`
   font-size: ${({ theme }) => theme.main.fontSize};
   opacity: 0.1 !important;
-  margin-top: 70px;
+  margin-top: 30px;
   padding: 10px;
 
   ${({ theme }) => theme.media.tabPort} {
-    margin-top: 100px;
     font-size: calc(15px + 7vw);
+    margin-top: 30px;
   }
+  // ${({ theme }) => theme.media.phone} {
+  //   margin-top: 30px;
+  // }
 `;
 const Title_2 = styled.h2`
   font-size: ${({ theme }) => theme.second.fontSize};
@@ -47,10 +50,15 @@ const Text = styled.p`
   font-size: calc(13px + 1vw);
   letter-spacing: 1px;
   width: 70%;
+  margin-top: -50px;
 
   ::first-letter {
     font-size: calc(30px + 1vw);
     line-height: 0;
+  }
+
+  ${({ theme }) => theme.media.tabPort} {
+    margin-top: -100px;
   }
 `;
 const StyledLineDown = styled(LineDown)`
