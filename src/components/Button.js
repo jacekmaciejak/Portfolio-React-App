@@ -52,10 +52,12 @@ const StyledWrapper = styled.div`
   }
 `;
 
-export default function Button({ className, children }) {
+export default function Button({ className, children, onClick }) {
   return (
     <ThemeProvider theme={theme}>
-      <StyledWrapper className={className}>{children}</StyledWrapper>
+      <StyledWrapper onClick={onClick} className={className}>
+        {children}
+      </StyledWrapper>
     </ThemeProvider>
   );
 }

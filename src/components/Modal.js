@@ -1,5 +1,7 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
+import Button from "./Button";
+import { theme } from "./utils/theme.js";
 
 const StyledWrapper = styled.div`
   top: 50%;
@@ -23,12 +25,18 @@ const H1 = styled.h1`
   left: 0;
   right: 0;
 `;
+const StyledButton = styled(Button)`
+  opacity: 1;
+`;
 
 export default function Modal({ closeModalFn }) {
   return (
-    <StyledWrapper>
-      <button onClick={closeModalFn}>Zamknij</button>
-      <H1>Witaj Jacku</H1>
-    </StyledWrapper>
+    <ThemeProvider theme={theme}>
+      <StyledWrapper>
+        <button onClick={closeModalFn}>Zamknij</button>
+        <H1>Witaj Jacku</H1>
+        <StyledButton onClick={closeModalFn}>Zamknij</StyledButton>
+      </StyledWrapper>
+    </ThemeProvider>
   );
 }
