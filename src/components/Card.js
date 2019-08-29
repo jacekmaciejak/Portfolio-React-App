@@ -160,22 +160,17 @@ const UL = styled.ul`
 
 const StyledButton = styled(Button)`
   transition: 0.5s;
-  text-align: center;
-  opacity: 0;
   visibility: hidden;
-  font-weight: bold;
   transform: translateY(40px);
   text-shadow: none;
   display: flex;
-  justify-content: end;
-  align-items: end;
+  justify-content: center;
+  align-items: center;
   height: auto;
   width: 60%;
-  text-align: center;
   cursor: pointer;
   background: transparent;
   border: 1px solid #fff;
-  position: absolute;
   overflow: hidden;
   letter-spacing: 2px;
   opacity: 0.5;
