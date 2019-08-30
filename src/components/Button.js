@@ -15,7 +15,6 @@ const StyledWrapper = styled.div`
   opacity: 0.5;
   color: #fff;
   text-decoration: none;
-  font-size: 24px;
   font-weight: bold;
   background: #000;
   padding: 10px;

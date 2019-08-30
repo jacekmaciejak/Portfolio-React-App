@@ -14,7 +14,7 @@ const Button = styled.button`
   z-index: 9999;
   text-decoration: none;
   font-weight: bold;
-  font-size: calc(10px + 1vw);
+  font-size: calc(5px + 1vw);
   border-radius: 5px;
   background-color: rgba(255, 255, 255, 0.8);
   transition: 0.9s;

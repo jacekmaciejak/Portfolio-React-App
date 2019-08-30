@@ -176,7 +176,7 @@ const StyledButton = styled(Button)`
   opacity: 0.5;
   color: #fff;
   text-decoration: none;
-  font-size: 24px;
+  font-size: calc(5px + 1vw);
   font-weight: bold;
   background: #000;
   padding: 10px;
