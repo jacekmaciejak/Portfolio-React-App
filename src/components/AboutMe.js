@@ -15,12 +15,11 @@ const StyledWrapper = styled.div`
 `;
 const Title_1 = styled.h1`
   font-size: ${({ theme }) => theme.main.fontSize};
+  margin-top: ${({ theme }) => theme.main.marginTop};
   opacity: 0.1 !important;
-  margin-top: 30px;
   padding: 10px;
 
   ${({ theme }) => theme.media.tabPort} {
-    font-size: calc(15px + 7vw);
     margin-top: 30px;
   }
   // ${({ theme }) => theme.media.phone} {
@@ -47,9 +46,9 @@ const Title_2 = styled.h2`
 const Text = styled.p`
   line-height: 2;
   text-align: justify;
-  font-size: calc(13px + 1vw);
+  font-size: ${({ theme }) => theme.third.fontSize};
   letter-spacing: 1px;
-  width: 70%;
+  width: 90%;
   margin-top: -50px;
 
   ::first-letter {

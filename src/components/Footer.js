@@ -24,7 +24,7 @@ const A = styled.a`
   :link,
   :visited {
     color: ${({ theme }) => theme.third.color};
-    	background-color: ${({ theme }) => theme.second.color}
+    background-color: ${({ theme }) => theme.second.color}
     text-decoration: none;
     display: inline-block;
     -webkit-transition: all 0.2s;

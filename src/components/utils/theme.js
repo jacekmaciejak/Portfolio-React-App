@@ -10,14 +10,16 @@ export const theme = {
   },
   main: {
     color: "#fff",
-    fontSize: "6vw"
+    fontSize: "calc(30px + 3.5vw)",
+    marginTop: "30px"
   },
   second: {
     color: "#f2f2f2",
-    fontSize: "4.5vw"
+    fontSize: "calc(20px + 3.5vw)"
   },
   third: {
-    color: "#000"
+    color: "#000",
+    fontSize: "calc(15px + 1vw)"
   },
   grid: {
     display: "grid",

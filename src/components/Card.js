@@ -159,6 +159,7 @@ const UL = styled.ul`
 `;
 
 const StyledButton = styled(Button)`
+  text-align: center;
   transition: 0.5s;
   visibility: hidden;
   transform: translateY(40px);
@@ -169,7 +170,6 @@ const StyledButton = styled(Button)`
   height: auto;
   width: 60%;
   cursor: pointer;
-  background: transparent;
   border: 1px solid #fff;
   overflow: hidden;
   letter-spacing: 2px;

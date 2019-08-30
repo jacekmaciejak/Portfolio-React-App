@@ -14,9 +14,10 @@ const StyledWrapper = styled.div`
 `;
 const Title_1 = styled.h1`
   font-size: ${({ theme }) => theme.main.fontSize};
+  margin-top: ${({ theme }) => theme.main.marginTop};
   opacity: 0.1 !important;
-  margin-top: 30px;
   padding: 10px;
+  text-align: center;
 `;
 const Title_2 = styled.h2`
   font-size: ${({ theme }) => theme.second.fontSize};

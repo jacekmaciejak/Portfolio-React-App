@@ -11,15 +11,18 @@ const StyledWrapper = styled.div`
   ${({ theme }) => theme.media.tabPort} {
     width: 90%;
   }
+  ${({ theme }) => theme.media.phone} {
+    text-align: center;
+  }
 `;
 const Title_1 = styled.h1`
-  font-size: calc(15px + 3.5vw);
+  font-size: ${({ theme }) => theme.main.fontSize};
   :first-letter {
     font-size: calc(35px + 3.5vw);
   }
 `;
 const Title_2 = styled.h2`
-  font-size: calc(15px + 3.5vw);
+  font-size: ${({ theme }) => theme.second.fontSize};
   line-height: 2;
   :first-letter {
     font-size: calc(35px + 3.5vw);
@@ -27,7 +30,7 @@ const Title_2 = styled.h2`
 `;
 const Paragraph = styled.p`
   line-height: 2;
-  font-size: calc(10px + 1.8vw);
+  font-size: ${({ theme }) => theme.third.fontSize};
   :first-letter {
     font-size: calc(25px + 1.8vw);
   }

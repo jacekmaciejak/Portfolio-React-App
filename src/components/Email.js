@@ -7,20 +7,20 @@ import ButtonEmail from "./ButtonEmail";
 const StyledWrapper = styled.div`
   ${({ theme }) => theme.grid}
   height: 90vh;
-  width: 100%;
+  width: 80vw;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 6fr;
+  margin: 0 auto;
 `;
 const Title_1 = styled.h1`
   font-size: ${({ theme }) => theme.main.fontSize};
+  margin-top: ${({ theme }) => theme.main.marginTop};
   line-height: 1;
   opacity: 0.1 !important;
   padding: 10px;
   text-align: center;
-  margin-top: 30px;
 
   ${({ theme }) => theme.media.tabPort} {
-    font-size: calc(40px + 3.5vw);
     line-height: 1;
   }
 `;
@@ -44,12 +44,15 @@ const Book = styled.section`
   z-index: 9999;
   ${({ theme }) => theme.grid}
   width: 100%;
-  ${({ theme }) => theme.media.tabLand} {
-    height: 75%;
+  ${({ theme }) => theme.media.tabPort} {
+    height: 90%;
+  }
+  ${({ theme }) => theme.media.phone} {
+    height: 85%;
   }
 `;
 const Book__form = styled.div`
-  width: 65vw;
+  width: 60vw;
   height: 100%;
   padding: 3rem;
   border-radius: 3px;
@@ -65,9 +68,9 @@ const Book__form = styled.div`
   background-image: url(${props => props.img});
   background-position: center;
   background-size: cover;
-${({ theme }) => theme.media.tabLand}{
-    width: 95%;
-    padding: 2rem;
+
+${({ theme }) => theme.media.tabPort}{
+  width:80vw;
 }
 `;
 

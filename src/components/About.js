@@ -51,7 +51,7 @@ const H2 = styled.h2`
   background-repeat: no-repeat;
   background-size: 80%;
   background-clip: text;
-  margin: 40px 0;
+  margin: ${({ theme }) => theme.main.marginTop} 0;
   -webkit-background-clip: text;
   -webkit-text-fill-color: rgba(255, 255, 255, 0);
   animation: animateText 3s linear infinite;

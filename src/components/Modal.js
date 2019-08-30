@@ -29,9 +29,9 @@ const H1 = styled.h1`
   right: 0;
 `;
 const StyledButton = styled(Button)`
-  font-size: calc(13px + 1vw);
+  font-size: calc(5px + 1vw);
   opacity: 1;
-  width: 15vw;
+  width: 10vw;
   position: absolute;
   top: 85%;
   left: 50%;

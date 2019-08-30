@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { theme } from "./utils/theme.js";
 
 const Button = styled.button`
   display: block;
@@ -10,15 +11,18 @@ const Button = styled.button`
   overflow: hidden;
   background: transparent;
   position: relative;
-  position: relative;
   z-index: 9999;
   text-decoration: none;
   font-weight: bold;
-  font-size: 24px;
+  font-size: calc(10px + 1vw);
   border-radius: 5px;
   background-color: rgba(255, 255, 255, 0.8);
   transition: 0.9s;
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+  ${({ theme }) => theme.media.phone} {
+    padding: 10px;
+    font-size: calc(10px + 1vw);
+  }
 
   :before {
     content: "";
