@@ -11,6 +11,7 @@ const StyledWrapper = styled.div`
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 6fr;
   margin: 0 auto;
+  position: relative;
 `;
 const Title_1 = styled.h1`
   font-size: ${({ theme }) => theme.main.fontSize};
@@ -173,6 +174,27 @@ const Form_textarea = styled.textarea`
     transform: translateY(-4rem);
   }
 `;
+const Back = styled.div`
+  width: 90%;
+  height: 70%;
+  background-color: #5632de;
+  color: #fff;
+  position: absolute;
+  top: 25%;
+  z-index: 1;
+  transform: rotate(8deg);
+  opacity: 0.2;
+  border-radius: 10px;
+  ${({ theme }) => theme.media.tabPort} {
+    top: 35%;
+  }
+`;
+const Back_2 = styled(Back)`
+  transform: rotate(12deg);
+`;
+const Back_3 = styled(Back)`
+  transform: rotate(16deg);
+`;
 
 export default function Email() {
   return (
@@ -181,6 +203,9 @@ export default function Email() {
         <StyledWrapper id="email">
           <Title_1 data-aos="fade-up">Zachęcam do kontaktu</Title_1>
           <Title_2 data-aos="fade-up">Kontakt</Title_2>
+          <Back />
+          <Back_2></Back_2>
+          <Back_3></Back_3>
           <Book id="contact" data-aos="fade-up">
             <Book__form img={img}>
               <Form autocomplete="off" method="post" action="Contact.php">

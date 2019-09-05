@@ -14,7 +14,7 @@ export const theme = {
     marginTop: "30px"
   },
   second: {
-    color: "#f2f2f2",
+    color: "#f4f4f4",
     fontSize: "calc(20px + 3.5vw)"
   },
   third: {

@@ -17,7 +17,7 @@ export default function Home() {
         <Banner
           title="Front-end Developer"
           subtitle="Jacek Maciejak"
-          paragraph="Witam Ci? na mojej stronie i zapraszam do przejrzenia moich projektów."
+          paragraph="Witam Ciebie na mojej stronie i zapraszam do przejrzenia moich projektów."
         />
         <LineDown />
       </Hero>

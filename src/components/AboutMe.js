@@ -48,7 +48,7 @@ const Text = styled.p`
   text-align: justify;
   font-size: ${({ theme }) => theme.third.fontSize};
   letter-spacing: 1px;
-  width: 90%;
+  width: 80%;
   margin-top: -50px;
 
   ::first-letter {
@@ -63,8 +63,8 @@ const Text = styled.p`
 const StyledLineDown = styled(LineDown)`
   position: absolute;
   top: 50%;
-  left: 92%;
-  transform: translate(-92%, -50%);
+  left: 95%;
+  transform: translate(-95%, -50%);
   height: 50%;
 
   ${({ theme }) => theme.media.tabPort} {

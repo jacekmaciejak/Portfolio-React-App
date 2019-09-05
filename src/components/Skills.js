@@ -3,6 +3,7 @@ import styled, { ThemeProvider } from "styled-components";
 import Panel from "./Panel.js";
 import Modal from "./Modal.js";
 import { theme } from "./utils/theme.js";
+import img from "../images/img5.jpg";
 
 const StyledWrapper = styled.div`
   ${({ theme }) => theme.grid};
@@ -10,8 +11,17 @@ const StyledWrapper = styled.div`
   width: 100%;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 6fr;
-  background-color: ${({ theme }) => theme.second.color};
-`;
+  // background-color: ${({ theme }) => theme.second.color};
+  position: relative;
+  background-image: url(${props => props.img});
+  object-fit: cover;
+  background-position: center;
+  background-size: cover;
+              background-position:top;
+              background-repeat:no-repeat;
+              background-attachment:fixed;
+              background-size:cover;
+  `;
 const Title_1 = styled.h1`
   font-size: ${({ theme }) => theme.main.fontSize};
   margin-top: ${({ theme }) => theme.main.marginTop};
@@ -52,7 +62,7 @@ export default class Skills extends Component {
 
     return (
       <ThemeProvider theme={theme}>
-        <StyledWrapper id="skills">
+        <StyledWrapper id="skills" img={img}>
           <Title_1 data-aos="fade-up">W czym jestem dobry?</Title_1>
           <Title_2 data-aos="fade-up">Technologie</Title_2>
           <Panel openModalFn={this.openModal} />

@@ -12,11 +12,12 @@ const StyledWrapper = styled.div`
   margin: 0 auto;
   width: 30vw;
   height: 60vh;
-  color: #000;
-  background-color: #fff;
   box-shadow: 0 20px 40px -10px #818181;
   z-index: 99999;
   text-align: center;
+  background-color: #5632de;
+  color: #fff;
+  border: 1px solid #fff;
   ${({ theme }) => theme.media.tabPort} {
     width: 60vw;
   }
