@@ -8,6 +8,8 @@ import ModalSass from "./Modals/ModalSass.js";
 import ModalGrid from "./Modals/ModalGrid.js";
 import ModalFlex from "./Modals/ModalFlex.js";
 import ModalReact from "./Modals/ModalReact.js";
+import ModalBootstrap from "./Modals/ModalBootstrap";
+import ModalRwd from "./Modals/ModalRwd.js";
 
 import { theme } from "./utils/theme.js";
 import img from "../images/img5.jpg";
@@ -57,7 +59,9 @@ export default class Skills extends Component {
     isModalGridOpen: false,
     isModalSassOpen: false,
     isModalFlexOpen: false,
-    isModalReactOpen: false
+    isModalReactOpen: false,
+    isModalBootstrapOpen: false,
+    isModalRwdOpen: false
   };
 
   openModal = () => {
@@ -130,6 +134,27 @@ export default class Skills extends Component {
       isModalReactOpen: false
     });
   };
+  openModalBootstrap = () => {
+    this.setState({
+      isModalBootstrapOpen: true
+    });
+  };
+  closeModalBootstrap = () => {
+    this.setState({
+      isModalBootstrapOpen: false
+    });
+  };
+  openModalRwd = () => {
+    this.setState({
+      isModalRwdOpen: true
+    });
+  };
+  closeModalRwd = () => {
+    this.setState({
+      isModalRwdOpen: false
+    });
+  };
+
   render() {
     const {
       isModalHtmlOpen,
@@ -138,7 +163,9 @@ export default class Skills extends Component {
       isModalGridOpen,
       isModalSassOpen,
       isModalFlexOpen,
-      isModalReactOpen
+      isModalReactOpen,
+      isModalBootstrapOpen,
+      isModalRwdOpen
     } = this.state;
 
     return (
@@ -154,6 +181,8 @@ export default class Skills extends Component {
             openModalSassFn={this.openModalSass}
             openModalFlexFn={this.openModalFlex}
             openModalReactFn={this.openModalReact}
+            openModalBootstrapFn={this.openModalBootstrap}
+            openModalRwdFn={this.openModalRwd}
           />
           {isModalHtmlOpen && <ModalHtml closeModalFn={this.closeModal} />}
           {isModalCssOpen && <ModalCss closeModalCssFn={this.closeModalCss} />}
@@ -170,6 +199,10 @@ export default class Skills extends Component {
           {isModalReactOpen && (
             <ModalReact closeModalReactFn={this.closeModalReact} />
           )}
+          {isModalBootstrapOpen && (
+            <ModalBootstrap closeModalBootstrapFn={this.closeModalBootstrap} />
+          )}
+          {isModalRwdOpen && <ModalRwd closeModalRwdFn={this.closeModalRwd} />}
         </StyledWrapper>
       </ThemeProvider>
     );

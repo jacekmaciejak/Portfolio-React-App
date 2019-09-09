@@ -390,7 +390,9 @@ export default function Panel({
   openModalSassFn,
   openModalGridFn,
   openModalFlexFn,
-  openModalReactFn
+  openModalReactFn,
+  openModalBootstrapFn,
+  openModalRwdFn
 }) {
   return (
     <ThemeProvider theme={theme}>
@@ -438,12 +440,12 @@ export default function Panel({
             </A>
           </Li>
           <Li className="p-6">
-            <A href="#panel">
+            <A href="#panel" onClick={openModalBootstrapFn}>
               <I className="fab">B4</I>
             </A>
           </Li>
           <Li className="p-7">
-            <A href="#panel">
+            <A href="#panel" onClick={openModalRwdFn}>
               <I className="fab">
                 <Img className="img" src={rwd} alt="Icon" />
               </I>
