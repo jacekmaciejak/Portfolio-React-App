@@ -46,7 +46,6 @@ export default function ModalHtml({ closeModalFn }) {
   return (
     <ThemeProvider theme={theme}>
       <StyledWrapper>
-        {/* <button onClick={closeModalFn}>Zamknij</button> */}
         <H1>HTML</H1>
         <StyledButton onClick={closeModalFn}>Zamknij</StyledButton>
       </StyledWrapper>

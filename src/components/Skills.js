@@ -19,7 +19,7 @@ const StyledWrapper = styled.div`
   height: 100vh;
   width: 100%;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 6fr;
+  grid-template-rows: 1fr 6fr;
   // background-color: ${({ theme }) => theme.second.color};
   position: relative;
   background-image: url(${props => props.img});
@@ -31,24 +31,25 @@ const StyledWrapper = styled.div`
   background-attachment:fixed;
   background-size:cover;
   `;
-const Title_1 = styled.h1`
-  font-size: ${({ theme }) => theme.main.fontSize};
-  margin-top: ${({ theme }) => theme.main.marginTop};
-  opacity: 0.1 !important;
-  padding: 10px;
-  text-align: center;
-`;
+// const Title_1 = styled.h1`
+//   font-size: ${({ theme }) => theme.main.fontSize};
+//   margin-top: ${({ theme }) => theme.main.marginTop};
+//   opacity: 0.1 !important;
+//   padding: 10px;
+//   text-align: center;
+// `;
 const Title_2 = styled.h2`
   font-size: ${({ theme }) => theme.second.fontSize};
   letter-spacing: 3px;
-  background: linear-gradient(90deg, #fff, #000, #fff);
+  background: linear-gradient(90deg, #fff, #5632de, #fff);
   background-repeat: no-repeat;
   background-size: 80%;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: rgba(255, 255, 255, 0);
   animation: animateText 3s linear infinite;
-  margin-top: -40px;
+  // margin-top: -40px;
+  margin-top: 60px;
 `;
 
 export default class Skills extends Component {
@@ -171,7 +172,7 @@ export default class Skills extends Component {
     return (
       <ThemeProvider theme={theme}>
         <StyledWrapper id="skills" img={img}>
-          <Title_1 data-aos="fade-up">W czym jestem dobry?</Title_1>
+          {/* <Title_1 data-aos="fade-up">W czym jestem dobry?</Title_1> */}
           <Title_2 data-aos="fade-up">Technologie</Title_2>
           <Panel
             openModalHtmlFn={this.openModal}
