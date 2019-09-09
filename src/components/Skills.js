@@ -3,6 +3,10 @@ import styled, { ThemeProvider } from "styled-components";
 import Panel from "./Panel.js";
 import ModalHtml from "./Modals/ModalHtml.js";
 import ModalCss from "./Modals/ModalCss.js";
+import ModalJs from "./Modals/ModalJs.js";
+import ModalSass from "./Modals/ModalSass.js";
+import ModalGrid from "./Modals/ModalGrid.js";
+
 import { theme } from "./utils/theme.js";
 import img from "../images/img5.jpg";
 
@@ -46,7 +50,10 @@ const Title_2 = styled.h2`
 export default class Skills extends Component {
   state = {
     isModalHtmlOpen: false,
-    isModalCssOpen: false
+    isModalCssOpen: false,
+    isModalJsOpen: false,
+    isModalGridOpen: false,
+    isModalSassOpen: false
   };
 
   openModal = () => {
@@ -69,8 +76,44 @@ export default class Skills extends Component {
       isModalCssOpen: false
     });
   };
+  openModalJs = () => {
+    this.setState({
+      isModalJsOpen: true
+    });
+  };
+  closeModalJs = () => {
+    this.setState({
+      isModalJsOpen: false
+    });
+  };
+  openModalGrid = () => {
+    this.setState({
+      isModalGridOpen: true
+    });
+  };
+  closeModalGrid = () => {
+    this.setState({
+      isModalGridOpen: false
+    });
+  };
+  openModalSass = () => {
+    this.setState({
+      isModalSassOpen: true
+    });
+  };
+  closeModalSass = () => {
+    this.setState({
+      isModalSassOpen: false
+    });
+  };
   render() {
-    const { isModalHtmlOpen, isModalCssOpen } = this.state;
+    const {
+      isModalHtmlOpen,
+      isModalCssOpen,
+      isModalJsOpen,
+      isModalGridOpen,
+      isModalSassOpen
+    } = this.state;
 
     return (
       <ThemeProvider theme={theme}>
@@ -80,9 +123,19 @@ export default class Skills extends Component {
           <Panel
             openModalHtmlFn={this.openModal}
             openModalCssFn={this.openModalCss}
+            openModalJsFn={this.openModalJs}
+            openModalGridFn={this.openModalGrid}
+            openModalSassFn={this.openModalSass}
           />
           {isModalHtmlOpen && <ModalHtml closeModalFn={this.closeModal} />}
           {isModalCssOpen && <ModalCss closeModalCssFn={this.closeModalCss} />}
+          {isModalJsOpen && <ModalJs closeModalJsFn={this.closeModalJs} />}
+          {isModalGridOpen && (
+            <ModalGrid closeModalGridFn={this.closeModalGrid} />
+          )}
+          {isModalSassOpen && (
+            <ModalSass closeModalSassFn={this.closeModalSass} />
+          )}
         </StyledWrapper>
       </ThemeProvider>
     );

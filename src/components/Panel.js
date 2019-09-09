@@ -383,7 +383,13 @@ const I = styled.i`
   }
 `;
 
-export default function Panel({ openModalHtmlFn, openModalCssFn }) {
+export default function Panel({
+  openModalHtmlFn,
+  openModalCssFn,
+  openModalJsFn,
+  openModalSassFn,
+  openModalGridFn
+}) {
   return (
     <ThemeProvider theme={theme}>
       <StyledWrapper data-aos="fade-up">
@@ -406,7 +412,7 @@ export default function Panel({ openModalHtmlFn, openModalCssFn }) {
             </A>
           </Li>
           <Li className="p-11">
-            <A href="#panel">
+            <A href="#panel" onClick={openModalJsFn}>
               <I className="fab">
                 <FontAwesomeIcon icon={faJsSquare} size="lg" />
               </I>
@@ -449,12 +455,12 @@ export default function Panel({ openModalHtmlFn, openModalCssFn }) {
             </A>
           </Li>
           <Li className="p-9">
-            <A href="#panel">
+            <A href="#panel" onClick={openModalGridFn}>
               <I className="ip-9 fab">Grid</I>
             </A>
           </Li>
           <Li className="p-10">
-            <A href="#panel">
+            <A href="#panel" onClick={openModalSassFn}>
               <I className="fab">
                 <FontAwesomeIcon icon={faSass} size="lg" />
               </I>
