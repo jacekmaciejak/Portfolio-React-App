@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import styled, { ThemeProvider } from "styled-components";
 import Panel from "./Panel.js";
-import Modal from "./Modal.js";
+import ModalHtml from "./Modals/ModalHtml.js";
+import ModalCss from "./Modals/ModalCss.js";
 import { theme } from "./utils/theme.js";
 import img from "../images/img5.jpg";
 
@@ -44,29 +45,44 @@ const Title_2 = styled.h2`
 
 export default class Skills extends Component {
   state = {
-    isModalOpen: false
+    isModalHtmlOpen: false,
+    isModalCssOpen: false
   };
 
   openModal = () => {
     this.setState({
-      isModalOpen: true
+      isModalHtmlOpen: true
     });
   };
   closeModal = () => {
     this.setState({
-      isModalOpen: false
+      isModalHtmlOpen: false
+    });
+  };
+  openModalCss = () => {
+    this.setState({
+      isModalCssOpen: true
+    });
+  };
+  closeModalCss = () => {
+    this.setState({
+      isModalCssOpen: false
     });
   };
   render() {
-    const { isModalOpen } = this.state;
+    const { isModalHtmlOpen, isModalCssOpen } = this.state;
 
     return (
       <ThemeProvider theme={theme}>
         <StyledWrapper id="skills" img={img}>
           <Title_1 data-aos="fade-up">W czym jestem dobry?</Title_1>
           <Title_2 data-aos="fade-up">Technologie</Title_2>
-          <Panel openModalFn={this.openModal} />
-          {isModalOpen && <Modal closeModalFn={this.closeModal} />}
+          <Panel
+            openModalHtmlFn={this.openModal}
+            openModalCssFn={this.openModalCss}
+          />
+          {isModalHtmlOpen && <ModalHtml closeModalFn={this.closeModal} />}
+          {isModalCssOpen && <ModalCss closeModalCssFn={this.closeModalCss} />}
         </StyledWrapper>
       </ThemeProvider>
     );

@@ -8,7 +8,6 @@ import LineDown from "../components/LineDown";
 import Email from "../components/Email";
 import About from "../components/About";
 import Footer from "../components/Footer";
-import Skills_2 from "../components/Skills_2";
 
 export default function Home() {
   return (
@@ -17,13 +16,12 @@ export default function Home() {
         <Banner
           title="Front-end Developer"
           subtitle="Jacek Maciejak"
-          paragraph="Witam Ciebie na mojej stronie i zapraszam do przejrzenia moich projektów."
+          paragraph="Witaj na mojej stronie, zapraszam do przejrzenia moich projektów."
         />
         <LineDown />
       </Hero>
       <AboutMe />
       <Skills />
-      {/* <Skills_2 /> */}
       <About />
       <Email />
       <Footer />

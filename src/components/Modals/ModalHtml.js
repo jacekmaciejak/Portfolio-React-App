@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { ThemeProvider } from "styled-components";
-import Button from "./Button";
-import { theme } from "./utils/theme.js";
+import Button from "../Button";
+import { theme } from "../utils/theme.js";
 
 const StyledWrapper = styled.div`
   position: fixed;
@@ -42,12 +42,12 @@ const StyledButton = styled(Button)`
   }
 `;
 
-export default function Modal({ closeModalFn }) {
+export default function ModalHtml({ closeModalFn }) {
   return (
     <ThemeProvider theme={theme}>
       <StyledWrapper>
         {/* <button onClick={closeModalFn}>Zamknij</button> */}
-        <H1>Witaj Jacku</H1>
+        <H1>HTML</H1>
         <StyledButton onClick={closeModalFn}>Zamknij</StyledButton>
       </StyledWrapper>
     </ThemeProvider>

@@ -13,6 +13,7 @@ const StyledWrapper = styled.div`
   justify-content: space-around;
   align-items: stretch;
   align-content: stretch;
+  background-color: rgb(86, 50, 222, 0.1);
 
   // @media (max-width: 1200px) {
   //   height: auto;
