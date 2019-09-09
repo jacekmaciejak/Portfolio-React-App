@@ -388,7 +388,9 @@ export default function Panel({
   openModalCssFn,
   openModalJsFn,
   openModalSassFn,
-  openModalGridFn
+  openModalGridFn,
+  openModalFlexFn,
+  openModalReactFn
 }) {
   return (
     <ThemeProvider theme={theme}>
@@ -448,7 +450,7 @@ export default function Panel({
             </A>
           </Li>
           <Li className="p-8">
-            <A href="#panel">
+            <A href="#panel" onClick={openModalFlexFn}>
               <I className="ip-8 fab">
                 Flex <br /> Box
               </I>
@@ -474,7 +476,7 @@ export default function Panel({
             </A>
           </Li>
           <Li className="p-12">
-            <A href="#panel">
+            <A href="#panel" onClick={openModalReactFn}>
               <I className="fab">
                 <FontAwesomeIcon icon={faReact} size="lg" />
               </I>

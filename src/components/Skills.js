@@ -6,6 +6,8 @@ import ModalCss from "./Modals/ModalCss.js";
 import ModalJs from "./Modals/ModalJs.js";
 import ModalSass from "./Modals/ModalSass.js";
 import ModalGrid from "./Modals/ModalGrid.js";
+import ModalFlex from "./Modals/ModalFlex.js";
+import ModalReact from "./Modals/ModalReact.js";
 
 import { theme } from "./utils/theme.js";
 import img from "../images/img5.jpg";
@@ -22,10 +24,10 @@ const StyledWrapper = styled.div`
   object-fit: cover;
   background-position: center;
   background-size: cover;
-              background-position:top;
-              background-repeat:no-repeat;
-              background-attachment:fixed;
-              background-size:cover;
+  background-position:top;
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+  background-size:cover;
   `;
 const Title_1 = styled.h1`
   font-size: ${({ theme }) => theme.main.fontSize};
@@ -53,7 +55,9 @@ export default class Skills extends Component {
     isModalCssOpen: false,
     isModalJsOpen: false,
     isModalGridOpen: false,
-    isModalSassOpen: false
+    isModalSassOpen: false,
+    isModalFlexOpen: false,
+    isModalReactOpen: false
   };
 
   openModal = () => {
@@ -106,13 +110,35 @@ export default class Skills extends Component {
       isModalSassOpen: false
     });
   };
+  openModalFlex = () => {
+    this.setState({
+      isModalFlexOpen: true
+    });
+  };
+  closeModalFlex = () => {
+    this.setState({
+      isModalFlexOpen: false
+    });
+  };
+  openModalReact = () => {
+    this.setState({
+      isModalReactOpen: true
+    });
+  };
+  closeModalReact = () => {
+    this.setState({
+      isModalReactOpen: false
+    });
+  };
   render() {
     const {
       isModalHtmlOpen,
       isModalCssOpen,
       isModalJsOpen,
       isModalGridOpen,
-      isModalSassOpen
+      isModalSassOpen,
+      isModalFlexOpen,
+      isModalReactOpen
     } = this.state;
 
     return (
@@ -126,6 +152,8 @@ export default class Skills extends Component {
             openModalJsFn={this.openModalJs}
             openModalGridFn={this.openModalGrid}
             openModalSassFn={this.openModalSass}
+            openModalFlexFn={this.openModalFlex}
+            openModalReactFn={this.openModalReact}
           />
           {isModalHtmlOpen && <ModalHtml closeModalFn={this.closeModal} />}
           {isModalCssOpen && <ModalCss closeModalCssFn={this.closeModalCss} />}
@@ -135,6 +163,12 @@ export default class Skills extends Component {
           )}
           {isModalSassOpen && (
             <ModalSass closeModalSassFn={this.closeModalSass} />
+          )}
+          {isModalFlexOpen && (
+            <ModalFlex closeModalFlexFn={this.closeModalFlex} />
+          )}
+          {isModalReactOpen && (
+            <ModalReact closeModalReactFn={this.closeModalReact} />
           )}
         </StyledWrapper>
       </ThemeProvider>
