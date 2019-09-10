@@ -65,6 +65,22 @@ export default class Skills extends Component {
     isModalRwdOpen: false
   };
 
+  closeAllModal = e => {
+    if (e.keyCode === 27) {
+      this.setState({
+        isModalHtmlOpen: false,
+        isModalCssOpen: false,
+        isModalJsOpen: false,
+        isModalGridOpen: false,
+        isModalSassOpen: false,
+        isModalFlexOpen: false,
+        isModalReactOpen: false,
+        isModalBootstrapOpen: false,
+        isModalRwdOpen: false
+      });
+    }
+  };
+
   openModal = () => {
     this.setState({
       isModalHtmlOpen: true
@@ -75,6 +91,7 @@ export default class Skills extends Component {
       isModalHtmlOpen: false
     });
   };
+
   openModalCss = () => {
     this.setState({
       isModalCssOpen: true
@@ -171,7 +188,7 @@ export default class Skills extends Component {
 
     return (
       <ThemeProvider theme={theme}>
-        <StyledWrapper id="skills" img={img}>
+        <StyledWrapper id="skills" img={img} onKeyDown={this.closeAllModal}>
           {/* <Title_1 data-aos="fade-up">W czym jestem dobry?</Title_1> */}
           <Title_2 data-aos="fade-up">Technologie</Title_2>
           <Panel
