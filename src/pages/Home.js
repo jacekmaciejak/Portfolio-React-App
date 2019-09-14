@@ -8,6 +8,7 @@ import LineDown from "../components/LineDown";
 import Email from "../components/Email";
 import About from "../components/About";
 import Footer from "../components/Footer";
+import SkillsSky from "../components/SkillsSky";
 
 export default function Home() {
   return (
@@ -21,7 +22,8 @@ export default function Home() {
         <LineDown />
       </Hero>
       <AboutMe />
-      <Skills />
+      {/* <Skills /> */}
+      <SkillsSky></SkillsSky>
       <About />
       <Email />
       <Footer />

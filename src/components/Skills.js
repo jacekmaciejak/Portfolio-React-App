@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ReactDOM from "react-dom";
 import styled, { ThemeProvider } from "styled-components";
 import Panel from "./Panel.js";
 import ModalHtml from "./Modals/ModalHtml.js";
@@ -79,6 +80,20 @@ export default class Skills extends Component {
         isModalRwdOpen: false
       });
     }
+  };
+
+  handleClickOf = e => {
+    this.setState({
+      isModalHtmlOpen: false,
+      isModalCssOpen: false,
+      isModalJsOpen: false,
+      isModalGridOpen: false,
+      isModalSassOpen: false,
+      isModalFlexOpen: false,
+      isModalReactOpen: false,
+      isModalBootstrapOpen: false,
+      isModalRwdOpen: false
+    });
   };
 
   openModal = () => {
