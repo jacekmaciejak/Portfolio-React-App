@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled, { ThemeProvider } from "styled-components";
 import { theme } from "./utils/theme.js";
 import SkyLight from "react-skylight";
+import Button from "./Button";
+
 import {
   faHtml5,
   faCss3Alt,
@@ -16,28 +18,25 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 const StyledWrapper = styled.div`
-  position: relative;
-  z-index: 99999;
+  width: 100%;
+  height: 100%;
 `;
 const Ul = styled.ul`
   position: absolute;
-  top: 65%;
-  left: 50%;
-  transform: translate(-50%, -65%);
-  margin: 0;
-  padding: 0;
-  width: 900px;
-  height: 600px;
+  // top: 10%;
+  // left: 25%;
+  // transform: translate(-25%, -10%);
+
   ${({ theme }) => theme.media.tabPort} {
     width: 400px;
-    top: 55%;
-    left: 112%;
-    transform: translate(-112%, -55%);
+    // top: 55%;
+    // left: 112%;
+    // transform: translate(-112%, -55%);
   }
 `;
 const Li = styled.li`
   list-style: none;
-  margin: 0 40px;
+  // margin: 0 40px;
   display: inline-block;
   :hover:nth-child(1) a {
     background: #3b5999;
@@ -383,15 +382,23 @@ const I = styled.i`
     }
   }
 `;
+const StyledButton = styled(Button)`
+  font-size: calc(5px + 1vw);
+  opacity: 1;
+  width: 10vw;
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -85%);
+  ${({ theme }) => theme.media.tabPort} {
+    width: 25vw;
+  }
+`;
 
 export default class PanelSky extends Component {
   render() {
     const Modal = {
-      // width: "100vw",
-      // height: "100vh"
-      // display: "grid",
-      // justifyItems: "center",
-      // alignItems: "center"
+      textAlign: "center"
     };
 
     return (
@@ -417,9 +424,10 @@ export default class PanelSky extends Component {
               <SkyLight
                 hideOnOverlayClicked
                 ref={ref => (this.animated = ref)}
-                title="Hej Jacek"
                 transitionDuration={1500}
-                overlayStyles={Modal}
+                dialogStyles={Modal}
+                title="AAAAAAAAA"
+                // title={<StyledButton>Zamknij</StyledButton>}
               >
                 Hello Jacek
               </SkyLight>
@@ -442,11 +450,21 @@ export default class PanelSky extends Component {
               </A>
             </Li>
             <Li className="p-1">
-              <A href="#panel">
+              <A href="#panel" onClick={() => this.animated.show()}>
                 <I className="fab">
                   <FontAwesomeIcon icon={faCss3Alt} size="lg" />
                 </I>
               </A>
+              <SkyLight
+                hideOnOverlayClicked
+                ref={ref => (this.animated = ref)}
+                transitionDuration={1500}
+                dialogStyles={Modal}
+                title="AAAAAAAAA"
+                // title={<StyledButton>Zamknij</StyledButton>}
+              >
+                Hello Jacek
+              </SkyLight>
             </Li>
             <Li className="p-6">
               <A href="#panel">
@@ -499,107 +517,3 @@ export default class PanelSky extends Component {
     );
   }
 }
-
-// export default function PanelSky({}) {
-//   return (
-//     <ThemeProvider theme={theme}>
-//       <StyledWrapper data-aos="fade-up">
-//         <Ul>
-//           <Li className="p-5">
-//             <A
-//               href="https://www.facebook.com/profile.php?id=100007445748069"
-//               target="_blank"
-//             >
-//               <I className="fab">
-//                 <FontAwesomeIcon icon={faFacebookF} size="lg" />
-//               </I>
-//             </A>
-//           </Li>
-//           <Li className="p-2">
-//             <A href="#panel" onClick={() => this.animated.show()}>
-//               <I className="fab">
-//                 <FontAwesomeIcon icon={faHtml5} size="lg" />
-//               </I>
-//             </A>
-//             <SkyLight
-//               hideOnOverlayClickedref={ref => (this.animated = ref)}
-//               title="Hej Jacek"
-//               transitionDuration={5000}
-//             >
-//               Hello Jacek
-//             </SkyLight>
-//           </Li>
-//           <Li className="p-11">
-//             <A href="#panel">
-//               <I className="fab">
-//                 <FontAwesomeIcon icon={faJsSquare} size="lg" />
-//               </I>
-//             </A>
-//           </Li>
-//           <Li className="p-4">
-//             <A
-//               href="https://www.linkedin.com/in/jacek-maciejak-frontend-developer"
-//               target="_blank"
-//             >
-//               <I className="fab">
-//                 <FontAwesomeIcon icon={faLinkedinIn} size="lg" />
-//               </I>
-//             </A>
-//           </Li>
-//           <Li className="p-1">
-//             <A href="#panel">
-//               <I className="fab">
-//                 <FontAwesomeIcon icon={faCss3Alt} size="lg" />
-//               </I>
-//             </A>
-//           </Li>
-//           <Li className="p-6">
-//             <A href="#panel">
-//               <I className="fab">B4</I>
-//             </A>
-//           </Li>
-//           <Li className="p-7">
-//             <A href="#panel">
-//               <I className="fab">
-//                 <Img className="img" src={rwd} alt="Icon" />
-//               </I>
-//             </A>
-//           </Li>
-//           <Li className="p-8">
-//             <A href="#panel">
-//               <I className="ip-8 fab">
-//                 Flex <br /> Box
-//               </I>
-//             </A>
-//           </Li>
-//           <Li className="p-9">
-//             <A href="#panel">
-//               <I className="ip-9 fab">Grid</I>
-//             </A>
-//           </Li>
-//           <Li className="p-10">
-//             <A href="#panel">
-//               <I className="fab">
-//                 <FontAwesomeIcon icon={faSass} size="lg" />
-//               </I>
-//             </A>
-//           </Li>
-//           <Li className="p-3">
-//             <A href="https://github.com/jacekmaciejak" target="_blank">
-//               <I className="fab">
-//                 <FontAwesomeIcon icon={faGithub} size="lg" />
-//               </I>
-//             </A>
-//           </Li>
-//           <Li className="p-12">
-//             <A href="#panel">
-//               <I className="fab">
-//                 <FontAwesomeIcon icon={faReact} size="lg" />
-//               </I>
-//             </A>
-//           </Li>
-//         </Ul>
-//       </StyledWrapper>
-//     </ThemeProvider>
-//   );
-// }
