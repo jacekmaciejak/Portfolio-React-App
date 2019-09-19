@@ -22,6 +22,7 @@ const StyledWrapper = styled.div`
   background-repeat:no-repeat;
   background-attachment:fixed;
   background-size:cover;
+
   `;
 
 const Title_2 = styled.h2`

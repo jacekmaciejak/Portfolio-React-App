@@ -18,20 +18,25 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 const StyledWrapper = styled.div`
+  position: relative;
+  z-index: 99999;
   width: 100%;
-  height: 100%;
 `;
 const Ul = styled.ul`
   position: absolute;
-  // top: 10%;
-  // left: 25%;
-  // transform: translate(-25%, -10%);
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -65%);
+  margin: 0;
+  padding: 0;
+  width: 900px;
+  height: 600px;
 
   ${({ theme }) => theme.media.tabPort} {
-    width: 400px;
-    // top: 55%;
-    // left: 112%;
-    // transform: translate(-112%, -55%);
+    left: 0;
+    top: 55%;
+    left: 112%;
+    transform: translate(-112%, -55%);
   }
 `;
 const Li = styled.li`
@@ -403,7 +408,7 @@ export default class PanelSky extends Component {
 
     return (
       <ThemeProvider theme={theme}>
-        <StyledWrapper data-aos="fade-up">
+        <StyledWrapper>
           <Ul>
             <Li className="p-5">
               <A
@@ -426,8 +431,6 @@ export default class PanelSky extends Component {
                 ref={ref => (this.animated = ref)}
                 transitionDuration={1500}
                 dialogStyles={Modal}
-                title="AAAAAAAAA"
-                // title={<StyledButton>Zamknij</StyledButton>}
               >
                 Hello Jacek
               </SkyLight>
@@ -461,7 +464,6 @@ export default class PanelSky extends Component {
                 transitionDuration={1500}
                 dialogStyles={Modal}
                 title="AAAAAAAAA"
-                // title={<StyledButton>Zamknij</StyledButton>}
               >
                 Hello Jacek
               </SkyLight>
