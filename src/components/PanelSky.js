@@ -431,8 +431,11 @@ export default class PanelSky extends Component {
                 ref={ref => (this.animated = ref)}
                 transitionDuration={1500}
                 dialogStyles={Modal}
+                xz
               >
-                Hello Jacek
+                <h1>AAAAAAA</h1>
+                <h3>ZZZZZZZ</h3>
+                <Button></Button>
               </SkyLight>
             </Li>
             <Li className="p-11">
@@ -459,14 +462,11 @@ export default class PanelSky extends Component {
                 </I>
               </A>
               <SkyLight
-                hideOnOverlayClicked
-                ref={ref => (this.animated = ref)}
-                transitionDuration={1500}
-                dialogStyles={Modal}
-                title="AAAAAAAAA"
-              >
-                Hello Jacek
-              </SkyLight>
+              // hideOnOverlayClicked
+              // ref={ref => (this.animated = ref)}
+              // transitionDuration={1500}
+              // dialogStyles={Modal}
+              ></SkyLight>
             </Li>
             <Li className="p-6">
               <A href="#panel">

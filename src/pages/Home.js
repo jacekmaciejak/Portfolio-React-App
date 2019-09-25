@@ -22,8 +22,8 @@ export default function Home() {
         <LineDown />
       </Hero>
       <AboutMe />
-      {/* <Skills /> */}
-      <SkillsSky></SkillsSky>
+      <Skills />
+      {/* <SkillsSky></SkillsSky> */}
       <About />
       <Email />
       <Footer />

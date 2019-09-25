@@ -11,7 +11,6 @@ import ModalFlex from "./Modals/ModalFlex.js";
 import ModalReact from "./Modals/ModalReact.js";
 import ModalBootstrap from "./Modals/ModalBootstrap";
 import ModalRwd from "./Modals/ModalRwd.js";
-
 import { theme } from "./utils/theme.js";
 import img from "../images/img5.jpg";
 
@@ -55,7 +54,7 @@ const Title_2 = styled.h2`
 
 export default class Skills extends Component {
   state = {
-    isModalHtmlOpen: false,
+    isModalHtmlOpen: true,
     isModalCssOpen: false,
     isModalJsOpen: false,
     isModalGridOpen: false,
@@ -96,7 +95,8 @@ export default class Skills extends Component {
     });
   };
 
-  openModal = () => {
+  openModal = e => {
+    e.preventDefault();
     this.setState({
       isModalHtmlOpen: true
     });
