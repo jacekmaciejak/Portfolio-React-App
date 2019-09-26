@@ -34,16 +34,11 @@ const Section = styled.div`
 const H1 = styled.h1`
   margin: 30px;
 `;
-const Ul = styled.ul`
-  text-align: start;
-  margin-left: 40%;
-  list-style: none;
-  font-size: calc(5px + 1vw);
-  list-style-type: circle;
-`;
+
 const P = styled.p`
   font-size: calc(5px + 1vw);
   margin: 30px;
+  text-align: justify;
 `;
 const StyledButton = styled(Button)`
   font-size: calc(5px + 1vw);
@@ -63,17 +58,12 @@ export default function ModalHtml({ closeModalBootstrapFn }) {
     <ThemeProvider theme={theme}>
       <StyledWrapper>
         <Section>
-          <H1>HTML5</H1>
-          <Ul>
-            <li>&lt;section&gt;</li>
-            <li>&lt;articel&gt;</li>
-            <li>&lt;nav&gt;</li>
-            <li>&lt;header&gt;</li>
-            <li>&lt;footer&gt;</li>
-            <li>&lt;aside&gt;</li>
-            <li>itd.</li>
-          </Ul>
-          <P>Znam bardzo dobrze i codziennie stosujÄ™ w projektach.</P>
+          <H1>Bootstrap 4</H1>
+          <P>
+            Poziom znajomo?ci technologii Bootstrap ocaniam na umo?liwiaj?cy mi
+            sprawne kodowanie stron internetowych. Przy u?yciu Bootstrap 4
+            zakodowa?em jedn? stron? internetow?.{" "}
+          </P>
           <StyledButton onClick={closeModalBootstrapFn}>Zamknij</StyledButton>
         </Section>
       </StyledWrapper>
