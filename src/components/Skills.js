@@ -54,7 +54,7 @@ const Title_2 = styled.h2`
 
 export default class Skills extends Component {
   state = {
-    isModalHtmlOpen: true,
+    isModalHtmlOpen: false,
     isModalCssOpen: false,
     isModalJsOpen: false,
     isModalGridOpen: false,

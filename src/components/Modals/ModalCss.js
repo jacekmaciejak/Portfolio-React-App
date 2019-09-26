@@ -5,6 +5,15 @@ import { theme } from "../utils/theme.js";
 
 const StyledWrapper = styled.div`
   position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 99999;
+`;
+const Section = styled.div`
+  position: fixed;
   top: 50%;
   transform: translateY(-50%);
   left: 0;
@@ -13,7 +22,7 @@ const StyledWrapper = styled.div`
   width: 30vw;
   height: 60vh;
   box-shadow: 0 20px 40px -10px #818181;
-  z-index: 99999;
+  z-index: 999999;
   text-align: center;
   background-color: #5632de;
   color: #fff;
@@ -23,11 +32,18 @@ const StyledWrapper = styled.div`
   }
 `;
 const H1 = styled.h1`
-  top: 50%;
-  transform: translateY(-50%);
-  position: relative;
-  left: 0;
-  right: 0;
+  margin: 30px;
+`;
+const Ul = styled.ul`
+  text-align: start;
+  margin-left: 40%;
+  list-style: none;
+  font-size: calc(5px + 1vw);
+  list-style-type: circle;
+`;
+const P = styled.p`
+  font-size: calc(5px + 1vw);
+  margin: 30px;
 `;
 const StyledButton = styled(Button)`
   font-size: calc(5px + 1vw);
@@ -46,8 +62,21 @@ export default function ModalCss({ closeModalCssFn }) {
   return (
     <ThemeProvider theme={theme}>
       <StyledWrapper>
-        <H1>Css</H1>
-        <StyledButton onClick={closeModalCssFn}>Zamknij</StyledButton>
+        <Section>
+          <H1>Css</H1>
+          <Ul>
+            <li>&lt;section&gt;,</li>
+            <li>&lt;articel&gt;,</li>
+            <li>&lt;nav&gt;,</li>
+            <li>&lt;header&gt;,</li>
+            <li>&lt;footer&gt;,</li>
+            <li>&lt;aside&gt;,</li>
+            <li>itd.</li>
+          </Ul>
+          <P>Znam bardzo dobrze i codziennie stosuję w projektach.</P>
+
+          <StyledButton onClick={closeModalCssFn}>Zamknij</StyledButton>
+        </Section>
       </StyledWrapper>
     </ThemeProvider>
   );

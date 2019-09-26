@@ -19,7 +19,7 @@ const Section = styled.div`
   left: 0;
   right: 0;
   margin: 0 auto;
-  width: 35vw;
+  width: 30vw;
   height: 60vh;
   box-shadow: 0 20px 40px -10px #818181;
   z-index: 999999;
@@ -35,16 +35,14 @@ const H1 = styled.h1`
   margin: 30px;
 `;
 const Ul = styled.ul`
-  // width: 30%;
-  // margin: 0 auto;
   text-align: start;
   margin-left: 40%;
   list-style: none;
-  font-size: calc(10px + 1vw);
+  font-size: calc(5px + 1vw);
   list-style-type: circle;
 `;
 const P = styled.p`
-  font-size: calc(10px + 1vw);
+  font-size: calc(5px + 1vw);
   margin: 30px;
 `;
 const StyledButton = styled(Button)`
@@ -67,12 +65,12 @@ export default function ModalHtml({ closeModalFn }) {
         <Section>
           <H1>HTML5</H1>
           <Ul>
-            <li>&lt;section&gt;,</li>
-            <li>&lt;articel&gt;,</li>
-            <li>&lt;nav&gt;,</li>
-            <li>&lt;header&gt;,</li>
-            <li>&lt;footer&gt;,</li>
-            <li>&lt;aside&gt;,</li>
+            <li>&lt;section&gt;</li>
+            <li>&lt;articel&gt;</li>
+            <li>&lt;nav&gt;</li>
+            <li>&lt;header&gt;</li>
+            <li>&lt;footer&gt;</li>
+            <li>&lt;aside&gt;</li>
             <li>itd.</li>
           </Ul>
           <P>Znam bardzo dobrze i codziennie stosuję w projektach.</P>
