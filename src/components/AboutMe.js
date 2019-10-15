@@ -12,6 +12,7 @@ const StyledWrapper = styled.div`
   grid-template-rows: 1fr 1fr 6fr;
   letter-spacing: 3px;
   position: relative;
+  z-index: 999;
 `;
 const Title_1 = styled.h1`
   font-size: ${({ theme }) => theme.main.fontSize};

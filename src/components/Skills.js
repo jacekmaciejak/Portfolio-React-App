@@ -31,6 +31,16 @@ const StyledWrapper = styled.div`
   background-attachment:fixed;
   background-size:cover;
   `;
+const Link = styled.a`
+  text-decoration: none;
+  color: #000;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  z-index: 1;
+  width: 20%;
+  font-size: 10px;
+`;
 // const Title_1 = styled.h1`
 //   font-size: ${({ theme }) => theme.main.fontSize};
 //   margin-top: ${({ theme }) => theme.main.marginTop};
@@ -206,6 +216,7 @@ export default class Skills extends Component {
         <StyledWrapper id="skills" img={img} onKeyDown={this.closeAllModal}>
           {/* <Title_1 data-aos="fade-up">W czym jestem dobry?</Title_1> */}
           <Title_2 data-aos="fade-up">Technologie</Title_2>
+
           <Panel
             openModalHtmlFn={this.openModal}
             openModalCssFn={this.openModalCss}
@@ -217,6 +228,9 @@ export default class Skills extends Component {
             openModalBootstrapFn={this.openModalBootstrap}
             openModalRwdFn={this.openModalRwd}
           />
+          <Link href="https://pl.freepik.com/darmowe-zdjecie-wektory/ramka">
+            Ramka plik wektorowy utworzone przez rawpixel.com - pl.freepik.com
+          </Link>
           {isModalHtmlOpen && <ModalHtml closeModalFn={this.closeModal} />}
           {isModalCssOpen && <ModalCss closeModalCssFn={this.closeModalCss} />}
           {isModalJsOpen && <ModalJs closeModalJsFn={this.closeModalJs} />}
